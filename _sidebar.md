@@ -1,4 +1,5 @@
-- [前端知识体系图]()
+- [知识体系图](study.md)
+
 - [常用功能解决方案]()
 
   - [文件上传](/pages/upload/uploadFile.md)
