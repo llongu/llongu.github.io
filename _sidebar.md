@@ -1,6 +1,6 @@
 - [知识体系图](study.md)
 
-- [常用功能解决方案]()
+- [常用功能解决方案](/pages/problem/home.md)
 
   - [文件上传](/pages/upload/uploadFile.md)
 
@@ -29,6 +29,7 @@
   - [执行上下文](/pages/javascript/executionContext.md)
   - [ES5 对象的扩展、密封、冻结](/pages/javascript/es5Object.md)
   - [值类型和引用类型及深浅拷贝](/pages/javascript/deepClone.md)
+  - [栈和堆](/pages/javascript/stack.md)
   - [函数，形参，实参的 length](/pages/javascript/arguments.md)
   - [自执行函数表达式与函数声明的调用](/pages/javascript/callFunction.md)
   - [eavl，new Function,setTimeout](/pages/javascript/eavl.md)
@@ -93,10 +94,6 @@
   - [例子](/pages/function/example.md)
   - [rxjs](/pages/function/rxjs.md)
 
-* [数据结构与算法](/pages/webDesign/home.md)
-
-  - [配色](/pages/webDesign/color.md)
-
 * [leetcode](/pages/leetcode/home.md)
 
 - [网页设计](/pages/webDesign/home.md)
@@ -110,5 +107,3 @@
   - [产品文档制作](/pages/proMan/doc.md)
   - [产品需求团队](/pages/proMan/team.md)
   - [产品需求技能](/pages/proMan/skill.md)
-
-- [Vuep 使用](/pages/vuep/index.md)
