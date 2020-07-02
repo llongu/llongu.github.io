@@ -87,7 +87,7 @@
 	.ppt_show {
 		width: 100%;
 		height: 100%;
-		background: url(../img/bg.jpg) no-repeat;
+		background: url(./img/bg.jpg) no-repeat;
 		background-position: center center;
 		background-size: cover;
 	}
@@ -225,23 +225,25 @@
 		scrollbar-track-color: #ddd;
 
 	}
+
 	.works_show {
-	width: 100%;
-	height: 105px;
-	background-position: center center;
-	background-size: cover;
-	font-size: 48px;
-	color: #fff;
-	text-align: center;
-	line-height: 105px;
-	overflow: hidden;
-	margin-bottom: 50px;
-}
-.works_show .pen {
-	vertical-align: middle;
-	margin-left: 30px;
-	margin-top: 0px;
-}
+		width: 100%;
+		height: 105px;
+		background-position: center center;
+		background-size: cover;
+		font-size: 48px;
+		color: #fff;
+		text-align: center;
+		line-height: 105px;
+		overflow: hidden;
+		margin-bottom: 50px;
+	}
+
+	.works_show .pen {
+		vertical-align: middle;
+		margin-left: 30px;
+		margin-top: 0px;
+	}
 </style>
 
 
@@ -249,18 +251,18 @@
 	<div class="main_html">
 		<div class="ppt_show">
 			<div class="wrap">
-					<div class="works_show">
-							部分作品展示<img src="img/pen.png" alt="pen" class="pen">
-						</div>
+				<div class="works_show">
+					部分作品展示<img src="img/pen.png" alt="pen" class="pen">
+				</div>
 				<ul class="portfolio-items">
 					<a class="item" href="website/blockchain-vue-demo/index.html">
 						<div class="view">
-								<img src="img/block.PNG" />
+							<img src="img/block.PNG" />
 						</div>
 					</a>
 					<a class="item" href="website/pay/index.html">
 						<div class="view">
-								<img src="img/pay.PNG" />
+							<img src="img/pay.PNG" />
 						</div>
 					</a>
 					<a class="item" href="website/jd/index.html">
@@ -317,14 +319,14 @@
 	});
 
 	var list = $('.portfolio-items'),
-	showVisibleItems = function () {
+		showVisibleItems = function () {
 			list.children('.item:not(.falldown)').each(function (el, i) {
 				var $this = $(this);
 				if ($this.isVisible()) {
 					$this.addClass('falldown');
 				}
 			});
-	};
+		};
 	showVisibleItems();
 
 	list.scroll(function () {
@@ -336,4 +338,5 @@
 		event.preventDefault();
 	});
 </script>
+
 </html>
