@@ -1,0 +1,335 @@
+@import "style.scss";
+.wrap{
+    font-family: $fontType;
+    background: $gray;
+
+    //列表通用
+    .list{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        li{
+            margin-bottom: 0.08rem;
+            padding: 0.6rem 0.4rem 0.6rem 0.5rem;
+            overflow: hidden;
+            background: $white;
+            .li_box{
+                float: left;
+                .data_img{
+                    width: 2.346rem;
+                    height: 2.48rem;
+                    margin-right: .2rem;
+                }
+                .data_text{
+                    width: 5.5rem;
+                    height: auto;
+                    font-size: 0.36rem;
+                    letter-spacing: 0.013rem;
+                    position: relative;
+                    color: $gray3;
+                    .data_title{
+                        color: #000;
+                    }
+                    .data_detail{
+                        word-break: break-all;
+                        text-overflow: ellipsis;
+                        display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+                        -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+                        -webkit-line-clamp:3; /** 显示的行数 **/
+                        overflow: hidden;  /** 隐藏超出的内容 **/
+                           margin: .2rem 0;
+                    }
+                    .data_way{
+                        color: $gray2;
+                          .book_time{
+                             margin-left: .1rem;
+                          }
+                    }
+                    .data_two{
+                        margin: .2rem 0;
+                    }
+                    .icon-fanhuir{
+                      position: absolute;
+                      right: 0;
+                      top: 50%;
+                      transform: translateY(-50%); 
+                    }
+                    .data_button{
+                        position: absolute;
+                        bottom: -.2rem;
+                        right: 0;
+                        padding: 0 .2rem;
+                        height: 0.8rem;
+                        background: $orange;
+                        @include shadow;
+                        border-radius: $Bradius;
+                        color: $white;
+                        text-align: center;
+                        line-height: 0.8rem;
+                        font-size: 0.4rem;
+                        a{
+                            color: inherit; 
+                        }
+                    }
+                    .see_num{
+                        position: absolute;
+                        right: 0;
+                        top: -.2rem;
+                         color: $gray2;
+                        i{ font-size: 0.48rem;vertical-align: middle;}
+                        
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+//首页
+.index_wrap{
+
+    .list{
+         background: $white;
+         margin-top:0.266rem ;
+        li{
+             border-bottom: 0.08rem solid $gray;
+             box-sizing: border-box;
+             margin-bottom: 0;
+            .li_box{
+                 .data_img{
+                    width: 3.16rem;
+                    border-radius: 0.48rem;
+                    position: relative;
+                    overflow: hidden;
+                    margin-right: .4rem;
+                    box-shadow: 0px 0px 0.266rem 0.066rem #cfcfcf;
+                    .data_img_shadow{
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        background: rgba(0,0,0,.5);
+                        font-size:0.453rem;
+                        font-weight: bold;
+                        color: $white;
+                        text-align: center;
+                        display: table;
+                        p{
+                            display: table-cell;
+                            vertical-align: middle;
+                            line-height: 0.8rem;
+                            margin-top: .3rem;
+                        }
+                        
+                    }
+                }
+                .data_text{
+                    padding-top: .2rem;
+                    .data_title{
+                        i{color: $orange;}
+                        .data_hot{
+                            margin-left: .1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//搜索页
+.search_wrap{
+        .banner{
+            max-height: 5rem;
+        }
+        .nav_main{
+            padding: .3rem ;
+            font-size: 0.32rem;
+            background: #fff;
+            overflow: hidden;
+            li{
+                width: 32%;
+               height: 1.2rem;
+                background: #f2f2f2;
+                color: $gray3;
+                text-align: center;
+                 float:left;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                &:first-child{
+                   border-top-left-radius: 0.2rem;
+                   border-bottom-left-radius: 0.2rem;
+                }
+                &:nth-child(2){
+                   margin: 0 1%;
+                }
+                &:last-child{
+                    border-top-right-radius: 0.2rem;
+                   border-bottom-right-radius: 0.2rem;
+                }
+            }
+            .nav_li{
+                color:#fff ;
+                background: $orange;
+            }
+        }
+         header{
+            width: 100%;
+            padding: 0.266rem 0;
+            overflow: hidden;
+            .header_main{
+                    width: 7.813rem;
+                    height:0.906rem;
+                   float: left;
+                   margin-left: .5rem;
+                    color: #aeaeae;
+                    border-radius:0.4rem;
+                    overflow: hidden;
+                    position: relative;
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        background: #fff;
+                        text-indent: 0.8rem;
+                        font-size: 0.35rem;
+                        letter-spacing: 0.013rem;
+                    }
+                    #search::-webkit-search-cancel-button {display: none;}
+                    #search::-webkit-input-placeholder {color: $gray3; font-family: $fontType;}
+                      .search_lable{
+                        width: 100%;
+                        height:100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        font-size: 0.35rem;
+                        text-align: center;
+                        line-height: 0.906rem;
+                        text-indent: .3rem;
+                        letter-spacing: 0.013rem;
+                        i{
+                            color: $gray2;
+                            span{
+                                 color: $gray3;
+                            font-family: $fontType;
+                                   
+                            }                        
+                        }
+                    }
+            }
+            .search_button{
+                text-align: center;
+                margin-top: .15rem;
+                padding:.1rem  .2rem;
+                font-size: .35rem;
+                color: #fff;
+                background: $orange;
+                border-radius: .3rem;
+                float: left;
+                margin-left: .1rem;
+            }
+        }
+        .list{
+            li .li_box .data_text{
+                width: 6.2rem;
+            }
+        }
+        .sort_wrap{
+            @include usualH;
+            position: relative;
+            margin-bottom: 0.08rem;
+            .line{
+                @include center;
+                width:0.5%;
+                left: 33%;
+                height: 60%;
+                background: red;
+                &:nth-child(2){
+                    left: 66%;
+                }
+            }
+            .time_sort,.click_sort{
+                width: 50%;
+                height: 100%;
+                text-align: center;
+                font-size:0.373rem ;
+                color: $gray3;
+                position: relative;
+                .sort_box{
+                  @include sortBox;
+                }
+            }
+         }
+         
+            .title{
+                @include usualH;
+                position: relative;
+                margin-bottom: 0.066rem;
+                font-size: 0.4rem;
+                font-weight: bold;
+                color: $orange;
+                text-indent: 0.506rem;
+                i{
+                    font-size: 0.4rem;
+                }
+             }
+}
+
+//详情页
+.detail_wrap{
+    border-top: 0.266rem solid $gray;
+    padding-bottom: .5rem;
+    background: $white;
+    .detail_main{
+        width: 90%;
+        margin: 0 auto;
+         color: $gray3;
+          font-size: 0.373rem;
+          letter-spacing: 0.013rem;
+          text-align: center;
+         .title{
+             color: #000;
+             font-size: 0.453rem;
+             margin: 0.6rem 0;
+        }
+        p{
+            text-indent: .5rem;
+             text-align: left;
+             line-height: .7rem;
+        }
+        .detail_bottom{
+            margin-top: .3rem; 
+            font-size: 0.293rem;
+            color: $gray2;
+            text-align: left;
+            span{
+                margin-right: .2rem;
+                i{
+                  font-size: 0.293rem;
+                   margin-right: .1rem;
+                }
+            }
+        }
+        .download{
+            width: 4.4rem;
+            height: 1.12rem;
+            line-height: 1.12rem;
+            background: $orange;
+            color: $white;
+            text-align: center;
+            border-radius: $Bradius;
+            @include shadow;
+            font-size: 0.453rem;
+            font-weight: bold;
+            letter-spacing: 0.026rem;
+            margin: 0 auto;
+            margin-top: 1rem;
+            i{margin-right: .2rem;}
+        }
+    }
+   
+}

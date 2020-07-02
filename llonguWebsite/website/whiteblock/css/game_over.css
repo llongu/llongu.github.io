@@ -1,0 +1,302 @@
+﻿.warp{
+	width:10rem;
+	margin:  0 auto;
+	height: 100%;
+	position: relative;
+	/*overflow: hidden;*/
+	min-height: 100%;
+	display: none;
+}
+#loading{
+	width: 0.72rem;
+	height: 0.826666rem;
+	display: block;
+	margin: 150px auto;
+}
+.warp img{
+	width: 100%;
+	height: 100%;
+}
+/*首页背景*/
+.index_bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+}
+/*首页标题------------主体*/
+.index_title{
+	width: 8.4rem;
+	height: 5.426666rem;
+	position: absolute;
+	left: 50%;
+	top: 1rem;
+	margin-left: -4.2rem;
+	z-index: 1;
+	animation: scale1 .5s linear;
+	-webkit-animation: scale1 .5s linear;
+}
+@keyframes scale1{
+	from{
+		transform: scale(.5) ;
+	}
+	to{
+		transform: scale(1) ;
+	}
+}
+.title_bg {
+	position: absolute;
+	z-index: 1;
+}
+/*时间*/
+.time{
+	width:7rem ;
+	height: 1.6rem;
+	position: absolute;
+	top:2.533333rem ;
+	left: 47%;
+	transform: translateX(-50%);
+	z-index: 1;
+	line-height: 1.6rem;
+	font-family: "微软雅黑";
+}
+/*分钟*/
+.mins{
+	width:2.5rem;
+	height: 100%;
+	float: left;
+	margin-left: 1rem;
+	position: relative;
+}
+.mins .white{
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-align: right;
+	font-size: 1.413333rem;
+	-webkit-text-fill-color: #fff;/*文字的填充色*/
+	-webkit-text-stroke-width:0.05rem;
+	-webkit-text-stroke-color:#2e2e2e;
+	position: absolute;
+	left: 0;
+	top: 0rem;
+	z-index: 1;
+}
+.mins .pink{
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-align: right;
+	font-size: 1.413333rem;
+	-webkit-text-fill-color: #ff6ca7;/*文字的填充色*/
+	-webkit-text-stroke-width:0.05rem;
+	-webkit-text-stroke-color:#2e2e2e;
+	position: absolute;
+	left: 0;
+	top: 0.12rem;
+}
+/*符号*/
+.fuhao{
+	width:.5rem;
+	height: 100%;
+	float: left;
+	position: relative;
+}
+.fuhao .white{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 1.413333rem;
+	-webkit-text-fill-color: #fff;/*文字的填充色*/
+	-webkit-text-stroke-width:0.05rem;
+	-webkit-text-stroke-color:#2e2e2e;
+	float: left;
+	position: absolute;
+	left: 0;
+	top: 0rem;
+	z-index: 1;
+}
+.fuhao .pink{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 1.413333rem;
+	-webkit-text-fill-color: #ff6ca7;/*文字的填充色*/
+	-webkit-text-stroke-width:0.05rem;
+	-webkit-text-stroke-color:#2e2e2e;
+	float: left;
+	position: absolute;
+	left: 0.02rem;
+	top: 0.12rem;
+}
+
+/*秒数*/
+.seconds{
+	width:2rem;
+	height: 100%;
+	color: #fff;
+	text-align: center;
+	font-size: 1.413333rem;
+	-webkit-text-fill-color: #fff;/*文字的填充色*/
+	-webkit-text-stroke-width:0.05rem;
+	-webkit-text-stroke-color:#2e2e2e;
+	float: left;
+	position: relative;
+}
+.seconds .white{
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-align: right;
+	font-size: 1.413333rem;
+	-webkit-text-fill-color: #fff;/*文字的填充色*/
+	-webkit-text-stroke-width:0.05rem;
+	-webkit-text-stroke-color:#2e2e2e;
+	position: absolute;
+	left: 0;
+	top: 0rem;
+	z-index: 1;
+}
+.seconds .pink{
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-align: right;
+	font-size: 1.413333rem;
+	-webkit-text-fill-color: #ff6ca7;/*文字的填充色*/
+	-webkit-text-stroke-width:0.05rem;
+	-webkit-text-stroke-color:#2e2e2e;
+	position: absolute;
+	left: 0;
+	top: 0.12rem;
+}
+/*財妹*/
+.girl{
+	width:2.666666rem;
+	height:5.8rem;
+	top: .1rem;
+	right: -1.5rem;
+	position: absolute;
+	transform: rotateZ(-14deg);
+	z-index: 2;
+}
+/*红旗*/
+.red{
+	width: 0.826666rem;
+	height: 1.093333rem;
+	position: absolute;
+	top: 0.213333rem;
+	left: 1.733333rem;
+}
+
+/*客户节*/
+.user_day{
+	width:2.96rem ;
+	height:1.24rem ;
+	position: absolute;
+	bottom:-.6rem;
+	left:2.8rem;
+}
+/*光*/
+.sun{
+	width:8.266666rem;
+	height: 5.12rem;
+	position: absolute;
+}
+
+/*线路图------------主体*/
+.wire{
+	width: 7.333333rem;
+	height: 9.24rem;
+	position: absolute;
+	left: 1.133333rem;
+	top: 4.8rem;
+}
+
+.wire_bg{
+	position: absolute;
+}
+
+/*--排行榜按钮--*/
+.list{
+	width:3.733333rem;
+	height:1.493333rem ;
+	position: absolute;
+	top: 2.373333rem;
+	left: 1.8rem;	
+
+}
+/*--开始游戏按钮--*/
+.begin{
+	width:6.08rem;
+	height:2.533333rem;
+	position: absolute;
+	top:5.2rem ;
+	left: .8rem;
+	display: inline-block;
+	margin-right: 0.2rem;
+	animation: scales 1s ease infinite alternate;
+}
+
+/*参与抽奖*/
+.jion{
+	width:6.093333rem ;
+	height:2.266666rem ;
+	position: absolute;
+	left:0.8rem ;
+	bottom: -1.3rem;
+	display: none;
+}
+/*不能参加抽奖*/
+.no_jion{
+	width: 6.933333rem;
+	height:1.386666rem ;
+	position: absolute;
+	left:0.8rem ;
+	bottom: -1.2rem;
+	/*display: none;*/
+}
+
+/*弹窗*/
+.pop{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.6);
+	z-index: 9;
+	display: none;
+}
+/*公用关闭按钮*/
+.close{
+	width:1.013333rem;
+	height:1.013333rem;
+	background: url(../img/close.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right:.8rem ;
+	top:0.4rem ;
+	z-index: 1;
+}
+/*活动规则*/
+.no_chance{
+	width:9.573333rem;
+	height: 11.026666rem;
+	position: absolute;
+	top: 2.533333rem;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+}
+
+/*抽奖机会用完*/
+
+
+			
+@keyframes scales{
+	from{transform: scale(.9);}
+	to{transform: scale(1.1);}
+}

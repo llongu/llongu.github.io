@@ -1,0 +1,22 @@
+/*新闻导航*/
+.new_nav{height:3.4rem;width: 100%;}
+.new_nav .left li{float: left;font-size: 0.8rem;color: #2d313d;line-height: 3.4rem;margin-right: 1.25rem;}
+/*标题定位*/
+.title_nav{margin-top: 1.3rem }
+.title_nav img{float: left;margin: 0 0.65rem;}
+.title_nav a{float: left;font-size: 0.6rem;color: #838281;}
+.title_nav .sanjao{margin-top: 0.25rem;}
+
+/*新闻主体*/
+.new_main{width: 100%;height: auto;border-top: 1px solid #eaeaeb;}
+
+
+.new_main .new_main_inner{width: 100%;height: auto;margin-bottom: 3.15rem;}
+.new_main_inner h3{width: 25.75rem;height: 2.65rem;border-bottom: 1px solid #eaeaeb;line-height: 2.65rem;font-size: 1rem;color: #2d313d;margin: 0 auto;text-align: center;margin-bottom: 2.5rem;}
+
+/*三级联动菜单*/
+.selects{margin:0 auto;margin-bottom:20px;width:350px;height:auto;}
+.selects select{margin:0 auto;margin-left:20px;border:1px solid #F9F;outline:none;cursor:pointer;}
+/*地图*/
+#allmap{height:500px;width:950px;overflow: hidden;margin: 0 auto;}
+#allmap p{margin-left:5px; font-size:14px;}

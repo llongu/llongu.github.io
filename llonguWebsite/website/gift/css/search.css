@@ -1,0 +1,47 @@
+.pierce,.main_pircture{width: 100%;height: auto;background: #fff;padding-bottom:1rem;overflow: hidden;}
+
+/*商品价格筛选区域*/
+.pierce{border-bottom: 0.25rem #d95661 solid;padding-top: 1rem;}
+.pierce .warp{padding-left: 0.7rem;}
+.pierce_inner{width: 100%;height:auto;float: left;}
+.pierce_inner a{font-size: 0.8rem;color: #2d313d;margin-right: 0.7rem;float: left;}
+.pierce_inner span{font-size: .6rem;margin-right: 0.5rem;color: #c0c1c4;margin-top:2px;display: block;float: left;}
+.pierce_line{width: 98%;border: 0.05rem solid #eaeaeb;margin: 0.5rem 0 .2rem 0;float: left;}
+.pierce_inner .null{color: #fb565c;}
+
+/*主体图片区域*/
+.main_pircture{height: 74.9rem;}
+.main_pircture .warp{height: auto;}
+/*层级定位*/
+.title_nav{margin-top: 0.8rem }
+.title_nav img{float: left;margin: 0 0.65rem;}
+.title_nav a{float: left;font-size: 0.6rem;color: #838281;}
+.title_nav .sanjao{margin-top: 0.25rem;}
+/*图片列表*/
+.picture_list{width: 100%;height: 17.45rem;padding-top: .9rem;clear: both;}
+.picture_list li{float: left;margin-right: 2.7rem;height: 16.3rem;width: 12.95rem;box-sizing: border-box;border: 1px solid #96989e;}
+.picture_list li:last-child{margin-right: 0;}
+
+.list_top{width: 100%;height: 12.9rem;float:left;}
+.list_top img{width: 100%;}
+
+/*文字盒子*/
+.list_bottom{width: 100%;height: 3.35rem;float:left;}
+.picture_list p a{font-size: 0.8rem;color: #2d313d;float:left;margin:13px 0 10px 0.55rem;}
+.picture_list span{font-size: 0.6rem;color: #2d313d;float:left;display: block;clear: both;margin-left: 0.55rem;}
+.picture_list .right{margin-top: -1rem;margin-right: 0.65rem;}
+.picture_list .right a{margin-left:1rem;}
+#gray{background: #f4f4f5;}
+
+/*上一页下一页*/
+.page{height: 6.1rem;width: 100%;}
+.page_go{width:27.2rem;height: auto;margin: 0 auto;margin-top: 1.7rem;}
+.page_go li{width: 0.85rem;height: 0.85rem;box-sizing: border-box;float: left;margin-right: 1.85rem;text-align: center;font-size: 0.6rem;color: #cfd0d1;line-height: .85rem;cursor: pointer;}
+
+.page_go .number_page{border: 1px solid #c0c1c4;}
+.page_go .click_page{background: #fb565c;padding-top: 0.05rem;height: 0.8rem;}
+
+
+/*点击切换图片主体样式*/
+.main_list{display: none;}
+

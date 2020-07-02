@@ -1,0 +1,1444 @@
+﻿body,html{
+	background: #f3f3f3;
+	height: auto;
+}
+.wrap{
+	height:44.053333rem;
+	background: url(../img/game_bg.jpg) no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+	position: relative;
+	display: none;
+}
+		.wrap img{
+			width: 100%;
+			height: 100%;
+		}
+
+
+/*
+ *  z-index层级规范 
+ * 
+ * pop黑色弹窗:11
+ * 底部固定栏：10
+ * 起点：8 
+ * stop牌子：8
+ * 返回首页:7
+ * 栅栏:8
+ * 行走人物 ：7
+ * 景点弹窗及文字：6==>9
+ * 
+ */
+/*返回首页*/
+.back_index{
+	width:3.893333rem ;
+	height: 1.333333rem;
+	position: absolute;
+	top:0.586666rem ;
+	right: 0.266666rem;
+	z-index: 7;
+	
+}
+/*起点*/
+.start_place{
+	width:1.333333rem;
+	height:1.493333rem;
+	position: absolute;
+	top:2.066666rem;
+	right: 0.08rem;
+	z-index: 8;
+}
+/*栅栏*/
+.suo{
+	width:3.013333rem;
+	height:0.786666rem;
+	position: absolute;
+	top:4.213333rem;
+	right: 0;
+	z-index: 8;
+}
+/*------------------------------------人物 ------------------------------------*/		
+#people{
+	/*30*/
+	/*40*/
+	width:1.733333rem;
+	height: 2.32rem;
+	position: absolute;
+	left: 7.333333rem;
+	top: 2.333333rem;
+	z-index: 7;	
+}
+
+#people img{
+	position: absolute;
+	top: 0;
+	left:0;
+}
+/*------------------------------------底部固定菜单栏------------------------------------*/
+.fiexd_meun{
+	width:100%;
+	height:2rem;
+	background: url(../img/fiexd_bg.png) no-repeat;
+	background-size: 100% 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+}	
+	
+		/*分享*/
+		.share_button{
+			width: 1.52rem;
+			height: 1.546666rem;
+			margin-left: 0.853333rem;
+			margin-top: 0.266666rem;
+			float: left;
+		}
+		/*活动规则*/
+		.rule_button{
+			width:2.186666rem;
+			height:1.466666rem;
+			margin-left: 0.8rem;
+			float: left;
+		}
+		/*圆盘*/
+		.round_pot{
+			width: 5.293333rem;
+			height: 1.52rem;
+			background: url(../img/pot.png) no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			right: -1.066666rem;
+			bottom: 0.106666rem;
+		}
+		/*骰子*/
+		.game_dice{
+			width:2.773333rem;
+			height:2.906666rem;
+			background:url(../img/game_dice.png) no-repeat; 
+			background-size: cover;
+			position: absolute;
+			right:1.333333rem;
+			bottom: 0.72rem;
+		}
+			.game_dice1{
+				background-position:0 0;
+			}
+			.game_dice2{
+				background-position:-0px -3.44rem;
+			}
+			.game_dice3{
+				background-position:-0px -6.786666rem;
+			}
+			.game_dice4{
+				background-position:-0px -10.266666rem;
+			}
+			.game_dice5{
+				background-position:-0px -13.733333rem;
+			}
+			.game_dice6{
+				background-position:-0px -17.146666rem;
+			}
+/*------------------------------------stop牌子 3个------------------------------------*/
+.stop_box div{
+	width: 0.72rem;
+	height: 1.4rem;
+	background: url(../img/stop.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	z-index: 8;
+}
+		.stop1{
+			top: 10.493333rem;
+			left: 4rem;
+		}
+		.stop2{
+			top: 21.306666rem;
+			left: 6rem;
+		}
+		.stop3{
+			top: 26.573333rem;
+			left: 6rem;
+		}
+		
+/*------------------------------------景点及文字介绍 16个------------------------------------*/
+.place_wrap{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.place_box{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	z-index:6;
+	
+}
+.place_box_pop{
+	background: rgba(0,0,0,0.7);
+	z-index: 9;
+}
+.place_box_pop .place_box_wrap {
+	display: block;
+}
+	/*景点地方定位*/
+	.place_wrap .place{
+		position: absolute;
+		width:1.466666rem ;
+		height: 1.813333rem;
+	}
+		.place1{
+			top: 2.373333rem;
+			left:0.4rem ;
+			
+		}
+		.place2{
+			top: 5.546666rem;
+			left:2.453333rem;
+		}
+		.place3{
+			top: 8rem;
+			left:7.066666rem;
+		}
+		.place4{
+			top:11.6rem;
+			left:4.48rem;
+		}
+		.place5{
+			top: 14rem;
+			left:3.066666rem;
+		}
+		.place6{
+			top: 14.6rem;
+			left:5.733333rem;
+		}
+		.place7{
+			top: 14.6rem;
+			left:8.44rem;
+		}
+		.place8{
+			top: 22.853333rem;
+			left:0.426666rem;
+		}
+		.place9{
+			top: 24.733333rem;
+			left:2.466666rem;
+		}
+		.place10{
+			top: 24.573333rem;
+			left:8.4rem;
+		}
+		.place11{
+			top: 28.906666rem;
+			left:7.626666rem;
+		}
+		.place12{
+			top: 29rem;
+			left:3.146666rem;
+		}
+		.place13{
+			top:33.693333rem;
+			left:0.026666rem;
+		}
+		.place14{
+			top: 33.373333rem;
+			left:7rem;
+		}
+		.place15{
+			top: 37.066666rem;
+			left:8.64rem;
+		}
+		.place16{
+			top: 37.04rem;
+			left:0.12rem;
+		}
+	
+	/*------------景点介绍------------*/
+	.place_box_wrap{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		overflow: hidden;
+		display: none;
+		z-index: 1;
+		font-family: "zk";
+	}
+			/*文字框*/
+			.place_text_wrap{
+				width: 5.333333rem;
+				height: 4.5rem;
+				background: url(../img/palce_box.png) no-repeat;
+				background-size: 100% 100%;
+				overflow: hidden;
+				position: absolute;
+			}
+			.place_text_box{
+				width: 80%;
+				height: 3.2rem;
+				overflow: scroll;
+				color: #fff;
+				text-indent: .2rem;
+				margin-top: 0.666666rem;
+				margin-left: .3rem;
+				font-size: 0.32rem;
+			}
+			.place_text_box h5{
+				text-align: center;
+				font-size: .45rem;
+			}
+			/*大圈*/
+			.place_text_round{
+				width: 0.866666rem;
+				height:0.893333rem ;
+				background: url(../img/place_box1.png) no-repeat;
+				background-size: 100% 100%;
+				position: absolute;
+			}
+			/*小圈*/
+			.place_text_round2{
+				width: 0.693333rem;
+				height:0.64rem;
+				background: url(../img/place_box2.png) no-repeat;
+				background-size: 100% 100%;
+				position: absolute;
+			}
+			/*人物及礼盒*/
+			.place_people_wrap{
+				width: 2.666666rem;
+				height: 2.533333rem;
+				position: absolute;
+			}
+			.place_people_expression{
+				width: 1.866666rem;
+				height: 2.4rem;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+			.place_people_gift{
+				width: 2rem;
+				height:2rem;
+				float: left;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				animation:gift ease-in-out  1s infinite alternate;
+				-webkit-animation:gift ease-in-out  1s infinite alternate;
+				-moz-animation:gift ease-in-out  1s infinite alternate;
+				-ms-animation:gift ease-in-out  1s infinite alternate;
+				
+			}
+			@keyframes gift{
+				from{transform: scale(.8);}
+				to{transform: scale(1.2);}
+			}
+			@-webkit-keyframes gift{
+				from{-webkit-transform: scale(.8);}
+				to{-webkit-transform: scale(1.2);}
+			}
+			@-moz-keyframes gift{
+				from{-moz-transform: scale(.8);}
+				to{-moz-transform: scale(1.2);}
+			}
+			@-ms-keyframes gift{
+				from{-ms-transform: scale(.8);}
+				to{-ms-transform: scale(1.2);}
+			}
+			/*----------景点16处文字框定位-----------*/
+			/*1*/
+			.place_box1 .place_text_wrap{
+				left: 1.5rem;
+				top: 6rem;
+			}
+			.place_box1 .place_text_round{
+				left: 2.5rem;
+				top: 5rem;
+			}
+			.place_box1 .place_text_round2{
+				left: 2.2rem;
+				top: 4rem;
+			}
+			.place_box1 .place_people_wrap{
+				left: 2rem;
+				top: 1.5rem;
+			}
+			.place_box1  .place_people_gift{
+				right: -1rem;
+			}
+			/*2*/
+			.place_box2 .place_text_wrap{
+				left: 4.5rem;
+				top: 5rem;
+			}
+			.place_box2 .place_text_round{
+				left: 3.5rem;
+				top:8rem;
+			}
+			.place_box2 .place_text_round2{
+				left: 3rem;
+				top: 7.5rem;
+			}
+			.place_box2 .place_people_wrap{
+				left: .2rem;
+				top: 5.5rem;
+			}
+			.place_box2  .place_people_gift{
+				left: 0rem;
+				bottom: -1.8rem;
+			}
+			/*3*/
+			.place_box3 .place_text_wrap{
+				left: .8rem;
+				top: 6.5rem;
+			}
+			.place_box3 .place_text_round{
+				left: 6rem;
+				top:8.5rem;
+			}
+			.place_box3 .place_text_round2{
+				left: 6.3rem;
+				top: 9.5rem;
+			}
+			.place_box3 .place_people_wrap{
+				left: 7rem;
+				top:8.5rem;
+			}
+			.place_box3  .place_people_gift{
+				right: .9rem;
+				bottom: -1.8rem;
+			}
+			/*4*/
+			.place_box4 .place_text_wrap{
+				left: 1.5rem;
+				top: 6.5rem;
+			}
+			.place_box4 .place_text_round{
+				left: 2.5rem;
+				top:11rem;
+			}
+			.place_box4 .place_text_round2{
+				left: 3.5rem;
+				top:12rem;
+			}
+			.place_box4 .place_people_wrap{
+				left:6rem;
+				top:11.8rem;
+			}
+			.place_box4  .place_people_gift{
+				right: -1rem;
+				bottom: 0rem;
+			}
+			/*5*/
+			.place_box5 .place_text_wrap{
+				left: 1.5rem;
+				top: 9rem;
+			}
+			.place_box5 .place_text_round{
+				left: 2rem;
+				top:13.5rem;
+			}
+			.place_box5 .place_text_round2{
+				left: 2.2rem;
+				top:14.5rem;
+			}
+			.place_box5 .place_people_wrap{
+				left:4rem;
+				top:14.8rem;
+			}
+			.place_box5  .place_people_gift{
+				right: -1rem;
+				bottom: 0rem;
+			}
+			/*6*/
+			.place_box6 .place_text_wrap{
+				left: 1.5rem;
+				top: 10rem;
+			}
+			.place_box6 .place_text_round{
+				left: 4rem;
+				top:15rem;
+			}
+			.place_box6 .place_text_round2{
+				left: 5rem;
+				top:15.5rem;
+			}
+			.place_box6 .place_people_wrap{
+				left:6.5rem;
+				top:15rem;
+			}
+			.place_box6 .place_people_gift{
+				right: 3rem;
+				bottom: -.5rem;
+			}
+			/*7*/
+			.place_box7 .place_text_wrap{
+				left: 1.5rem;
+				top: 10rem;
+			}
+			.place_box7 .place_text_round{
+				left: 7rem;
+				top:14rem;
+			}
+			.place_box7 .place_text_round2{
+				left: 7.5rem;
+				top:15rem;
+			}
+			.place_box7 .place_people_wrap{
+				left:5.5rem;
+				top:15rem;
+			}
+			.place_box7 .place_people_gift{
+				right: 3rem;
+				bottom: 0rem;
+			}
+			/*8*/
+			.place_box8 .place_text_wrap{
+				left: 4rem;
+				top: 21.5rem;
+			}
+			.place_box8 .place_text_round{
+				left: 3rem;
+				top:24rem;
+			}
+			.place_box8 .place_text_round2{
+				left: 2rem;
+				top:23.5rem;
+			}
+			.place_box8 .place_people_wrap{
+				left:.5rem;
+				top:24.5rem;
+			}
+			.place_box8 .place_people_gift{
+				right: -1rem;
+				bottom: 0rem;
+			}
+			/*9*/
+			.place_box9 .place_text_wrap{
+				left: 4rem;
+				top: 19.5rem;
+			}
+			.place_box9 .place_text_round{
+				left: 3rem;
+				top:23rem;
+			}
+			.place_box9 .place_text_round2{
+				left: 3rem;
+				top:24rem;
+			}
+			.place_box9 .place_people_wrap{
+				left:4rem;
+				top:25rem;
+			}
+			.place_box9 .place_people_gift{
+				right: -1rem;
+				bottom: 0rem;
+			}
+			/*10*/
+			.place_box10 .place_text_wrap{
+				left: 1rem;
+				top: 20rem;
+			}
+			.place_box10 .place_text_round{
+				left: 6.5rem;
+				top:24rem;
+			}
+			.place_box10 .place_text_round2{
+				left: 7.5rem;
+				top:24.5rem;
+			}
+			.place_box10 .place_people_wrap{
+				left:4rem;
+				top:25rem;
+			}
+			.place_box10 .place_people_gift{
+				right: -1.5rem;
+			}
+			
+			/*11*/
+			.place_box11 .place_text_wrap{
+				left:1rem;
+				top: 23.5rem;
+			}
+			.place_box11 .place_text_round{
+				left: 5rem;
+				top:28rem;
+			}
+			.place_box11 .place_text_round2{
+				left: 6.5rem;
+				top:28.5rem;
+			}
+			.place_box11 .place_people_wrap{
+				left:4rem;
+				top:29rem;
+			}
+			.place_box11 .place_people_gift{
+				right: -1rem;
+			}
+			/*12*/
+			.place_box12 .place_text_wrap{
+				left: 4rem;
+				top: 24rem;
+			}
+			.place_box12 .place_text_round{
+				left:5rem;
+				top:28.5rem;
+			}
+			.place_box12 .place_text_round2{
+				left: 4.7rem;
+				top:29.5rem;
+			}
+			.place_box12 .place_people_wrap{
+				left:3rem;
+				top:30rem;
+			}
+			.place_box12 .place_people_gift{
+				right: -1rem;
+			}
+			/*13*/
+			.place_box13 .place_text_wrap{
+				left: 1rem;
+				top: 28rem;
+			}
+			.place_box13 .place_text_round{
+				left: 2rem;
+				top:32.5rem;
+			}
+			.place_box13 .place_text_round2{
+				left: 1rem;
+				top:33rem;
+			}
+			.place_box13 .place_people_wrap{
+				left:1rem;
+				top:33.5rem;
+			}
+			.place_box13 .place_people_gift{
+				right: -1rem;
+			}
+			/*14*/
+			.place_box14 .place_text_wrap{
+				left: .5rem;
+				top: 28rem;
+			}
+			.place_box14 .place_text_round{
+				left: 6rem;
+				top:32rem;
+			}
+			.place_box14 .place_text_round2{
+				left:7rem;
+				top:32.5rem;
+			}
+			.place_box14 .place_people_wrap{
+				left:5.5rem;
+				top:33.5rem;
+			}
+			.place_box14 .place_people_gift{
+				right: 3rem;
+			}
+			/*15*/
+			.place_box15 .place_text_wrap{
+				left:2rem;
+				top: 32rem;
+			}
+			.place_box15 .place_text_round{
+				left: 7.5rem;
+				top:35.5rem;
+			}
+			.place_box15 .place_text_round2{
+				left:8.5rem;
+				top:36rem;
+			}
+			.place_box15 .place_people_wrap{
+				left:7rem;
+				top:37rem;
+			}
+			.place_box15 .place_people_gift{
+				right: 3rem;
+			}
+			/*16*/
+			.place_box16 .place_text_wrap{
+				left: 3rem;
+				top: 31rem;
+			}
+			.place_box16 .place_text_round{
+				left: 1.5rem;
+				top:35rem;
+			}
+			.place_box16 .place_text_round2{
+				left:1rem;
+				top:36rem;
+			}
+			.place_box16 .place_people_wrap{
+				left:1.5rem;
+				top:36.8rem;
+			}
+			.place_box16 .place_people_gift{
+				right: -1rem;
+			}
+/*----------弹层------------*/
+.pop{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.7);
+	z-index: 11;
+	display: none;
+	font-family: "zk";
+}
+		/*------------活动规则------------*/
+		.rule_pop {
+			width: 95%;
+			margin: 0 auto;
+			height: 100%;
+			color: #fff;
+			display: none;
+			position: relative;		
+			font-family: "微软雅黑";	
+		}		
+				
+				/*选项卡标题部分*/
+				.tab_title{
+					width: 100%;
+					height: 1.866666rem;
+					border-bottom: 0.026666rem solid #b3b3b3;
+					position: relative;
+				}
+				/*活动规则关闭按钮*/
+				.rule_close{
+					width:0.826666rem;
+					height:0.826666rem;
+					position: absolute;
+					right:0.213333rem;
+					bottom:0.213333rem;
+					z-index: 20;
+				}
+				
+				.tab{
+					width: 100%;
+					height: auto;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+				}
+				.tab li{
+					width: 2.8rem;
+					height: 100%;
+					float: left;
+					text-align: center;
+					font-size: 0.4rem;
+					position: relative;
+					padding-top: .1rem;
+					padding-bottom: .4rem;
+				}
+				/*箭头指向*/
+				.tab .arrow{
+					width: 2.026666rem;
+					height: 0.333333rem;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					margin-left: -1.013333rem;
+					display: none;
+				}
+				.tab li:first-child .arrow{
+					display: block;
+				}
+				/*主体文字部分*/
+				.tab_main{
+					width: 100%;
+					height: auto;
+					clear: both;
+					max-height:90%;
+					overflow: scroll;
+				}
+				.tab_main li{
+					font-size: 0.373333rem;
+					letter-spacing: 0.013333rem;
+					display: none;
+				}
+				.tab_main li:first-child{
+					display: block;
+				}
+				.tab_main .tab_box{
+					margin-top: 0.466666rem;
+				}
+				.tab_main .tab_box:last-child{
+					padding-bottom: 0.6rem;
+				}
+				.tab_main .tab_box .tab_tip{
+					width: 1.933333rem;
+					height:0.746666rem ;
+					background: #ffffff;
+					color: #000;
+					text-align: center;
+					line-height: .746666rem;
+				}
+				.tab_main .tab_box p{
+					margin-top: 0.266666rem;
+					color: #fff;
+				}
+				/*中奖信息*/
+				.gift_message{
+					width: 90%;
+					height: auto;
+					margin:  0 auto;
+					color: #fff;
+					font-size:0.373333rem;
+					letter-spacing: 0.026666rem;
+					padding: 0.6rem 0;
+				}
+				.gift_message .le,.gift_message .ri{
+					width: 65%;
+					display: block;
+					float: left;
+					text-align: left;
+				}
+				.gift_message .ri{
+					width: 35%;
+				}
+				.gift_message div {
+					font-weight: bold;
+					overflow: hidden;
+				}
+				.gift_message p{
+					margin-top: 0.32rem;
+					overflow: hidden;
+				}
+		
+		/*------------复用样式------------*/
+		/*大窗口背景*/
+		.pop_big{
+			width:6.613333rem;
+			height:8.066666rem;
+			background: url(../img/pop_big.png) no-repeat;
+			padding: 0 .1rem;
+		}
+		/*小窗口背景*/
+		.pop_small{
+			width:6.586666rem;
+			height:6.24rem;
+			background: url(../img/pop_small.png) no-repeat;
+			padding: 0 .1rem;
+		}
+		/*窗口按钮*/
+		.pop_button{
+			width: 2.52rem;
+			height: 0.933333rem;
+			background: url(../img/pop_button.jpg) no-repeat;
+			background-size: 100% 100%;
+			text-align: center;
+			line-height: .93333rem;
+			font-size:0.426666rem ;
+			color: #444446;
+			margin: 0 auto;
+		}
+		.pop_big,.pop_small{
+			background-size: 100% 100%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			-webkit-transform: translate(-50%,-50%);
+			-moz-transform: translate(-50%,-50%);
+			-ms-transform: translate(-50%,-50%);
+		}
+		/*大小窗口关闭按钮*/
+		.game_close{
+			width:0.88rem ;
+			height:0.88rem ;
+			background: url(../img/game_close.png) no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			top: -1.306666rem;
+			right: -.88rem;
+		}
+		/*窗口文字提示*/
+		.tip{
+			font-size: 0.453333rem;
+			color: #444446;
+		}
+		.tip_orange{
+			color: #de4a0c;
+		}
+		/*人物表情*/
+		.people_expression{
+			width: 1.8rem;
+			height: 2.426666rem;
+			position: absolute;
+		}
+		/*------------复用样式-结束-----------*/
+		
+		
+		/*------------向导选择------------*/
+		.cosplay{
+			display: none;
+		}
+				/*牌子*/
+				.cosplay_title{
+					width: 2.52rem;
+					height:1.04rem ;
+					margin: 0 auto;
+					margin-top:0.293333rem ;
+				}
+				/*承仔小余*/
+				.cosplay_people{
+					width:5.466666rem ;
+					height:3.626666rem ;
+					margin: 0 auto;
+					clear: both;
+					margin-top: 0.36rem;
+				}
+				.cosplay_people .cosplay_wrap{
+					width: 2.373333rem;
+					height: 3.6rem;
+					position: relative;
+				}
+				.cosplay_wrap .cosplay_boy,.cosplay_wrap .cosplay_girl{
+					width: 100%;
+					height: 3rem;
+					background: url(../img/choose_bg.jpg) no-repeat;
+					background-size: 100% 100%;
+					overflow: hidden;
+				}
+				.cosplay_wrap .choose_ico{
+					width: 0.493rem;
+					height:0.626rem ;
+					position: absolute;
+					z-index: 10;
+					top: 0;
+					right: 0.2rem;
+				}
+				.cosplay_wrap p{
+					text-align: center;
+					padding-top: .2rem;
+					font-size: 0.346rem;
+				}
+				.cosplay_wrap .choose_click{
+					width:1.653rem;
+					height:2.266rem;
+					display: block;
+					margin: 0 auto;
+					margin-top: .2rem;
+				}
+				.cosplay_wrap .choose_click_move{
+					animation: downs .3s linear;
+					-webkit-animation: downs .3s linear;
+					-ms-animation: downs .3s linear;
+					-moz-animation: downs .3s linear;
+				}
+				@keyframes downs{
+					0%{
+						margin-top: .2rem;
+					}
+					50%{
+						margin-top: 0rem;
+					}
+					100%{
+						margin-top: .2rem;
+					}
+				}
+				@-webkit-keyframes downs{
+					0%{
+						margin-top: .2rem;
+					}
+					50%{
+						margin-top: 0rem;
+					}
+					100%{
+						margin-top: .2rem;
+					}
+				}
+				@-moz-keyframes downs{
+					0%{
+						margin-top: .2rem;
+					}
+					50%{
+						margin-top: 0rem;
+					}
+					100%{
+						margin-top: .2rem;
+					}
+				}
+				@-ms-keyframes downs{
+						0%{
+						margin-top: .2rem;
+					}
+					50%{
+						margin-top: 0rem;
+					}
+					100%{
+						margin-top: .2rem;
+					}
+				}
+				/*选择箭头*/
+				.cosplay_people .cosplay_choose{
+					width:0.546666rem ;
+					height:0.586666rem ;
+					position: absolute;
+					top: 2.533333rem;
+					left: 50%;
+					transform: translateX(-50%);
+					-webkit-transform: translateX(-50%);
+					-moz-transform: translate(-50%,-50%);
+					-ms-transform: translate(-50%,-50%);
+				}
+				.cosplay_girl .cosplay_choose{display: none;}
+				/*选择提示*/
+				.cosplay_tip{
+					width: 4.066666rem;
+					height: 0.293333rem;
+					clear: both;
+					margin: 0 auto;
+					margin-top: 0.266666rem;
+				}
+				/*开始游戏*/
+				.game_begin{
+					margin-top: 0.32rem;
+				}
+		/*------------空白格------------*/
+		.blank_place{
+			display: none;
+		}
+		
+			/*提示文字*/
+			.blank_place_tip{
+				text-align: center;
+				margin-top: 1.68rem;
+			}
+			/*人物表情*/
+			.blank_place_expression{
+				left:4.5rem ;
+				bottom: 0.306666rem;
+			}
+		/*------------开心一刻------------*/
+		.happy{
+			display: none;
+		}
+		
+			/*提示标题*/
+			.happy_tip{
+				text-align: center;
+				margin-top: 1.3rem;
+				font-size: .5rem;
+			}
+			/*提示文字*/
+			.happy_tip_text{
+				text-align: center;
+				margin-top: .5rem;
+			}
+			.happy_tip_text span{
+				display: none;
+			}
+			.happy_tip_text .happy1{
+				display: block;
+			}
+		/*------------点击分享------------*/
+		.share{
+			display: none;
+		}
+		
+			/*提示文字*/
+			.share_tip{
+				text-align: center;
+				margin-top: 1.4rem;
+			}
+			.share_tip .share_tip_samll{
+				font-size: .37rem;
+			}
+			/*分享按钮*/
+			.pop_share_button{
+				margin-top: .4rem;
+			}
+		/*------------分享成功------------*/
+		.share_success{
+			display: none;
+		}
+			/*提示文字*/
+			.share_success_tip{
+				text-align: center;
+				margin-top: 1.4rem;
+			}
+			/*人物表情*/
+			.share_success_expression{
+				left:4.5rem ;
+				bottom: 0.306666rem;
+			}	
+		/*------------分享失败------------*/
+		.share_fail{
+			display: none;
+		}
+		
+			/*提示文字*/
+			.share_fail_tip{
+				text-align: center;
+				margin-top: 1.68rem;
+			}
+			/*人物表情*/
+			.share_fail_expression{
+				left:4.5rem ;
+				bottom: 0.306666rem;
+			}	
+		/*------------遥控骰子------------*/
+		.remote_dice{
+			display: none;
+		}
+			/*提示文字*/
+			.remote_dice_tip{
+				text-align: center;
+				margin-top: 1.4rem;
+			}
+			.remote_dice_tip i{
+				font-style: normal;
+				font-size: 0.266666rem;
+				font-family: "微软雅黑";
+			}
+			/*骰子*/
+			.remote_dice_choose{
+				width: 5.133333rem;
+				height: 3.333333rem;
+				margin: 0 auto;
+			}				
+				.dice_choose{
+					width: 1.6rem;
+					height:1.653333rem;
+					background: url(../img/game_dice.png) no-repeat;
+					background-size: cover;
+					float: left;
+					margin-right: .1rem;
+					margin-top: .1rem;
+				}
+				.dice_choose1{
+					background-position:-0px -0px;
+				}
+				.dice_choose2{
+					background-position:-0px -2rem;
+				}
+				.dice_choose3{
+					background-position:-0px -3.9rem;
+				}
+				.dice_choose4{
+					background-position:-0px -5.9rem;
+				}
+				.dice_choose5{
+					background-position:-0px -7.9rem;
+				}
+				.dice_choose6{
+					background-position:-0px -9.85rem;
+				}
+				
+		/*------------前进一步------------*/
+		.go_dice{
+			display: none;
+		}
+			
+		/*------------后退一步------------*/
+		.back_dice{
+			display: none;
+		}	
+			/*共用提示文字*/
+			.go_dice_tip,.back_dice_tip{
+				text-align: center;
+				margin-top: 1.4rem;
+			}
+			/*共用图片*/
+			.go_dice_picture,.back_dice_picture{
+				width:2.533333rem ;
+				height:2.506666rem ;
+				margin: 0 auto;
+				margin-top: .5rem;
+			}
+			/*共用人物表情*/
+			.go_dice_expression,.back_dice_expression{
+				left:4.5rem ;
+				bottom: 0.5rem;
+			}	
+			
+		/*------------打开礼盒------------*/
+		.open_gift{
+			display: none;
+		}	
+			
+			/*提示文字*/
+			.open_gift_tip{
+				text-align: center;
+				margin-top: 1rem;
+			}
+			.open_gift_title img{
+				width:3.88rem ;
+				height:0.506666rem;
+			}
+			/*礼盒图片*/
+			.open_gift_picture{
+				width: 2.226666rem;
+				height:2.28rem ;
+				position: relative;
+				margin-top: .4rem;
+				margin-left: 2rem;
+			}
+			/*星星*/
+			.open_gift_picture .start{
+				position: absolute;
+				animation: startScale 1s ease infinite alternate;
+				-webkit-animation: startScale 1s ease infinite alternate;
+				-moz-animation: startScale 1s ease infinite alternate;
+				-ms-animation: startScale 1s ease infinite alternate;
+				-o-animation: startScale 1s ease infinite alternate;
+			}
+				.open_gift_picture .start1{
+					width: 0.36rem;
+					height: 0.36rem;
+					left: -0.72rem;
+					top: 0.56rem;
+					animation-delay: .2s;
+					-webkit-animation-delay: .2s;
+					-moz-animation-delay: .2s;
+					-ms-animation-delay: .2s;
+					-o-animation-delay: .2s;
+					
+					
+				}
+				.open_gift_picture .start2{
+					width: 0.24rem;
+					height: 0.24rem;
+					top: 0.853333rem;
+					left: -0.133333rem;
+					animation-delay: .2s;
+					-webkit-animation-delay: .2s;
+					-moz-animation-delay: .2s;
+					-ms-animation-delay: .2s;
+					-o-animation-delay: .2s;
+					
+				}
+				.open_gift_picture .start3{
+					width: 0.346666rem;;
+					height: 0.346666rem;
+					right: -0.4rem;
+					top: 0.333333rem;
+					
+				}
+				.open_gift_picture .start4{
+					width: 0.36rem;
+					height:0.333333rem;
+					right: -0.8rem;
+					top: -0.186666rem;
+					
+				}	
+				
+				@keyframes startScale{
+					from{transform: scale(.1);}
+					to{transform: scale(1.1);}
+				}
+				@-webkit-keyframes startScale{
+					from{-webkit-transform: scale(.1)}
+					to{-webkit-transform: scale(1.1);}
+				}
+				@-moz-keyframes startScale{
+					from{-moz-transform: scale(.1)}
+					to{-moz-transform: scale(1.1);}
+				}
+				@-ms-keyframes startScale{
+					from{-ms-transform: scale(.1)}
+					to{-ms-transform: scale(1.1);}
+				}
+				@-o-keyframes startScale{
+					from{-o-transform: scale(.1)}
+					to{-o-transform: scale(1.1);}
+				}
+			/*人物表情*/
+			.open_gift_expression{
+				left:4.526666rem ;
+				bottom: 0.5rem;
+				transform: rotateZ(8deg);
+				-webkit-transform: rotateZ(8deg);
+				-moz-transform: rotateZ(8deg);
+				-ms-transform: rotateZ(8deg);
+				-o-transform: rotateZ(8deg);
+			}			
+			
+		/*------------获得奖品	-----------*/
+		.get_gift{
+			display: none;
+		}	
+			
+			/*提示文字*/
+			.get_gift_tip{
+				text-align: center;
+				margin-top: 1rem;
+				font-size: 0.373333rem;
+			}
+			.get_gift_tip h3{
+				font-weight: normal;
+				font-size: 0.453333rem;
+			}
+			/*奖品图片*/
+			.get_gift_picture{
+				width: auto;
+				height:auto;
+				overflow: hidden;
+				margin: 0 auto;
+				margin-top: .2rem;
+				text-align: center;
+			}	
+			.get_gift_picture img{
+				display: none;
+				margin: 0 auto;
+			}
+			/*话费5元 京东500 京东1000 天猫10 天猫100*/
+			#fare{
+				width: 4.413333rem;
+				height: 2.293333rem;
+				display: block;
+			}	
+			#jd500,#jd1000{
+				width: 3.413333rem;
+				height: 2.16rem;
+			}
+			#tm10,#tm100{
+				width: 3.28rem;
+				height: 2.16rem;
+			}	
+			/*立即领取*/		
+			#now_get{
+				width:2rem ;
+				height: 0.533333rem;
+				margin: 0 auto;
+				margin-top: 0.533333rem;
+			}
+			/*人物表情*/
+			.get_gift_expression{
+				right:0.1rem;
+				bottom: 0.4rem;
+			}		
+		/*------------输入手机号码-----------*/
+		.phone_pop{
+			display: none;
+			padding-bottom: .4rem;
+		}	
+			
+			/*提示文字*/
+			.phone_pop_tip{
+				text-align: center;
+				margin-top: 1.506666rem;
+			}
+			/*提示文字2*/
+			.phone_pop_tip2{
+				text-align: center;
+				font-size: 0.266666rem;
+			}
+			.phone_pop_tip2 p{
+				width: 85%;
+				margin: 0 auto;
+			}
+			/*输入框*/
+			#phone_input{
+				width: 3.84rem;
+				height: 0.853333rem;
+				background: url(../img/phone_bg.jpg) no-repeat;
+				background-size: 100% 100%;
+				margin: 0.4rem auto;
+				text-align: center;
+				font-size: 0.373333rem;
+				color: #444446;
+			}
+			/*奖品图片*/
+			.get_gift_picture{
+				width: auto;
+				height:auto;
+				overflow: hidden;
+				margin: 0 auto;
+				margin-top: .2rem;
+				text-align: center;
+			}	
+			.get_gift_picture img{
+				display: none;
+				margin: 0 auto;
+			}
+		
+			/*点击确认*/		
+			#now_sure{
+				width:2rem ;
+				height: 0.533333rem;
+				margin: 0 auto;
+				margin-top: 0.533333rem;
+			}
+			/*人物表情*/
+			.phone_pop_expression{
+				right:0rem;
+				bottom: 0.2rem;
+			}
+
+/*摇骰子提示*/										
+.dice_tip{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.7);
+	z-index: 9;
+	/*display: none;*/
+}
+.dice_tip .dice_tip_text{
+	width: 6.133333rem;
+	height: 0.666666rem;
+	position: absolute;
+	right: 0.933333rem;
+	bottom:5.5rem;
+	color: #fff;
+}
+.know{
+	width:1.973333rem;
+	height:0.76rem;
+	position: absolute;
+	right: 1rem;
+	bottom:4.3rem;
+	/*animation: arrow .7s linear infinite alternate;*/
+}
+@keyframes arrow{
+	from{
+		transform: translateY(-0.2rem);
+	}
+	to{
+		transform: translateY(0.2rem);
+	}
+}
+@keyframes arrow{
+	from{
+		transform: translateY(-0.2rem);
+	}
+	to{
+		transform: translateY(0.2rem);
+	}
+}
+@-webkit-keyframes arrow{
+	
+	from{
+		-webkit-transform: translateY(-0.2rem);
+	}
+	to{
+		-webkit-transform: translateY(0.2rem);
+	}
+}
+@-moz-keyframes arrow{
+	
+	from{
+		-moz-transform: translateY(-0.2rem);
+	}
+	to{
+		-moz-transform: translateY(0.2rem);
+	}
+}
+@-ms-keyframes arrow{
+	
+	from{
+		-ms-transform: translateY(-0.2rem);
+	}
+	to{
+		-ms-transform: translateY(0.2rem);
+	}
+}

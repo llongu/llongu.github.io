@@ -1,0 +1,118 @@
+.New_Products,.September,.new,.newcompany{width: 100%;background: #fff;}
+
+.banner{height: 25.6rem;}/*背景banner*/
+
+.New_Products{height: 26.65rem;}/*新品推荐*/
+
+.September{height: 36.7rem;background: #f4f4f5;overflow: hidden;}/*9月中秋*/
+
+.new{height: 49.65rem;}/*新闻企业区域*/
+
+.newcompany{height: 16rem;background: #f4f4f5;overflow: hidden;}/*新入住厂家*/
+
+
+
+/*banner区域*/
+
+/*商品分类菜单*/
+
+
+/*图标*/
+
+.banner ul li:first-child  .menu_list i{background: url(../images/index_icon.png) no-repeat -20px -1px;}
+
+/*商品分类弹窗*/
+.goods_main{display:block;}
+
+
+
+
+/**/
+.warp .title{float: left; margin: 2.3rem 0  1.9rem 2.25rem;}
+.warp .title h3{font-size:0.8rem;color: #2d313d;float: left;}
+.warp .title h3 span{color: #fb565c;margin: 0 1rem 0 0.25rem ;}
+.warp .title h3 img{float:right;margin-top: 0.4rem;}
+
+.warp  .more{background: #2d313d;text-align:center;line-height: 9.5rem;width: 9.5rem;height: 9.5rem;}
+.warp .more a{color: #fff;font-size: 18px;display: inline;}
+.warp .more2{background: #fb565c;line-height: 12rem;}
+/*新品推荐*/
+
+.New_Products_picture{width: 100%;height: 21.35rem;}
+.New_Products_picture li{width: 9.5rem;height: 9.5rem;float: left;overflow: hidden;margin-right: 0.6rem;margin-bottom: 1.2rem;}
+.New_Products_picture li img{width: 100%;}
+.New_Products_picture li:nth-child(6n){margin-right: 0;}
+
+
+/*9月中秋*/
+.September_picture{width: 100%;height: 31.5rem;}
+.September_top{width: 100%;height: 19.75rem;margin-bottom: .7rem;}
+.September_top div{float: left;height: 100%;}
+
+
+.September_click{width: 29.7rem;position: relative;overflow: hidden;}
+.September_top_center{width:19.55rem ;margin: 0 .6rem;}
+.September_top_right{width: 190px;}
+.September_top_right li{margin-bottom: 0.7rem;}
+/*中秋专场*/
+.September_click_show{width: 100%;height: 100%;position: absolute;left: 0;top: 82%;background: rgba(221,86,97,.85);text-align: center;font-size: .7rem;color: #fff;line-height: 24px;}
+.September_click_show span{display: inline-block;transform: rotate(-90deg);font-size: 15px;margin-top: 0.25rem;}
+.September_click_show h4{font-size: 1.1rem;margin: .5rem 0 2.7rem 0;}
+.September_click_show .show_go{width:10.2rem ;height:1.75rem;background: #fff;text-align: center;margin: 0 auto;float: none;line-height: 1.75rem;margin-top: 2.4rem;}
+.September_click_show .show_go a{font-size: .7rem;color: #2d313d;}
+
+.September_bottom{height: 9.5rem;width: 100%;}
+.September_bottom li{float: left;margin-right: 0.6rem;width: 9.5rem;height:9.5rem}
+.September_bottom a,.September_bottom img{width: 100%;height: 100%;}
+.September_bottom  .September_bottom_first{width: 19.6rem;}
+.September_bottom li:last-child{margin: 0;}
+
+
+
+/*新闻&文化*/
+.new_picture{height:22.85rem ;width: 100%;}
+.new_picture li{float: left;margin-right: 0.6rem;margin-bottom: 0.55rem;}
+
+/*文章标题*/
+.new_text,.new_text2{background: #2d313d;position: relative;}
+
+/*文章标题1*/
+.new .new_picture .new_text{width:8.15rem;height: 8.5rem; padding-left: 0.5rem;padding-right: 0.85rem;padding-top: 1rem;}
+.new .new_picture .new_text img{position: absolute;right:-17px;top:50%;transform: translateY(-50%) rotate(90deg);}
+/*文章标题公共样式*/
+.new_picture span{font-size:0.5rem ;color: #a5a6aa;float: left;}
+.new_picture .new_text_title{color: #fb565c;font-size: 14px;margin: .7rem 0 .7rem 0;line-height: 1.2rem;}
+.new_picture p{color: #898b8f;font-size: .6rem;line-height: 1rem;}
+.new_picture a{float: left;clear: both;}
+.new .new_picture .more a{float: none;}
+.new_picture .new_go{float: right;font-size: .6rem;margin-top: .5rem;color: #a5a6aa;}/*详细*/
+
+.new_picture li:nth-child(4){margin-right:0;}
+.new_picture li:last-child{margin-right:0;}
+/*文章标题2*/
+.new_text2{width: 16.85rem;height: 11.25rem;padding: 1rem 1.6rem 0 1.15rem;}
+.new_text2 img{position: absolute;top: -0.55rem;left: 50%;transform: translateX(-50%);}
+.new_picture  .new_text2 .new_text_title{margin:0.5rem 0 ;}
+/*文章标题3*/
+.new_text3 img{position: absolute;left: -17px;top: 50%;transform: translateY(-50%) rotate(-90deg);}
+
+
+/*企业&厂商*/
+.new_factory{width: 100%;height: 12.5rem;clear: both;}
+.new_factory li{width: 6.55rem;height: 5rem; float: left;text-align: center;margin-left: 0.8rem;margin-bottom: 1rem;}
+.new_factory li a{font-size: 0.5rem;color: #898884;}
+
+.warp .black_more a{float: right;font-size: .7rem;color: #2d313d;margin-right: 2.8rem;font-weight: bold;margin-top: 2.5rem;}
+
+/*新入住厂家*/
+.newcompany_list .title{margin-bottom:2.5rem;margin-top: 2.5rem;}
+.newcompany_list{width: 100%;height: 8.15rem;}
+.newcompany_list li{float: left;width: 18.6rem;height:6.8rem;padding-left: 1rem;padding-top: 1.4rem;background: #fff;margin-right: .6rem;}
+.newcompany_list .li2{background: #fb565c;}
+.newcompany_list .li2  .text span,.newcompany_list .li2  .text a{color: #fff;}
+.newcompany_list .li3{background: #fff;margin: 0;}
+
+.newcompany_list .text{width: 16.75rem;height: .7rem;line-height: .7rem;margin-bottom: .6rem;}
+.newcompany_list .text span{color: #fb565c;float: left;margin-right:.5rem;}
+.newcompany_list .text a{font-size: .7rem;color: #2d313d;float: left;}
+.newcompany_list .text p{font-size:0.6rem ;color: #b8b8bb;float: right;}

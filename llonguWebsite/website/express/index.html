@@ -1,0 +1,487 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">		
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="js/flexible.js" ></script>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/index.css"/>
+	</head>
+	<body>
+		<div id="loadingText">资源加载中</div>
+		
+		<!--首页-->
+		<div class="wrap index_wrap">
+			<!--活动规则-->
+			<div class="rule_button"><img src="img/rule_button.png" alt="" /></div>
+
+			<!--箭头-->
+			<!--<div class="arrow_box">
+				<div class="arrow1"><img src="img/arrow1.png" alt="" /></div>
+				<div class="arrow2"><img src="img/arrow2.png" alt="" /></div>
+			</div>
+			<!--开始游戏-->
+			<div class="begin_game"><img src="img/begin.png" alt="" /></div>
+		</div>
+		
+		<!--游戏页-->
+		<div class="wrap game_wrap">
+			<!--分数-->
+			<div id="times">时间：<span id="ss">30</span><span>.</span><span id="ms">0</span></div>
+			<!--头像-->
+			<div class="people_main">
+				<!--圆-->
+				<div class="people_main_round_wrap">
+					<div class="people_main_round"><img src="img/hand.png" alt="" /></div>
+				</div>
+				<p>战斗分数</p>
+				<div id="score"><span>0</span>分&#8593;</div>
+			</div>
+			<!--倒计时动画-->
+			<div class="Countdown_wrap">
+				<div class="Countdown3"><img src="img/time3.png" alt="" /></div>
+				<div class="Countdown2"><img src="img/time2.png" alt="" /></div>
+				<div class="Countdown1"><img src="img/time1.png" alt="" /></div>
+			</div>
+		
+			<!--游戏主体-->
+			<div id="game_main">
+				
+			</div>
+		</div>
+
+		<!--弹窗-->
+		<div class="pop">
+					<!--活动规则-->
+					<div class="rule_pop ">
+						<!--选项卡-->
+						<div class="tab_title">
+							<!--关闭按钮-->
+							<div class="close"><img src="img/rule_close.png" alt="" /></div>
+							<ul class="tab">
+								<li>
+									<div>活动说明 <span class="ri">|</span></div>
+									<img src="img/arrow.png" alt=""  class="arrow"/>
+								</li>
+								<li>
+									<div>排行榜</div>
+									<img src="img/arrow.png" alt=""  class="arrow"/>
+								</li>
+								<li>
+									<div>我的奖品 </div>
+									<img src="img/arrow.png" alt="" class="arrow">
+								</li>
+							</ul>
+						</div>
+						<!--选项卡主体文字-->
+						<ul class="tab_main">
+								<li>
+									<div class="tab_box">
+										<div class="tab_tip">活动时间</div>
+										<p>2017年11月7日至2017年11月11日</p>
+									</div>
+									<div class="tab_box">
+										<div class="tab_tip">活动用户</div>
+										<p>重庆人保财险微信公众号粉丝</p>
+									</div>
+									<div class="tab_box">
+										<div class="tab_tip">活动奖品</div>
+										<p>Ipad、扫地机器人、车载电源转换器、蓝牙耳机、炭包狗（一对）、200元加油卡、100元加油卡、50元话费、20元话费、10元话费</p>
+									</div>
+									<div class="tab_box">
+										<div class="tab_tip">活动规则</div>
+										<p>1、活动期间，重庆人保财险微信公众号粉丝进入“精彩活动-双十一，疯狂拆快递”活动页面/点击图文内的链接参与游戏。</p>
+										<p>2、参与方式：用户进入游戏页面，在30秒的时间内通过拆快递获得分数，大包裹、大物件加20分，小包裹、小物件加10分，点到炸弹扣5分。当游戏 <span class="orange">成绩达到600分即可参与抽奖，抽奖次数每人每日3次</span>，（同一微信号、同一手机号、同一设备号符合其中任一条件者视为同一用户）注：11月1日至活动结束前，<span class="orange">通过微信公众号进行“保费支付”的用户将额外获得1次抽奖机会。</span></p>
+										<p>3、领奖方式：话费将在中奖后直接为用户充值到账，请以到账通知短信为准；实物奖品将在活动结束后集中发放，中奖用户需在<span class="orange">3日之内</span>准确填写个人信息，填写信息需与会员信息一致，如因信息填写错误，导致奖品无法发放，视为用户主动放弃，如还未注册会员，请用户至“我”-“个人中心”注册会员。</p>
+									</div>
+									<div class="tab_box">
+										<div class="tab_tip">活动注意</div>
+										<p>如发现刷分数、开外挂等作弊行为，将取消中奖资格，<br/>本活动最终解释权归重庆人保财险所有。</p>
+
+									</div>
+								</li>
+							
+								<li>
+									<!--排行榜-->
+									<div class="gift_list">
+										<p>当前排名：（只显示前100名）</p>
+										<!--排行-->
+										<div class="gift_list_main">
+											<!--标题-->
+											<div class="gift_list_title">
+												<div>排行</div>
+												<div>头像</div>
+												<div>昵称</div>
+												<div>成绩</div>
+											</div>
+											
+											
+											<!--盒子1-->
+											<div class="gift_list_box">
+												<div>
+													<div class="gift_list_num">No.1</div>
+												</div>
+												<div>
+													<div class="gift_list_round"><img src="img/hand.png" alt="" /></div>
+												</div>
+												<div>
+													<div class="gift_list_name">蜡笔没有小新</div>
+												</div>
+												<div>
+													<div class="gift_list_score">222048分</div>
+												</div>
+											</div>
+											<!--盒子2-->
+											<div class="gift_list_box">
+												<div>
+													<div class="gift_list_num">No.1</div>
+												</div>
+												<div>
+													<div class="gift_list_round"><img src="img/hand.png" alt="" /></div>
+												</div>
+												<div>
+													<div class="gift_list_name">蜡笔没有小新</div>
+												</div>
+												<div>
+													<div class="gift_list_score">222048分</div>
+												</div>
+											</div>
+											<!--盒子3-->
+											<div class="gift_list_box">
+												<div>
+													<div class="gift_list_num">No.1</div>
+												</div>
+												<div>
+													<div class="gift_list_round"><img src="img/hand.png" alt="" /></div>
+												</div>
+												<div>
+													<div class="gift_list_name">蜡笔没有小新</div>
+												</div>
+												<div>
+													<div class="gift_list_score">222048分</div>
+												</div>
+											</div>
+											
+											
+										</div>
+									</div>
+								</li>
+							
+								<li>
+									<!--中奖信息-->
+									<div class="gift_message">
+										<div><span class="le">奖品名称</span><span class="ri">中奖时间</span><span class="le">信息查看</span></div>
+										<p>
+											<span class="le" >1000元超市券</span>
+											<span class="ri" >2017-12-31</span>
+											<span class="tab_tip"  >查看奖品</span>
+										</p>
+										
+									</div>
+								</li>
+						</ul>
+					</div>
+					
+					<!--游戏结束抽奖页面-->
+					<div class="game_over_pop game_over_pop2">
+						<!--头像-->
+						<div class="people_main_round_wrap">
+							<div class="people_main_round"><img src="img/hand.png" alt="" /></div>
+						</div>
+						<!--文字部分-->
+						<div class="game_over_pop_text">
+							<p class="now_score_num">您的成绩为：<span>900</span>分</p>
+							<p class="best_score_num">最佳成绩为：<span>1405</span>分</p>
+							<p class="ranking_num">最佳排名为：NO.<span>158</span></p>
+							<p class="chance_num">今天还有<span>0</span>次机会抽奖</p>
+						</div>
+						<!--抽奖-->
+						<div class="game_over_pop_button">
+							<div  id="now_button">立即抽奖</div>
+							<div id="ranking_button" class="le">排行榜</div>
+							<div id="gain_button" class="ri">再玩一次</div>
+						</div>
+						<!--文字底部-->
+						<div class="game_over_pop_text game_over_pop_text_bottom">
+							<p>分享至朋友圈可额外增加一次抽奖机会</p>
+							<p>通过微信号进行"保费支付"的用户额外获得1次抽奖机会。</p>
+						</div>
+						
+					</div>
+					
+					<!--游戏结束未到600分页面-->
+					<div class="game_over_pop game_no_score_pop">
+						<!--头像-->
+						<div class="people_main_round_wrap">
+							<div class="people_main_round"><img src="img/hand.png" alt="" /></div>
+						</div>
+						<!--文字部分-->
+						<div class="game_over_pop_text">
+							<p class="now_score_num">您的成绩为：<span>900</span>分</p>
+							<p class="best_score_num">最佳成绩为：<span>1405</span>分</p>
+							<p class="no_score_num">很遗憾！<br>您没有达到600分哦~<br>继续加油吧~</p>
+						</div>
+						<!--抽奖-->
+						<div class="game_over_pop_button">
+							<div  id="gain_button2">再玩一次</div>
+						</div>
+						
+					</div>
+						
+					<!--摇一摇抽奖页面-->
+					<div class="shake_pop">
+						<!--抽奖箱子-->
+						<div class="shake_pop_box">
+							<img src="img/gift_bg.png" alt="" />
+						</div>
+						<p>摇一摇，抽取奖品~</p>
+					</div>
+					
+					<!--很遗憾未中奖页面-->
+					<div class="no_gift_pop big_pop">
+						<!--箱子-->
+						<div class="gift_box"><img src="img/pop_box.png"/></div>
+						<!--关闭-->
+						<div class="close2"><img src="img/close.png" alt="" /></div>
+						<!--标题-->
+						<div class="no_gift_pop_title">
+							<!--还有机会-->
+							<div class="have_chance">
+									<!--眼泪-->
+									<div class="eye"><img src="img/eye.png" alt="" /></div>
+									<h3>很遗憾！</h3>
+									<p>您没有中奖哦~</p>
+									<p>今日还有<span id="chance_num">3</span>次抽奖机会！</p> 
+									<p>继续加油吧~</p>
+							</div>
+							<!--已用完-->
+							<div class="no_chance">
+									<!--眼泪-->
+									<div class="eye"><img src="img/eye.png" alt="" /></div>
+									<h3>很遗憾！</h3>
+									<p>您的运气用完了吗？</p> 
+									<p>明日再来吧，等你哟~</p>
+							</div>
+						</div>
+						<!--手掌-->
+						<div class="hand"><img src="img/hand.png" alt="" /></div>
+					</div>
+					
+					<!--很遗憾未未中奖其他情况页面-->
+					<div class="no_gift_other_pop big_pop">
+						<!--箱子-->
+						<div class="gift_box"><img src="img/pop_box.png"/></div>
+						<!--关闭-->
+						<div class="close2"><img src="img/close.png" alt="" /></div>
+						<!--标题-->
+						<div class="no_gift_pop_title">
+							<!--其他情况-->
+							<div class="other_msg">
+									<!--眼泪-->
+									<div class="eye"><img src="img/eye.png" alt="" /></div>
+									<h3>很遗憾！</h3>
+									<p>您的运气用完了吗？您的运气用完了吗您的运气用完了吗</p> 
+									
+							</div>
+						</div>
+						<!--手掌-->
+						<div class="hand"><img src="img/hand.png" alt="" /></div>
+					</div>
+					
+					<!--获得奖品页面-->
+					<div class="get_gift_pop big_pop">
+						<!--箱子-->
+						<div class="gift_box"><img src="img/pop_box.png"/></div>
+						<!--标题-->
+						<div class="get_gift_pop_title">
+							<!--手掌-->
+							<div class="hands2"><img src="img/hand2.png" alt="" /></div>
+							<h3>恭喜你</h3>
+							<p>获得：<span id="gift_title">扫地机器人啊啊啊</span></p>
+						</div>
+						<!--商品图片-->
+						<div id="gift_picture">
+							<img src="img/gift1.jpg" alt="" />
+						</div>
+						<!--立即领奖-->
+						<div id="now_get_gift" class="form_button">立即领奖</div>
+					</div>
+					
+					<!--奖品填写页面-->
+					<div class="gift_form_pop big_pop">
+						<!--箱子-->
+						<div class="gift_box"><img src="img/pop_box.png"/></div>
+						<!--表单-->
+						<form action="" class="form">
+								<div class="form_box name_box">
+									<label for="name">姓名:</label>
+									<input type="text" id="name" maxlength="10"/>
+								</div>
+								<div class="form_box phone_box">
+									<label for="phone">手机号:</label>
+									<input type="tel" id="phone" maxlength="11"/>
+ 								</div>
+ 								<div class="form_box addres_box">
+									<label for="addres">地址:</label>
+									<input type="text" id="addres"/>
+ 								</div>
+						</form>
+						<!--表单文字-->
+						<div class="form_text">
+							以上填写内容需与会员中心信息一致，如填写错误，将影响奖品发放。
+							<a href="">请前往会员中心注册</a>
+						</div>
+						<!--提交按钮-->
+						<div class="form_button" id="submit">提交</div>
+						<!--提示信息-->
+						<div class="erro_mesg"></div>
+					</div> 
+					
+					<!--奖品填写页面 手机号码-->
+					<div class="gift_form_pop2 big_pop">
+						<!--箱子-->
+						<div class="gift_box"><img src="img/pop_box.png"/></div>
+						<!--表单-->
+						<form action="" class="form">
+								<div class="form_box phone_box">
+									<label for="phone">手机号:</label>
+									<input type="tel" id="phone" maxlength="11"/>
+ 								</div>
+						</form>
+						<!--表单文字-->
+						<div class="form_text">
+							以上填写内容需与会员中心信息一致，如填写错误，将影响奖品发放。
+							<a href="">请前往会员中心注册</a>
+						</div>
+						<!--提交按钮-->
+						<div class="form_button" id="submit2">提交</div>
+						<!--提示信息-->
+						<div class="erro_mesg"></div>
+					</div> 
+					
+					<!--成功填写信息-->
+					<div class="form_success_pop  form_success_pop1 small_pop">
+						<!--箱子-->
+						<div class="gift_box"><img src="img/pop_box.png"/></div>
+						<!--关闭按钮-->
+						<div class="close2"><img src="img/close.png" alt="" /></div>
+						<p class="form_success_pop_title">您已成功填写信息！</p>
+						
+						<!--表单-->
+						<form action="" class="form">
+								<div> <p class="wirte_name">姓名：<span>蜡笔没有小新</span></p></div>
+								<div> <p class="wirte_phone">手机号码：<span>15215012345</span></p></div>
+								<div> <p class="wirte_address">地址：<span>重庆市沙坪坝区xx路</span></p></div>
+						</form>
+					</div>
+		
+					<!--成功填写信息 手机号码-->
+					<div class="form_success_pop form_success_pop2  small_pop">
+						<!--箱子-->
+						<div class="gift_box"><img src="img/pop_box.png"/></div>
+						<!--关闭按钮-->
+						<div class="close2"><img src="img/close.png" alt="" /></div>
+						<p class="form_success_pop_title">您已成功填写信息！</p>
+						
+						<!--表单-->
+						<form action="" class="form">
+								<div> <p class="wirte_phone">手机号码：<span>15215012345</span></p></div>
+						</form>
+					</div>
+		
+					<!--请关注二维码页面-->
+					<div class="code_pop big_pop">
+						<!--箱子-->
+						<div class="gift_box"><img src="img/pop_box.png"/></div>
+						<!--标题-->
+						<div class="get_gift_pop_title">
+							<p>抱歉！此活动只有“重庆人保财险”公众号的粉丝才能参加哦。</p>
+						</div>
+					</div>
+					
+					<!--分享成功-->
+					<div class="share_success_pop small_pop">
+						<!--箱子-->
+						<div class="gift_box"><img src="img/pop_box.png"/></div>
+						<!--关闭-->
+						<div class="close2"><img src="img/close.png" alt="" /></div>
+						<!--标题-->
+						<div class="get_gift_pop_title">
+							<p>分享成功！</p>
+						</div>
+					</div>
+		
+		</div>
+		
+		<audio src="audio/nosound.mp3" id="timeM"  preload="auto"></audio>
+		<audio src="audio/nosound.mp3" id="clickM" preload="auto"></audio>
+		<audio src="audio/nosound.mp3" id="boomM"  preload="auto"></audio>
+		<audio src="audio/nosound.mp3" id="yiyM"  preload="auto"></audio>
+		<audio src="audio/nosound.mp3" id="bgM"  preload="auto" loop="loop"></audio>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/index.js" ></script>
+	<script type="text/javascript" src="js/form.js" ></script>
+	<script type="text/javascript">
+		var timeM=document.getElementById("timeM");
+		var clickM=document.getElementById("clickM");
+		var boomM=document.getElementById("boomM");
+		var yiyM=document.getElementById("yiyM");
+		var bgM=document.getElementById("bgM");
+
+		function musicPlay(k) {
+		  switch (k){
+		  	case "time":
+		  		timeM.play();
+		  		break;
+		  	case "click":
+		  		clickM.play();
+		  		break;		
+		  	case "boom":
+		  		boomM.play();
+		  		break;
+		  	case "yiy":
+		  		yiyM.play();
+		  		break;
+		  	case "bg":
+		  		//倒计时结束
+		  		bgM.play();
+		  		break;
+		    case "bgpause":
+		    	//游戏结束
+		  		bgM.pause();
+		  		bgM.src="audio/bg.mp3";
+		  		break;
+		    case "init":
+		  		timeM.play();
+		        clickM.play();
+		        boomM.play();
+		        yiyM.play();
+		        bgM.play();
+		        timeM.src="audio/time.mp3";
+		        clickM.src="audio/click.mp3";
+		        boomM.src="audio/boom.mp3";
+		        yiyM.src="audio/yiy.mp3";
+		        bgM.src="audio/bg.mp3";
+		  		break;
+		  }
+		}
+    
+	    $("body").on("click",function(){
+	         musicPlay("init")
+	         $("body").off("click")
+	    })
+		
+		var game=new game({
+			"Data":"Source.json"
+		});
+
+	</script>
+
+</html>
+

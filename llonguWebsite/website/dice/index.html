@@ -1,0 +1,340 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">		
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	 <meta name="format-detection" content="telephone=no" />
+	 <meta name="format-detection" content="telephone=no" />
+	 <meta name="x5-orientation" content="portrait">
+     <meta name="full-screen" content="yes">
+     <meta name="apple-mobile-web-app-capable" content="yes" />
+     <meta name="screen-orientation" content="portrait">
+    <meta name="browsermode" content="application">
+	 <script type="text/javascript" src="js/flexible.js" ></script>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+	</head>
+	<body>
+		
+		<div id="loadingMain">
+			<div id="loadingInner">
+				<div id="loadingLine"><img src="img/loading_line.png" alt="" /></div>
+				<div id="loadingText">Loading...0%</div>
+			</div>
+			
+		</div>
+		<div class="wrap">
+			<!--活动规则-->
+			<div class="rule_button"><img src="img/rule_button.png" alt="" /></div>
+			<!--标题-->
+			<div class="title_warp">
+				<div class="title_boy"><img src="img/boy.png" alt=""  /></div>
+				<div class="title_gift"><img src="img/girl.png" alt="" /></div>
+				<div class="title_text "><img src="img/title.png" alt="" /></div>
+			</div>
+			<!--骰子-->
+			<div class="index_dice index_dice1"></div>
+		
+			<!--底盘-->
+			<div class="disc"><img src="img/disc.jpg" alt="" /></div>
+			
+			<!--进入游戏-->
+			<div class="game_begin"><a href="game.html"><img src="img/game_begin.jpg" alt="" /></a></div>
+			<!--树子-->
+			<div class="tree"><img src="img/tree.jpg" alt="" /></div>
+			<!--花-->
+			<div class="flower"><img src="img/flower.jpg" alt="" /></div>
+			
+			<!--滚动信息-->
+			<div id="scorll_wrap">
+					<div id="scorll_main">
+						<ul id="dom1">
+							<li>
+								<i>恭喜“152****1234”用户抽中：1元话费！</i>
+								<i>恭喜“152****1234”用户抽中：2元话费！</i>
+								<i>恭喜“152****1234”用户抽中：3元话费！</i>
+							</li>
+						</ul>
+						<ul id="dom2">
+							<li></li>
+						</ul>
+					</div>
+			</div>
+			
+			<!--弹窗-->
+			<div class="pop">
+					<!--活动规则-->
+					<div class="rule_pop">
+						<!--选项卡-->
+						<div class="tab_title">
+							<!--关闭按钮-->
+							<div class="close"><img src="img/rule_close.png" alt="" /></div>
+							<ul class="tab">
+								<li>
+									<div>活动说明 <span class="ri">|</span></div>
+									<img src="img/arrow.png" alt=""  class="arrow"/>
+								</li>
+								<li>
+									<div>我的奖品 </div>
+									<img src="img/arrow.png" alt=""  class="arrow"/>
+								</li>
+							</ul>
+						</div>
+						<!--选项卡主体文字-->
+						<ul class="tab_main">
+								<li>
+									<div class="tab_box">
+										<div class="tab_tip">活动时间</div>
+										<p>2017年11月1日 - 2017年12月31日</p>
+									</div>
+									<div class="tab_box">
+										<div class="tab_tip">活动用户</div>
+										<p>下载注册手机银行且绑定了银行卡的用户</p>
+									</div>
+									<div class="tab_box">
+										<div class="tab_tip">活动奖品</div>
+										<p>一等奖：1000元京东E卡
+										<p>二等奖：500元京东E卡</p>
+										<p>三等奖：100元天猫超市券</p>
+										<p>参与奖：10元天猫超市券、5元话费</p>
+									</div>
+									<div class="tab_box">
+										<div class="tab_tip">活动规则</div>
+										<p>1.用户可选择“承仔”或“小余”来进行游戏；
+										<p>2.用户根据投掷的骰子点数按照规定的地图前进；</p>
+										<p>3.用户到达对应格子后会获得一个礼包，打开礼包将随机获得道具或奖品等信息；</p>
+										<p>4.每位用户每天有1次掷骰子的机会；</p>
+										<p>5.每位用户每天可分享活动链接至朋友圈获得1次机会。</p>
+
+									</div>
+									<div class="tab_box">
+										<div class="tab_tip">活动注意</div>
+										<p>若活动中发现用户存在作弊行为，将取消中奖资格，本次活动最终解释权归重庆银行所有。</p>
+									</div>
+								</li>
+								<li>
+									<!--中奖信息-->
+									<div class="gift_message">
+										<div><span class="le">中奖名称</span><span class="ri">中奖时间</span></div>
+										<p><span class="le">1000元天猫超市券超市券</span><span class="ri">2017-12-31</span></p>
+										<p><span class="le">1000元天猫超市券超市券</span><span class="ri">2017-12-31</span></p>
+										<p><span class="le">1000元天猫超市券超市券</span><span class="ri">2017-12-31</span></p>
+									</div>
+								</li>
+						</ul>
+					</div>
+			
+			</div>
+			
+		</div>
+			<audio src="audio/dice.mp3" id="diceSound" preload="auto"></audio>
+	</body>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript" src="js/index.js" ></script>
+	<script type="text/javascript" src="layer/mobile/layer.js" ></script>
+	<script type="text/javascript">
+		//信息提示
+		function Message(){
+//			//提示
+//		  layer.open({
+//		    content: 'hello layer'
+//		    ,skin: 'msg'
+//		    ,time: 2 //2秒后自动关闭
+//		  });
+		}
+	</script>
+	<!--图片加载script-->
+	<script type="text/javascript">
+			//图片资源
+			var imgSave=null;
+			
+			/*-----------图片加载---------*/
+           	   var imgBegin=function(){
+           	   	
+           	   	var BackSwitch=true;//回调函数开关
+           	    var imgArr,imgNum;
+           	   
+           	  	   //图片数组
+	           	   imgArr=[
+	           	   		"img/index_bg.jpg",
+	           	   		"img/title_bg.png",
+	           	   		"img/index_dice.png",
+	           	   		"img/land.png",
+//	           	   		游戏页面图片jpg
+						"img/game_bg.jpg",
+						"img/choose_bg.jpg",
+						"img/back_bg.jpg",
+						"img/go_bg.jpg",
+						"img/fare5.jpg",
+						"img/jd1000.jpg",
+						"img/jd500.jpg",
+						"img/tm100.jpg",
+						"img/tm10.jpg",
+						"img/jd1000.jpg",
+						"img/jd1000.jpg",
+						"img/click_go.jpg",
+						"img/click_sure.jpg",
+						"img/start.jpg",
+						"img/phone_bg.jpg",
+						"img/pop_button.jpg",
+						"img/click_sure.jpg",
+						"img/click_sure.jpg",
+//						png
+						"img/choose.png",
+						"img/choose_text.png",
+						"img/choose_title.png",
+						"img/girl_ico.png",
+						"img/boy_ico.png",
+						"img/boy.png",
+						"img/boy1.png",
+						"img/boy2.png",
+						"img/boy3.png",
+						"img/girl.png",
+						"img/girl1.png",
+						"img/girl2.png",
+						"img/girl3.png",
+						"img/game_dice.png",
+						"img/index_dice.png",
+						"img/back_index.png",
+						"img/pop_small.png",
+						"img/pop_big.png",
+						"img/gift.png",
+						"img/game_close.png",
+						"img/fiexd_bg.png",
+						"img/pot.png",
+						"img/share.png",
+						"img/stop.png",
+						"img/start_ico.png",
+						"img/place_box2.png",
+						"img/place_box1.png",
+						"img/palce_box.png",
+						"img/suo.png",
+						"img/place_close.png",
+						"img/name1.png",
+						"img/name2.png",
+						"img/name3.png",
+						"img/name4.png",
+						"img/name5.png",
+						"img/name6.png",
+						"img/name7.png",
+						"img/name8.png",
+						"img/name9.png",
+						"img/name10.png",
+						"img/name11.png",
+						"img/name12.png",
+						"img/name13.png",
+						"img/name14.png",
+						"img/name15.png",
+						"img/name16.png",
+						"img/place1.png",
+						"img/place2.png",
+						"img/place3.png",
+						"img/place4.png",
+						"img/place5.png",
+						"img/place6.png",
+						"img/place7.png",
+						"img/place8.png",
+						"img/place9.png",
+						"img/place10.png",
+						"img/place11.png",
+						"img/place12.png",
+						"img/place13.png",
+						"img/place14.png",
+						"img/place15.png",
+						"img/place16.png"
+	           	   ];
+	           	   //图片存储json
+	               imgSave = {};
+            		 
+		 	 	   //读取页面img链接	
+		           imgNum=document.getElementsByTagName("img");
+	           
+				    for(var i=0;i<imgNum.length;i++){
+				         imgArr.push(imgNum[i].getAttribute("src"))
+				     }      
+			
+	            function imgLoad(imgArr,callBack){
+	                var  len = imgArr.length,//所有图片的个数
+		                 loaded = 0,//记录我们加载了多少张图片
+						 loadNum=100/len,//计算百分比大小
+						 percentage=0,//每次增加的百分比值
+						 percentageNum=0,//计数器值
+						 percentageNum2=100,//计数器值
+						 percentageK=true;//计算器开关
+				
+					
+	                for(var i = 0; i < len; i ++){
+	                    var img = new Image();
+	                    	img.src = imgArr[i];
+	                    	//把图片名字存进imgName
+	                    	var name1 = imgArr[i].split("/");
+				            var name2 = name1[name1.length-1]; 
+				            var name = name2.split(".")[0];
+				            imgSave[name] = imgArr[i];
+				            
+	                    	//图片加载
+		                    img.onload = function(){
+		                        loaded ++ ;
+	               		 		percentage=percentage+loadNum;
+		                       
+		                       if(percentageK){
+		                       		loading();
+		                        	percentageK=false;
+		                       }
+		                        //加载完成
+		                        if(loaded == len){
+//		                             callBack();
+		                             return;
+		                        }
+		                    }
+	                   		// 图片已经缓存
+//		                     if (img.complete){ 
+//								callBack();
+//		       					return; 
+//		    				}
+
+	                }
+	                
+	                //图片加载计数器
+	               	function loading(){
+	               		 		var timer=setInterval(function(){
+	               		 			if(percentageNum<percentage){
+		               		 			if(percentageNum>=100){
+		               		 				percentageNum=100;
+		               		 				clearInterval(timer)
+		               		 				callBack()
+		               		 			}
+		               		 			$("#loadingLine").css("left","-"+percentageNum2+"%");
+		               		 			$("#loadingText").html("Loading..."+percentageNum+"%");
+			                      	 	percentageNum2--;
+			                      	 	percentageNum++;
+			                      	 }
+	               		 		},20)
+	               	}
+	           
+	            }
+	
+	         	//回调函数
+	 			 imgLoad(imgArr,function(){
+	                setTimeout(function(){
+	                	if(!BackSwitch)return;
+	                	BackSwitch=false;
+	                	 $("#loadingMain").hide();
+	                	 $(".wrap").show();
+	                	 //初始化动画
+	                	init();
+	                	//信息提示
+	                	Message();
+	                },500);
+	             });
+			              
+
+           	}
+			/*-----------图片加载---------*/
+			imgBegin();
+	</script>
+</html>
+

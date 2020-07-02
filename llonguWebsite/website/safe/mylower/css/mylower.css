@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.iconfont { font-size: inherit; }
+
+.sortOrange { color: #ff5c00; }
+
+.sortGray { color: #595959; }
+
+.lineL:before, .lineR:after { content: ""; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); left: 100%; width: 0.5%; height: 60%; background: #f4f5f7; }
+
+.lineR:before { left: 0; }
+
+.wrap { background: #f4f5f7; font-family: "微软雅黑"; letter-spacing: 1px; overflow-y: scroll; }
+.wrap .list_box { background: #fff; margin-bottom: 0.133rem; overflow: hidden; }
+.wrap .list_box li { width: 95%; -webkit-box-sizing: border-box; box-sizing: border-box; border-bottom: 0.026rem solid #f2f2f2; float: right; overflow: hidden; }
+.wrap .list_box:first-child { margin-top: 0.266rem; }
+.wrap .list_box .title { height: 1.146rem; background: #fff; line-height: 1.146rem; font-weight: bold; color: #ff5c00; font-size: 0.4rem; text-indent: 0.4rem; }
+.wrap .list_box .list_xuan .icon-xuanze { -webkit-transform: rotateZ(-180deg); transform: rotateZ(-180deg); }
+.wrap .list_box .list_xuan .list_box_inner { display: block !important; }
+.wrap .list_box .list { width: 100%; padding: .2rem 0; padding-top: 0; overflow: hidden; border-bottom: 0.026rem solid #f4f5f7; }
+.wrap .list_box .list .list_t { width: 33.3%; text-align: center; color: #595959; font-size: 0.4rem; float: left; padding: .2rem 0; }
+.wrap .list_box .list .list_t i { font-size: .6rem; color: #8f8f8f; display: inline-block; -webkit-transition: all .1s linear; transition: all .1s linear; }
+.wrap .list_box .list .list_box_inner { background: #fff; clear: both; overflow: hidden; display: none; }
+.wrap .list_box .list .list_box_inner li { width: 95%; -webkit-box-sizing: border-box; box-sizing: border-box; border-bottom: 0.026rem solid #f2f2f2; float: right; overflow: hidden; }
+.wrap .list_box .list .list_box_inner .list_box_inner_b { max-height: 4rem; overflow: scroll; }
+.wrap .list_box .list .list_box_inner .title { border-bottom: 0.053rem solid #f4f5f7; border-top: 0.053rem solid #f4f5f7; text-indent: .8rem; }
+.wrap .list_box .list .list_box_inner .title2 span { color: #000 !important; }
+.wrap .list_box .list .list_box_inner li { padding: .4rem 0; margin: 0 auto; float: none; }
+.wrap .list_box .list .list_box_inner li span { width: 33.3%; text-align: center; color: #595959; font-size: 0.4rem; float: left; }
+.wrap .list_box .list .list_box_inner li span:nth-child(2) { color: #ff5c00; }
+
+/*# sourceMappingURL=mylower.css.map */

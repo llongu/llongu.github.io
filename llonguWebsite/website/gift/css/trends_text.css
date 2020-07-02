@@ -1,0 +1,12 @@
+/*返回公司动态的标题*/
+.new_nav .left li{font-size: 0.6rem;color: #838281;}
+
+/*新闻主体*/
+.new_main{width: 100%;height: auto;border-top: 1px solid #eaeaeb;}
+
+/*新闻主体左边*/
+.new_main .new_left{width: 100%;height: auto;margin-bottom: 3.15rem;}
+.new_left h3{width: 25.75rem;height: 2.65rem;border-bottom: 1px solid #eaeaeb;line-height: 2.65rem;font-size: 1rem;color: #2d313d;margin: 0 auto;text-align: center;}
+.new_date{display: block;margin: 0 auto;font-size:0.6rem ;color: #abacaf;text-align: center;margin-top: 1rem;margin-bottom: 0.8rem;}
+.new_left p{font-size: 0.6rem;color: #2d313d;text-indent: 1rem;line-height: 1rem;margin-top: 1.4rem;}
+.new_left_bottom{color: #abacaf;font-size: .7rem;margin: 2.35rem 0 0 0;}

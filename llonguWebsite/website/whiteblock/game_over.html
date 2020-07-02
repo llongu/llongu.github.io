@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title></title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	 <meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/game_over.css" />
+	<script type="text/javascript" src="js/flexible.debug.js" ></script>
+	</head>
+<body>
+	<img src="img/loading.gif" alt="" id="loading">
+	<div class="warp">
+			<img src="img/index_bg.jpg" alt="" class="index_bg">
+			
+			<!--首页标题-->
+			<div class="index_title">
+				<img src="img/game_title.png" alt="" class="title_bg">
+					
+				<!--时间-->	
+				<div class="time ">
+					<div class="mins ">
+						<span class="white counter">100</span>
+						<span class="pink counter">100</span>
+					</div>
+					<div class="fuhao">
+						<span class="white">”</span>
+						<span class="pink">”</span>
+					</div>
+					<div class="seconds">
+						<span class="white counter">95</span>
+						<span class="pink counter">95</span>
+					</div>
+				</div>
+			
+			</div>
+			
+			<!--线路图-->
+			<div class="wire">
+				<img src="img/wire2.png" alt="" class="wire_bg">
+				
+			
+				<!--排行榜按钮-->
+				<div class="list">
+					<a href="">
+						<img src="img/list_b.png" alt="">
+					</a>
+				</div>
+				<!--开始游戏按钮-->
+				<div class="begin">
+					<a href="game.html">
+						<img src="img/begin_to.png" alt="">
+					</a>	
+				</div>
+				<!--参加抽奖-->
+				<div class="jion">
+						<img src="img/jion.png" alt="">
+				</div>
+				<!--不能参加抽奖-->
+				<div class="no_jion">
+					<img src="img/no_jion.png" alt="">
+				</div>
+				
+			</div>
+	
+			<!--弹层-->
+			<div class="pop">
+				<!--抽奖机会用完-->
+				<div class="no_chance">
+					<!--关闭按钮-->
+					<div class="close"></div>
+					<img src="img/no_chance.png" alt="">
+				</div>
+			</div>
+		
+	
+	</div>	
+</body>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/jquery.countup.min.js"></script>
+		<script>
+	var heights=$(window).height();
+		$(".warp").height(heights);
+		$(".warp_bg").height(heights);
+		$(".pop").height(heights);
+		//关闭弹层
+		$(".close").on("click",function(){
+			$(this).parent().hide();
+			$(".pop").hide();
+		})
+		
+		function getRequest(name) {   
+		      var url = window.location.search; //获取url中"?"符后的字串   
+		      var theRequest = new Object();   
+		      if (url.indexOf("?") != -1) {   
+		         var str = url.substr(1);   
+		         strs = str.split("&");   
+		         for(var i = 0; i < strs.length; i ++) {   
+		            theRequest[strs[i].split("=")[0]]=decodeURI(strs[i].split("=")[1]); 
+		         }   
+		      }   
+	     	 return theRequest[name];
+	    }
+	            
+	
+		
+			//接收挑战时间
+			$(".mins .white").html(getRequest("time"));//分钟白色
+			$(".mins .pink").html(getRequest("time"));//分钟粉色
+			
+			$(".seconds .white").html(getRequest("seconds"));//秒数
+			$(".seconds .pink").html(getRequest("seconds"));//秒数
+			
+			//挑战时间是否达到30秒
+			//没有
+			$(".no_jion").show();
+			$(".jion").hide();
+			
+			//有
+			$(".jion").show();
+			$(".no_jion").hide();
+			
+			
+			//参与抽奖按钮
+			$(".jion").click(function(){
+				//判断是否还有机会抽奖 有 跳转页面 没有 弹窗
+//				window.location.href="";
+				$(".pop").show();
+				$(".no_chance").show();
+				
+			})
+			
+			
+			//数字动画插件
+			$('.counter').countUp();
+			
+			
+			//图片加载
+            function imgLoad(arr,callBack){
+                var len = arr.length;//所有图片的个数
+                var imgs = {};//创建一个空的JSON,去存我们的所有图片
+                var loaded = 0;//记录我们加载了多少张图片
+
+                for(var i = 0; i < len; i ++){
+                    var img = new Image();
+                    img.onload = function(){
+                        loaded ++ ;//增加了一张图片
+                        //加载完成
+                        if(loaded == len){
+                            //loading加载完毕
+                             callBack();
+                            
+                        }
+                    }
+                    img.src = arr[i];
+                    
+                     if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数
+						document.getElementById("loading").style.display="none";//加载图片隐藏
+						document.getElementsByClassName("warp").item(0).style.display="block";//加载图片隐藏
+						callBack();
+       					return; // 直接返回，不用再处理onload事件
+    				}
+                    var name1 = arr[i].split("/");
+                    var name2 = name1[name1.length-1]; 
+                    var name = name2.split(".")[0];
+                    imgs[name] = arr[i];
+//                   console.log(imgs);
+                }
+            }
+	
+            //存放预加载图片数组 
+            var arr = [ "img/index_bg.jpg",
+                       "img/game_title.png",
+                       "img/wire2.png",
+                       "img/list_b.png",
+                      "img/begin_to.png",
+                       "img/jion.png",
+                      "img/no_jion.png",
+                       "img/no_chance.png",
+                     ];
+ 			
+ 			
+ 			 imgLoad(arr,function(){
+                setTimeout(function(){
+                     document.getElementById("loading").style.display="none";//加载图片隐藏
+                     document.getElementsByClassName("warp").item(0).style.display="block";//加载图片隐藏
+                },500);
+            });
+		</script>
+		
+</html>

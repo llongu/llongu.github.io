@@ -1,0 +1,22 @@
+/*标题导航 定位*/
+.new_nav{margin-bottom: 3.9rem;}
+/*图片列表*/
+.picture_main{width: 100%;height: 55.75rem;}
+.picture_list{width: 56.5rem;height: auto;margin: 0 auto;display: none;}
+.picture_list li{width: 11.75rem;height: 11.75rem;float: left;margin: 0 3.15rem 2.15rem 0;}
+.picture_list li:nth-child(4n){margin-right: 0;}
+
+/*上一页下一页*/
+.page{height: 5rem;width: 100%;}
+.page_go{width:27.2rem;height: auto;margin: 0 auto;margin-top: 1.7rem;}
+.page_go li{width: 0.85rem;height: 0.85rem;box-sizing: border-box;float: left;margin-right: 1.85rem;text-align: center;font-size: 0.6rem;color: #cfd0d1;line-height: .85rem;cursor: pointer;}
+
+.page_go .number_page{border: 1px solid #c0c1c4;}
+.page_go .click_page{background: #fb565c;padding-top: 0.05rem;height: 0.8rem;}
+
+
+
+
+
+
+

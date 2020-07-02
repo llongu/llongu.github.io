@@ -1,0 +1,80 @@
+﻿.warp{
+	width:10rem;
+	margin:  0 auto;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	min-height: 100%;
+	display: none;
+}
+#loading{
+	width: 0.72rem;
+	height: 0.826666rem;
+	display: block;
+	margin: 150px auto;
+}
+
+.warp img{
+	width: 100%;
+	height: 100%;
+}
+/*背景*/
+.form_bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+}
+
+
+
+/*弹窗*/
+.pop{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.6);
+	z-index: 9;
+	/*display: none;*/
+}
+
+/*活动规则*/
+.fuyao_bg_main{
+	width:9.6rem;
+	height:14.733333rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/*display: none;*/
+}
+.fuyao_bg{
+	position: absolute;
+}
+
+/*滑动主体*/
+.scroll_main{
+	width:7.586666rem;
+	height:8.88rem;
+	position: absolute;
+	top: 2.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	overflow-y: scroll;
+}
+.scroll_main .long_img{
+	height: auto;
+}
+/*继续参加*/
+.continue2{
+	width:3.706666rem ;
+	height: 1.706666rem;
+	position: absolute;
+	top: 12rem;
+	left: 50%;
+	transform: translateX(-50%);
+}

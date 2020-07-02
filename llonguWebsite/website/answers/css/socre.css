@@ -1,0 +1,392 @@
+@font-face {
+	font-family:"hanyi";/*汉仪菱心体*/
+	src: url(../font/hanyi1.ttf);
+	font-weight: lighter;
+}
+@font-face {
+	font-family:"zhanku";/*站酷字体*/
+	src: url(../font/zhanku.ttf);
+}
+@font-face {
+	font-family:"number";/*成绩分数*/
+	src: url(../font/hanyinumber.ttf);
+}
+
+.warp img{
+	width: 100%;
+	height: 100%;
+}
+/*                            点击我的证书      弹窗                                                                                       */
+.my_book{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 30;
+}
+.my_book .my_score_bg{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/*我的分数*/
+.my_score_round{
+	width:4.253333rem ;
+	height: 4.4rem;
+	position: absolute;
+	top: 28%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 2rem;
+	text-align: center;
+	font-family: "number";
+	background: url(../images/img/my_score_round.png) no-repeat;
+	background-size: 100% 100%;
+	line-height:4.4rem ;
+	color: #fff;
+	
+}
+
+/*晒晒成绩单按钮*/
+.sun_score{
+	width:4.4rem ;
+	height:0.84rem;
+	position: absolute;
+	top:57%;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+/*刮奖*/
+.gift_warp{
+	width: 6.906666rem;
+	height: 3.44rem;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top:65%;
+}
+
+.gift_warp_inner{
+	width:100%;
+	height:100%;
+	position: absolute;
+	left: 0;
+	top:0;
+	background: url(../images/img/guagua_bg.png) no-repeat;
+	background-size: 100% 100%;
+	z-index: 10;
+}
+
+/*刮奖主体*/
+.gift_main{
+	width:6.133333rem;
+	height:2.16rem;
+	position: absolute;
+	top: .8rem;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 0.093333rem;
+	background: #f2f2f2;
+	text-align: center;
+	line-height: 2.16rem;
+	color: #c40b0b;
+	font-size: 0.4rem;
+	font-family: "微软雅黑";
+	letter-spacing: 0.1rem;
+	overflow: hidden;
+}
+/*財妹*/
+.gua_people{
+	width:1.426666rem ;
+	height:3.066666rem ;
+	position: absolute;
+	top: -1.626666rem;
+	left: -.2rem;
+	transform: rotateZ(-15deg);
+}
+/*刮奖图片*/
+.gift_guagua{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+/*关闭按钮样式*/
+.share_close{
+	width:0.56rem;
+	height:0.56rem;
+	position: absolute;
+}
+/*分享弹窗*/
+.share_box{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.8);
+	display: none;
+}
+.share_main{
+	width: 7.946666rem;
+	height:11.466666rem ;
+	position: absolute;
+	right: 0;
+	top: 0.373333rem;
+	
+}
+.share_box .share_close{
+	right:1.84rem;
+	top: 4.933333rem;
+}	
+
+
+
+/*          表单弹窗                     */
+.index_pop_up{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 12;
+	display: none;
+}
+
+/*                  没刮到奖的                          */
+
+.gift_no{
+	width:8.346666rem ;
+	height:10.266666rem ;	
+	background: url(../images/img/fiating.jpg) no-repeat;
+	display: none;
+}
+/*返回首页*/
+.go_index{
+	width:2.893333rem ;
+	height: 0.893333rem;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	top:6rem ;
+}
+
+
+/*                  刮到奖的                            */
+
+.gift_yes{
+	width:8.8rem ;
+	height:12rem ;
+	background: url(../images/img/gift_bg.jpg) no-repeat;
+	display: none;
+}
+
+/*           信纸主体                   */
+.letter_main{
+	width:6rem ;
+	height:auto;
+	padding-top: 1rem;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+/*恭喜你*/
+.letter_main .happy_you{
+	font-family: "hanyi";
+	font-size: 0.933333rem;
+	color: #e04119;
+	width: 100%;
+	text-align: center;
+	height:auto;
+	margin-bottom: .2rem;
+}
+.letter_main .happy_you p{
+	font-size:0.373333rem;
+	color: #157f9a;
+	margin-top: .1rem;
+}
+
+
+/*----------------------中间主体            中奖信息以及表单----------------------*/
+
+.gift_form_main{
+	height:5.866666rem;
+	width: 100%;
+	display: none;
+	
+}
+/*五折柚子卷*/
+.five_gift_form_main{
+	height: 5.2rem;
+	/*display: none;*/
+}
+.five_furit{
+	font-size: 0.64rem;
+	color: #e04119;
+	font-family:"hanyi";
+	text-align: center;
+}
+.five_furit_bottom{
+	font-size: 0.24rem;
+	color: #e04119;
+	text-indent: 0.2rem;
+	font-family: "微软雅黑";
+}
+/*了解按钮*/
+.liaojie{
+	width: 3.226666rem;
+	height: 0.493333rem;
+	margin:0.2rem auto 0.1rem auto ;
+}
+/*表单*/
+.forms{
+	width: 100%;
+	height: auto;
+}
+.form_div{
+	width: 90%;
+	height: 0.693333rem;
+	line-height: 0.693333rem;
+	margin: 0 auto;
+	margin-bottom:0.16rem;
+}	
+.forms .form_div:first-child{
+	margin-bottom:0rem;
+}
+.form_div input{
+	width: 4.44rem;
+	height: 100%;
+	border: 0.053333rem solid #e53c0d;
+	border-radius: 0.133333rem;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 0.266666rem;
+	color: #464646;
+	font-family: "微软雅黑";
+	float: right;
+	background: #e7e7e7;
+	
+}
+.lables1{
+	font-size: 0.453333rem;
+}
+.lables{
+	color: #157f9a;
+	font-family: "hanyi";
+	float: left;
+	font-size: 0.373333rem;
+	width: auto;
+	height: 100%;
+	margin-right: 0.133333rem;
+	display:inline-block;
+}
+
+/*爱奇艺*/
+.aiqiyi_gift_form_main{
+	display: none;
+}
+.aiqiyi{
+	height: 1.8rem;
+	width: 100%;
+	font-size: 0.64rem;
+	color: #e04119;
+	font-family:"hanyi";
+	text-align: center;
+	line-height: 1.8rem;
+}
+/*身份证框*/
+.form_div #card_number{
+	width:3.733333rem;
+}
+
+/*2 折 柚子卷  地址显示  车牌身份号隐藏*/
+.two_gift{
+	display: none;
+}
+.two_gift_text{
+	font-size:0.2rem ;
+	color: #e04119;
+	text-align: center;
+	letter-spacing: -0.01rem;
+	margin-top: 0.05rem;
+}
+ /*车牌 身份号div*/
+.car_div,.card_div{
+	/*display: none;*/
+}
+
+/*----------------------中间主体            中奖信息以及表单 结束----------------------*/
+
+
+/*确定按钮*/
+.sure_button{
+	width:2.266666rem ;
+	height:0.84rem ;
+	display: block;
+	margin: 0 auto;
+	clear: both;
+}
+
+/*下方文字*/
+.letter_bottom_text{
+	width: 100%;
+	font-size: 0.3rem;
+	color: #157f9a;
+	font-family: "微软雅黑";
+	text-indent:.5rem;
+	margin-top: 0.066666rem;
+	/*display: none;*/
+}
+
+/*点击确定已保存弹窗*/
+.index_pop_up2{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.7);
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 12;
+	display: none;
+}
+.saves{
+	width: 7.093333rem;
+	height: 4.706666rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.saves .share_close{
+	right: .2rem;
+	top: -.8rem;
+	
+}
+
+
+
+
+
+
+
+
+
+/*刮奖界面公共样式*/
+.gift_no,.gift_yes{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	background-size: 100% 100% ;
+}
+.gift_no .share_close,.gift_yes .share_close{
+	right:.1rem;
+	top: -0.6rem;
+}	

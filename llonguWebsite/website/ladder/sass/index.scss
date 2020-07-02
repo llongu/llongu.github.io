@@ -1,0 +1,823 @@
+body,
+html {
+    font-family: "微软雅黑";
+}
+
+//公共部分
+@mixin CenterP {
+    transform: translate(-50%, -50%);
+}
+
+@mixin Bsz {
+    background-size: 100% 100%;
+}
+
+@mixin Pabs {
+    position: absolute;
+}
+
+@mixin PopButton {
+    height: 1.2rem;
+    border-radius: 0.506rem;
+    background: #de1623;
+    line-height: 1.2rem;
+    font-size: 0.48rem;
+    text-align: center;
+    color: #fff;
+    box-shadow: -5px 0px -5px #000 inset;
+}
+
+.wrap {
+    height: 100%;
+    max-height: 1024px;
+    background: url(../img/index_bg.jpg) no-repeat;
+    @include Bsz;
+    overflow: hidden;
+    display: none;
+    position: relative;
+}
+
+.game_wrap {
+    background: url(../img/game_bg.jpg) no-repeat;
+    @include Bsz;
+}
+
+//头像圆
+.people_main_round_wrap {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 0.05rem solid #fff;
+    margin: 0 auto;
+    .people_main_round {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        @include Pabs;
+        background: #fff;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 0.05rem solid #341e0f;
+        left: 50%;
+        top: 50%;
+        @include CenterP;
+    }
+}
+//------------------------------------资源加载------------------------------------
+#loadingMain{
+    width:8rem ;
+    height: 0.44rem;
+    @include Pabs;
+    left: 50%;
+    top: 55%;
+    @include CenterP;
+    background: url(../img/loading_bg.png) no-repeat;
+    @include Bsz;
+     #loadingArrow{
+            width: 0.266rem;
+            height: 0.4rem;
+            @include Pabs;
+            left: 0;
+            top: 0%;
+            overflow: hidden;
+            z-index: 2;
+        }
+        #loadingText{
+            @include Pabs;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -.5rem;
+            color: #7D7D7D;
+            font-weight: bold;
+            font-size: 0.32rem;
+        }
+    #loadingInner{
+        width:7.85rem;
+        height: 0.4rem;
+        @include Pabs;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+        #loadingLine{
+            width: 0%;
+            height: 100%;
+        }
+    }
+}
+//------------------------------------首页------------------------------------
+.index_wrap {
+    //活动规则
+    .rule_button {
+        width: 1.76rem;
+        height: 1.04rem;
+        @include Pabs;
+        right: 0.106666rem;
+        top: .6rem;
+        z-index: 6;
+    }
+    //标题
+    .index_title{
+        width: 8.133rem;
+        height: 3.066rem;
+        @include Pabs;
+        left: 50%;
+        top: 1.546rem;
+        transform: translateX(-50%);
+    }
+//  雪
+    .snow{
+        width: 100%;
+        height: 200%;
+        @include Pabs;
+        top: -100%;
+        left: 0;
+        animation: Move 50s linear infinite;
+        img{
+            height: 50%;
+            float: left;
+        }
+        
+        @keyframes Move{
+            0%{
+                top: -100%;
+            }
+            100%{
+                top: 0;
+            }
+        }
+    }
+//  墙
+    .wall_wrap{
+        width: 100%;
+        height: 10.773rem;
+        @include Pabs;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+        background: url(../img/wall.png) no-repeat;
+        @include Bsz;
+        
+       
+    }
+    
+    .shadow{
+         width: 100%;
+         height: 100%;
+         @include Pabs;
+         z-index: 5;
+    }
+    //开始游戏
+    .begin_game {
+        width: 5.386rem;
+        height: 1.533rem;
+        @include Pabs;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 1.55rem;
+    }
+    //  底部
+    .bottom_main {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        //滚动信息
+        .scorll_left {
+            width: 100%;
+            height: 0.666rem;
+            background: rgba(0, 0, 0, .4);
+            overflow: hidden;
+            //显示滚动条 不显示滚动条hidden 
+            font-size: 0.346rem;
+            color: #fff;
+            //滚动主体
+            .scorll_main {
+                width: auto;
+                float: left;
+                height: 100%;
+                line-height: 0.666rem;
+                ul {
+                    width: auto;
+                    float: left;
+                    height: 100%;
+                    li {
+                        width: auto;
+                        float: left;
+                        height: 100%;
+                        line-height: 0.666rem;
+                        color: #fff;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        //让p标签里面的文本强制性在一行显示
+                    }
+                }
+             
+            }
+        }
+        //技术支持
+        #company {
+            text-align: center;
+            font-size: 0.266rem;
+            color: #000;
+        }
+    }
+      .bottom_main2{
+        top: 1.5rem;
+        z-index: 2;
+    }
+}
+
+//------------------------------------游戏页------------------------------------
+.game_wrap {
+    //头像
+    .people_main {
+        width: 7rem;
+        @include Pabs;
+        right: 0;
+        top: 1.333rem;
+        text-align: center;
+        color: #fff;
+        line-height: 2rem;
+        .people_main_round_wrap {
+            float: right;
+            margin-right: .2rem;
+        }
+        //分数
+        #score {
+            font-size: 0.666rem;
+            font-weight: bold;
+            float: right;
+            margin-right: .2rem;
+            letter-spacing: 1px;
+            -webkit-text-stroke: 0.026rem #aa2a2d;
+        }
+    }
+}
+
+//-----------------------------------弹层------------------------------------
+.pop {
+    width: 100%;
+    height: 100%;
+    @include Pabs;
+    left: 50%;
+    top: 50%;
+    @include CenterP;
+    background: rgba(0, 0, 0, .7);
+    z-index: 20;
+    max-width: 10rem;
+    overflow: hidden;
+    display: none;
+    //--------公共部分----------
+    //大小弹窗
+    .big_pop,
+    .small_pop {
+        width: 7.013rem;
+        height: 8.36rem;
+        background: url(../img/pop_big.png) no-repeat;
+        @include Bsz;
+        @include Pabs;
+        left: 50%;
+        top: 50%;
+        @include CenterP;
+    }
+    .small_pop {
+        //      height: 6.533rem;
+        //      background: url(../img/pop_small.png) no-repeat;
+        //      @include Bsz;
+    }
+    //关闭按钮
+    .close_css {
+        width: 0.826666rem;
+        height: 0.826666rem;
+        @include Pabs;
+        top: -0.586rem;
+        right: -0.48rem;
+    }
+     //-------------------不是人保粉丝-------------------
+    .no_follower{
+        display: none;
+        .pop_title{
+            margin-top: 2rem;
+        }
+    }
+    //-------------------活动规则-------------------
+    .rule_pop {
+        width: 95%;
+        margin: 0 auto;
+        height: 100%;
+        color: #fff;
+        display: none;
+        //      transform: scale(0);
+        //      transform-origin: 90% .5rem;
+        //      transition: all  .4s  linear;
+        //其他字体颜色
+        .rule_orange {
+            color: #d30a17;
+        }
+        //关闭按钮
+        .rule_close {
+            top:inherit ;
+            right: 0.213333rem;
+            bottom: 0.213333rem;
+            z-index: 20;
+        }
+        //选项卡标题部分
+        .rule_tab_title {
+            width: 100%;
+            height: 1.866666rem;
+            border-bottom: 0.026666rem solid #b3b3b3;
+            position: relative;
+            .rule_tab {
+                width: 100%;
+                height: auto;
+                @include Pabs;
+                left: 0;
+                bottom: 0;
+                li {
+                    width: 2.8rem;
+                    height: 100%;
+                    float: left;
+                    text-align: center;
+                    font-size: 0.4rem;
+                    position: relative;
+                    padding-top: .1rem;
+                    padding-bottom: .4rem;
+                }
+                li:first-child .rule_tab_arrow {
+                    display: block;
+                }
+                //箭头指向
+                .rule_tab_arrow {
+                    width: 2.026666rem;
+                    height: 0.333333rem;
+                    @include Pabs;
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: -1.013333rem;
+                    display: none;
+                }
+            }
+        }
+        //主体列表切换
+        .rule_tab_main {
+            width: 100%;
+            height: auto;
+            clear: both;
+            max-height: 90%;
+            overflow: scroll;
+            li {
+                font-size: 0.373333rem;
+                letter-spacing: 0.013333rem;
+                display: none;
+            }
+            li:first-child {
+                display: block;
+                padding-bottom:0.6rem;
+            }
+            .rule_tab_tip {
+                width: 1.933333rem;
+                height: 0.746666rem;
+                background: #ffffff;
+                color: #000;
+                text-align: center;
+                line-height: .746666rem;
+            }
+            //活动说明
+            .rule_tab_box {
+                margin-top: 0.466666rem;
+                p {
+                    margin-top: 0.266666rem;
+                    color: #fff;
+                }
+              
+            }
+            .rule_agree_box{
+                display: none;
+            }
+            //排行榜
+            .gift_list {
+                width: 90%;
+                height: auto;
+                margin: 0 auto;
+                color: #fff;
+                font-size: 0.373333rem;
+                letter-spacing: 0.026666rem;
+                padding: 0.2rem 0;
+                .gift_list_main {
+                    width: 100%;
+                    height: auto;
+                    .gift_list_title {
+                        height: auto;
+                        padding: .2rem 0;
+                        border-bottom: none;
+                        overflow: hidden;
+                        div {
+                            width: 20%;
+                            height: 100%;
+                            float: left;
+                            text-align: center;
+                            overflow: hidden;
+                        }
+                    }
+                    .gift_list_box {
+                        height: 1.693333rem;
+                        border-bottom: 0.026666rem solid #7d7d7d;
+                        overflow: hidden;
+                        display: block;
+                        div {
+                            width: 20%;
+                            height: 100%;
+                            float: left;
+                            text-align: center;
+                            overflow: hidden;
+                        }
+                        //排名
+                        .gift_list_num, .gift_list_name, .gift_list_rank,.gift_list_score{
+                            width: 100%;
+                            margin-top: .5rem;
+                            text-align: center;
+                        }
+                        //头像
+                        .gift_list_round {
+                            width: 1.266666rem;
+                            height: 1.266666rem;
+                            background: #fff;
+                            box-sizing: border-box;
+                            border: 0.026666rem solid #341e0f;
+                            border-radius: 50%;
+                            margin: 0 auto;
+                            float: none;
+                            margin-top: .2rem;
+                        }
+                       
+                    }
+                }
+            }
+            //我的奖品
+            .gift_message {
+                width: 90%;
+                height: auto;
+                margin: 0 auto;
+                color: #fff;
+                font-size: 0.373333rem;
+                letter-spacing: 0.026666rem;
+                padding: 0.6rem 0;
+                div {
+                    font-weight: bold;
+                    overflow: hidden;
+                }
+                span {
+                     width: 60%;
+                    display: block;
+                    float: left;
+                    text-align: left;
+                }
+                
+                 span:last-child{
+                        width: 40%;
+                    }
+                p {
+                    margin-top: 0.32rem;
+                    overflow: hidden;
+                    span {
+                        width: 60%;
+                        text-align: left;
+                        margin-top: 0.32rem;
+                        overflow: hidden;
+                        overflow: hidden;
+                    }
+                    span:last-child{
+                        width: 40%;
+                    }
+                    .rule_tab_tip {
+                        text-align: center;
+                        margin-top: .1rem;
+                    }
+                }
+            }
+        }
+    }
+    .rule_pop_show {
+        transform: scale(1);
+    }
+    //-------------------游戏引导-------------------
+     .game_lead_pop{
+            display: none;
+            width: 5.093rem;
+            height: 4.933rem;   
+            @include Pabs;
+            left: 50%;
+            top: 50%;
+            @include CenterP;  
+     }
+    //-------------------游戏结束抽奖页面-------------------
+    .game_over_pop {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: none;
+        //头像宽度
+        .people_main_round_wrap {
+            width: 2.8rem;
+            height: 2.8rem;
+            margin: 1.066rem auto;
+        }
+        //文字
+        .game_over_pop_text {
+            text-align: center;
+            color: #fff;
+            font-size: 0.44rem;
+            letter-spacing: 0.013rem;
+        }
+        //本次成绩
+        .now_score_num {
+            font-size: 0.533rem;
+            margin-bottom: .1rem;
+        }
+        //抽奖机会
+        .chance_num {
+            margin: 0.533rem auto;
+        }
+        //很遗憾
+        .no_score_num {
+            margin: 1.12rem auto 0.533rem auto;
+        }
+        //按钮层
+        .game_over_pop_button {
+            width: 6rem;
+            height: auto;
+            margin: 0 auto;
+            color: #fff;
+            overflow: hidden;
+            div {
+                @include PopButton;
+            }
+            //立即抽奖
+            #now_button {
+                width: 100%;
+                margin-bottom: .2rem;
+                font-weight: bold;
+            }
+            //排行榜,再玩一次
+            .ranking_button,
+            .gain_button {
+                width: 2.8rem;
+            }
+        }
+        //底部文字
+        .game_over_pop_bottom_text {
+            padding: 0 .2rem;
+            clear: both;
+            margin-top: 1.2rem;
+            text-align: center;
+            color: #fff;
+            font-size: 0.346rem;
+            p:first-child {
+                text-decoration: underline;
+            }
+        }
+    }
+    //-------------------游戏结束未达到指定分数页面-------------------
+    .score_miss {
+        //按钮层
+        .game_over_pop_button {
+            //     再玩一次
+            .ranking_button,
+            .gain_button {
+                width: 2.8rem;
+                font-weight: bold;
+            }
+//          .gain_button {
+//              width: 100%;
+//              font-weight: bold;
+//          }
+        }
+    }
+    //------------------- 次数用完了页面-------------------
+    .no_chance {
+        display: none;
+        //      标题
+        .pop_title {
+            margin-top: 1.8rem;
+        }
+        //      知道了
+        .know_button {
+            @include PopButton;
+            width: 5.266rem;
+            height: 1.066rem;
+            line-height: 1.066rem;
+            margin: 0 auto;
+        }
+    }
+    //-------------------摇一摇页面------------------- 
+    .shake_pop {
+        width: 8.266rem;
+        height: 7.533rem;
+        @include Pabs;
+        left: 50%;
+        top: 50%;
+        @include CenterP;
+        display: none;
+        .shake_box {
+            width: 100%;
+            height: 6.573rem;
+        }
+        p {
+            font-weight: bold;
+            color: #fff;
+            font-size: 0.453rem;
+            text-align: center;
+        }
+    }
+    //--------------------表单页面--------------------
+    //   公用
+    form {
+        width: 5.36rem;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 0.3rem;
+        .form_box {
+            width: 100%;
+            height: 0.666rem;
+            margin-bottom: 0.2rem;
+            border-bottom: 0.053rem solid #341e0f;
+            line-height: 0.72rem;
+            label {
+                font-size: 0.453rem;
+                color: #ee5512;
+            }
+            input {
+                width: 100%;
+                height: 100%;
+                color: #4b4b4b;
+                font-size: 0.533rem;
+                text-align: center;
+                border: none;
+                font-weight: bold;
+                letter-spacing: 0.013rem;
+            }
+            input::-webkit-input-placeholder {
+                color: #4b4b4b;
+                font-size: 0.32rem;
+            }
+            span {
+                height: 100%;
+                color: #d3431e;
+                font-size: 0.48rem;
+                text-align: center;
+                line-height: 0.826666rem;
+                float: left;
+            }
+        }
+    }
+    .pop_title {
+        width: 6.4rem;
+        height: auto;
+        margin: 0.573rem auto;
+        margin-bottom: 0.266rem;
+        color: #d30a17;
+        font-weight: bold;
+        text-align: center;
+        font-size: 0.613rem;
+        p:last-child {
+            font-size: 0.48rem;
+            font-weight: normal;
+            line-height: 0.9rem;
+        }
+    }
+    //提示信息
+    .erro_mesg {
+        height: 0.4rem;
+        text-align: center;
+        color: #de1623;
+        font-size: 0.32rem;
+        margin-bottom: .1rem;
+    }
+    //--------------------中奖页面--------------------
+    .form_pop {
+        display: none;
+        //      标题
+        .pop_title {
+            p:first-child {
+                font-size: 1.093rem;
+            }
+            p:last-child {
+                font-size: 0.533rem;
+                font-weight: bold;
+                line-height: inherit;
+            }
+        }
+        //      奖品图
+        .gift_img {
+            width: 3.573rem;
+            height: 2.16rem;
+            margin: 0 auto;
+        }
+        //提交按钮
+        #submit {
+            @include PopButton;
+            width: 5.333rem;
+            height: 1.013rem;
+            line-height: 1.013rem;
+            margin: 0 auto;
+            margin-top: .1rem;
+            font-weight: bold;
+        }
+        //表单文字
+        .form_text {
+            width: 6rem;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0.32rem;
+            margin-top: 1rem;
+            color: #fff;
+            line-height: 0.533rem;
+            a {
+                color: #fff;
+                margin-bottom: .2rem;
+                letter-spacing: 0.013rem;
+                text-decoration: underline;
+            }
+        }
+    }
+    //--------------------中奖确认页面--------------------
+    .form_sure_pop {
+        display: none;
+        //      标题
+        .pop_title {
+            margin-top: 1rem;
+        }
+        //      按钮
+        .form_sure_pop_button {
+            width: 6.34rem;
+            height: auto;
+            overflow: hidden;
+            margin: .5rem auto;
+            div {
+                @include PopButton;
+                width: 2.826rem;
+                height: 1.066rem;
+                line-height: 1.066rem;
+            }
+        }
+        
+        .form_sure_pop_text{
+             height: 0.4rem;
+            text-align: center;
+            color: #de1623;
+            font-size: 0.32rem;
+            margin-bottom: .1rem;
+        }
+         
+    }
+    //--------------------保存成功--------------------
+    .save_success{
+        display: none;
+        .pop_title{
+            margin-top: 3rem;
+            letter-spacing: 0.04rem;
+        }
+    }
+    //--------------------未中奖页面--------------------
+    .no_gift {
+        display: none;
+        //   标题
+        .pop_title {
+            margin-top: 2.16rem;
+            p:last-child {
+                font-size: 0.48rem;
+                font-weight: normal;
+                line-height: 0.9rem;
+            }
+        }
+        
+        //      知道了
+        .know_button {
+            @include PopButton;
+            width: 5.266rem;
+            height: 1.066rem;
+            line-height: 1.066rem;
+            margin: 0 auto;
+        }
+    }
+    //--------------------分享成功页面--------------------    
+    .share_pop {
+        display: none;
+        //   标题
+        .pop_title {
+            margin-top: 2.16rem;
+        }
+        .share_pop_button {
+            @include PopButton;
+            width: 5.253rem;
+            margin: 0 auto;
+            height: 1.066rem;
+            line-height: 1.066rem;
+        }
+    }
+}
