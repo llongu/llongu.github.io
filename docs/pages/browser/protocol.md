@@ -17,7 +17,7 @@
 3. 传输层
 4. 应用层
 
-   ![](../../pages/browser/img/protocol1.png)
+   ![](./img/protocol1.png)
 
    **五层:为了方便理解 将网络接口层划分为了物理层和数据链路层两层**
 
@@ -33,7 +33,7 @@
 6. 表示层
 7. 应用层
 
-   ![](../../pages/browser/img/protocol2.png)
+   ![](./img/protocol2.png)
 
 > ### 模型比较
 
@@ -61,7 +61,7 @@
 
 （8）OSI 参考模型虽然被看好，由于没把握好时机，技术不成熟，实现困难；相反，TCP/IP 参考模型虽然有许多不尽人意的地方，但还是比较成功的。
 
-![](../../pages/browser/img/protocol3.gif)
+![](./img/protocol3.gif)
 
 ---
 

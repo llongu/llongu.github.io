@@ -20,6 +20,6 @@
 
 > Nignx 的正向代理何反向代理
 
-![](../../pages/nginx/img/q.png)
+![](./img/q.png)
 
-![](../../pages/nginx/img/b.png)
+![](./img/b.png)

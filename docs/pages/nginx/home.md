@@ -94,7 +94,7 @@ upstream test {
 
 ```
 
-![](../../pages/nginx/img/ccc.png)
+![](./img/ccc.png)
 
 #### 4、fair（第三方）
 
@@ -127,7 +127,7 @@ upstream backend {
 
 ### **图片举例**
 
-![](../../pages/nginx/img/222.png)
+![](./img/222.png)
 
 ### HTTP 服务器
 

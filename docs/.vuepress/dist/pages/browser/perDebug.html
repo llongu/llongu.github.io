@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>时间节点图 | 写字の地方</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="logo.png" with="0.1rem" search="true">
+    <meta name="description" content="notes">
+    
+    <link rel="preload" href="/assets/css/0.styles.cba8b62d.css" as="style"><link rel="preload" href="/assets/js/app.955ec313.js" as="script"><link rel="preload" href="/assets/js/2.2796b56f.js" as="script"><link rel="preload" href="/assets/js/10.e7f00212.js" as="script"><link rel="prefetch" href="/assets/js/11.a013b6a5.js"><link rel="prefetch" href="/assets/js/12.314c3993.js"><link rel="prefetch" href="/assets/js/13.765f77a7.js"><link rel="prefetch" href="/assets/js/14.119005e2.js"><link rel="prefetch" href="/assets/js/15.a8e21173.js"><link rel="prefetch" href="/assets/js/16.2564de54.js"><link rel="prefetch" href="/assets/js/17.d67fb9a4.js"><link rel="prefetch" href="/assets/js/18.ec92c569.js"><link rel="prefetch" href="/assets/js/19.fcfcebea.js"><link rel="prefetch" href="/assets/js/20.88a04ee3.js"><link rel="prefetch" href="/assets/js/21.5b149036.js"><link rel="prefetch" href="/assets/js/22.f5018f40.js"><link rel="prefetch" href="/assets/js/23.67e75518.js"><link rel="prefetch" href="/assets/js/24.c0a7bca1.js"><link rel="prefetch" href="/assets/js/25.be0beb39.js"><link rel="prefetch" href="/assets/js/26.4a6cd4dd.js"><link rel="prefetch" href="/assets/js/27.3d697304.js"><link rel="prefetch" href="/assets/js/28.b36c1daf.js"><link rel="prefetch" href="/assets/js/29.ca91790d.js"><link rel="prefetch" href="/assets/js/3.f7dedf2e.js"><link rel="prefetch" href="/assets/js/30.8741f2b9.js"><link rel="prefetch" href="/assets/js/31.07c88d99.js"><link rel="prefetch" href="/assets/js/32.5d1726ba.js"><link rel="prefetch" href="/assets/js/33.a538c940.js"><link rel="prefetch" href="/assets/js/34.829a23df.js"><link rel="prefetch" href="/assets/js/35.b5944a7b.js"><link rel="prefetch" href="/assets/js/36.29ac74f8.js"><link rel="prefetch" href="/assets/js/37.ee06747b.js"><link rel="prefetch" href="/assets/js/38.0d3598d9.js"><link rel="prefetch" href="/assets/js/39.a5771e22.js"><link rel="prefetch" href="/assets/js/4.2016ec19.js"><link rel="prefetch" href="/assets/js/40.5c0c2c1e.js"><link rel="prefetch" href="/assets/js/41.6a3ff98a.js"><link rel="prefetch" href="/assets/js/42.77acd62e.js"><link rel="prefetch" href="/assets/js/43.0865cb92.js"><link rel="prefetch" href="/assets/js/44.2e6c06d9.js"><link rel="prefetch" href="/assets/js/45.32931851.js"><link rel="prefetch" href="/assets/js/46.6b7a41d7.js"><link rel="prefetch" href="/assets/js/47.6d522ae1.js"><link rel="prefetch" href="/assets/js/48.5490d92d.js"><link rel="prefetch" href="/assets/js/49.9f27d770.js"><link rel="prefetch" href="/assets/js/5.d0e1a492.js"><link rel="prefetch" href="/assets/js/50.39a4e632.js"><link rel="prefetch" href="/assets/js/51.014cd2b8.js"><link rel="prefetch" href="/assets/js/52.aeaa963d.js"><link rel="prefetch" href="/assets/js/53.43cf66a3.js"><link rel="prefetch" href="/assets/js/54.d26c7311.js"><link rel="prefetch" href="/assets/js/55.2f0ed379.js"><link rel="prefetch" href="/assets/js/56.e2586728.js"><link rel="prefetch" href="/assets/js/57.4b5d4a0a.js"><link rel="prefetch" href="/assets/js/58.c4bdefc3.js"><link rel="prefetch" href="/assets/js/6.d5029721.js"><link rel="prefetch" href="/assets/js/7.72588daf.js"><link rel="prefetch" href="/assets/js/8.214434b2.js"><link rel="prefetch" href="/assets/js/9.a94c5c3a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cba8b62d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="logo.png" alt="写字の地方" class="logo"> <span class="site-name can-hide">写字の地方</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <ul class="color-theme-options"><li><a href="#" class="default-theme"></a></li> <li><a href="#" class="blue-theme"></a></li><li><a href="#" class="red-theme"></a></li><li><a href="#" class="purple-theme"></a></li></ul> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox"></div> <div class="ignore-themes-options toggle-option"><label for="ignore-themes-toggle">Ignore Other Themes?</label> <input id="ignore-themes-toggle" type="checkbox"></div> <!----></div></div></div> <!----> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/browser/httpCode.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/javascript/this.html" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/pages/function/begin.html" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Html&amp;Css/formattingContexts.html" class="nav-link">
+  Html&amp;Css
+</a></li><li class="dropdown-item"><!----> <a href="/pages/webpack/process.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/pages/test/home.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jquery/entry.html" class="nav-link">
+  jquery剖析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/coding/aop&amp;oop.html" class="nav-link">
+  编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/pages/leetcode&amp;books/home.html" class="nav-link">
+  leetcode&amp;books
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常见问题解决方案" class="dropdown-title"><span class="title">常见问题解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="常见问题解决方案" class="mobile-dropdown-title"><span class="title">常见问题解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/use/uploadFile.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/excel.html" class="nav-link">
+  导入导出excel
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="自动化工具开发" class="dropdown-title"><span class="title">自动化工具开发</span> <span class="arrow down"></span></button> <button type="button" aria-label="自动化工具开发" class="mobile-dropdown-title"><span class="title">自动化工具开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="服务端" class="dropdown-title"><span class="title">服务端</span> <span class="arrow down"></span></button> <button type="button" aria-label="服务端" class="mobile-dropdown-title"><span class="title">服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/nginx/des.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/pages/linux/order.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jenkins/" class="nav-link">
+  jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="一锅端" class="dropdown-title"><span class="title">一锅端</span> <span class="arrow down"></span></button> <button type="button" aria-label="一锅端" class="mobile-dropdown-title"><span class="title">一锅端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/pm/process.html" class="nav-link">
+  产品经理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/ui/color.html" class="nav-link">
+  UI设计
+</a></li><li class="dropdown-item"><!----> <a href="/pages/php/base.html" class="nav-link">
+  php
+</a></li><li class="dropdown-item"><!----> <a href="/pages/java/" class="nav-link">
+  java
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生活类" class="dropdown-title"><span class="title">生活类</span> <span class="arrow down"></span></button> <button type="button" aria-label="生活类" class="mobile-dropdown-title"><span class="title">生活类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  飞机场收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  聚合类网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  外包网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  浏览器插件聚合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  薅羊毛
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  互联网常见项目 erp crm 对应痛点
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路-炒股软件
+</a></li></ul></div></div> <a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/browser/httpCode.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/javascript/this.html" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/pages/function/begin.html" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Html&amp;Css/formattingContexts.html" class="nav-link">
+  Html&amp;Css
+</a></li><li class="dropdown-item"><!----> <a href="/pages/webpack/process.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/pages/test/home.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jquery/entry.html" class="nav-link">
+  jquery剖析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/coding/aop&amp;oop.html" class="nav-link">
+  编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/pages/leetcode&amp;books/home.html" class="nav-link">
+  leetcode&amp;books
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常见问题解决方案" class="dropdown-title"><span class="title">常见问题解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="常见问题解决方案" class="mobile-dropdown-title"><span class="title">常见问题解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/use/uploadFile.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/excel.html" class="nav-link">
+  导入导出excel
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="自动化工具开发" class="dropdown-title"><span class="title">自动化工具开发</span> <span class="arrow down"></span></button> <button type="button" aria-label="自动化工具开发" class="mobile-dropdown-title"><span class="title">自动化工具开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="服务端" class="dropdown-title"><span class="title">服务端</span> <span class="arrow down"></span></button> <button type="button" aria-label="服务端" class="mobile-dropdown-title"><span class="title">服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/nginx/des.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/pages/linux/order.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jenkins/" class="nav-link">
+  jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="一锅端" class="dropdown-title"><span class="title">一锅端</span> <span class="arrow down"></span></button> <button type="button" aria-label="一锅端" class="mobile-dropdown-title"><span class="title">一锅端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/pm/process.html" class="nav-link">
+  产品经理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/ui/color.html" class="nav-link">
+  UI设计
+</a></li><li class="dropdown-item"><!----> <a href="/pages/php/base.html" class="nav-link">
+  php
+</a></li><li class="dropdown-item"><!----> <a href="/pages/java/" class="nav-link">
+  java
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生活类" class="dropdown-title"><span class="title">生活类</span> <span class="arrow down"></span></button> <button type="button" aria-label="生活类" class="mobile-dropdown-title"><span class="title">生活类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  飞机场收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  聚合类网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  外包网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  浏览器插件聚合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  薅羊毛
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  互联网常见项目 erp crm 对应痛点
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路-炒股软件
+</a></li></ul></div></div> <a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/pages/browser/httpCode.html" class="sidebar-link">http 状态码</a></li><li><a href="/pages/browser/http2.html" class="sidebar-link">http2.0</a></li><li><a href="/pages/browser/protocol.html" class="sidebar-link">底层协议</a></li><li><a href="/pages/browser/pageProcess.html" class="sidebar-link">输入 URL 到页面渲染流程</a></li><li><a href="/pages/browser/layout.html" class="sidebar-link">重排重绘</a></li><li><a href="/pages/browser/cache.html" class="sidebar-link">缓存机制</a></li><li><a href="/pages/browser/origin.html" class="sidebar-link">同源策略</a></li><li><a href="/pages/browser/perDebug.html" aria-current="page" class="active sidebar-link">性能调试</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/pages/browser/optimization.html" class="sidebar-link">性能优化</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="时间节点图"><a href="#时间节点图" class="header-anchor">#</a> 时间节点图</h1> <p><img src="/assets/img/browserTime.8d91c4e7.png" alt=""></p> <div class="language- extra-class"><pre><code>  navigationStart：当前浏览器窗口的前一个网页关闭，发生unload事件时的Unix毫秒时间戳。如果没有前一个网页，则等于fetchStart属性。
+
+  unloadEventStart：如果前一个网页与当前网页属于同一个域名，则返回前一个网页的unload事件发生时的Unix毫秒时间戳。如果没有前一个网页，或者之前的网页跳转不是在同一个域名内，则返回值为0。
+
+  unloadEventEnd：如果前一个网页与当前网页属于同一个域名，则返回前一个网页unload事件的回调函数结束时的Unix毫秒时间戳。如果没有前一个网页，或者之前的网页跳转不是在同一个域名内，则返回值为0。
+
+  redirectStart：返回第一个HTTP跳转开始时的Unix毫秒时间戳。如果没有跳转，或者不是同一个域名内部的跳转，则返回值为0。
+
+  redirectEnd：返回最后一个HTTP跳转结束时（即跳转回应的最后一个字节接受完成时）的Unix毫秒时间戳。如果没有跳转，或者不是同一个域名内部的跳转，则返回值为0。
+
+  fetchStart：返回浏览器准备使用HTTP请求读取文档时的Unix毫秒时间戳。该事件在网页查询本地缓存之前发生。
+
+  domainLookupStart：返回域名查询开始时的Unix毫秒时间戳。如果使用持久连接，或者信息是从本地缓存获取的，则返回值等同于fetchStart属性的值。
+
+  domainLookupEnd：返回域名查询结束时的Unix毫秒时间戳。如果使用持久连接，或者信息是从本地缓存获取的，则返回值等同于fetchStart属性的值。
+
+  connectStart：返回HTTP请求开始向服务器发送时的Unix毫秒时间戳。如果使用持久连接（persistent connection），则返回值等同于fetchStart属性的值。
+
+  connectEnd：返回浏览器与服务器之间的连接建立时的Unix毫秒时间戳。如果建立的是持久连接，则返回值等同于fetchStart属性的值。连接建立指的是所有握手和认证过程全部结束。
+
+  secureConnectionStart：返回浏览器与服务器开始安全链接的握手时的Unix毫秒时间戳。如果当前网页不要求安全连接，则返回0。
+
+  requestStart：返回浏览器向服务器发出HTTP请求时（或开始读取本地缓存时）的Unix毫秒时间戳。
+
+  responseStart：返回浏览器从服务器收到（或从本地缓存读取）第一个字节时的Unix毫秒时间戳。
+
+  responseEnd：返回浏览器从服务器收到（或从本地缓存读取）最后一个字节时（如果在此之前HTTP连接已经关闭，则返回关闭时）的Unix毫秒时间戳。
+
+  domLoading：返回当前网页DOM结构开始解析时（即Document.readyState属性变为“loading”、相应的readystatechange事件触发时）的Unix毫秒时间戳。
+
+  domInteractive：返回当前网页DOM结构结束解析、开始加载内嵌资源时（即Document.readyState属性变为“interactive”、相应的readystatechange事件触发时）的Unix毫秒时间戳。
+
+  domContentLoadedEventStart：返回当前网页DOMContentLoaded事件发生时（即DOM结构解析完毕、所有脚本开始运行时）的Unix毫秒时间戳。
+
+  domContentLoadedEventEnd：返回当前网页所有需要执行的脚本执行完成时的Unix毫秒时间戳。
+
+  domComplete：返回当前网页DOM结构生成时（即Document.readyState属性变为“complete”，以及相应的readystatechange事件发生时）的Unix毫秒时间戳。
+
+  loadEventStart：返回当前网页load事件的回调函数开始时的Unix毫秒时间戳。如果该事件还没有发生，返回0。
+
+  loadEventEnd：返回当前网页load事件的回调函数运行结束时的Unix毫秒时间戳。如果该事件还没有发生，返回0。
+</code></pre></div><h1 id="性能指标"><a href="#性能指标" class="header-anchor">#</a> 性能指标</h1> <p><img src="/assets/img/pre.bf34f246.png" alt=""></p> <blockquote><h3 id="performancetiming"><a href="#performancetiming" class="header-anchor">#</a> PerformanceTiming</h3></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+   <span class="token keyword">let</span> timing <span class="token operator">=</span> performance<span class="token punctuation">.</span>timing
+   <span class="token keyword">let</span> performance <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token comment">// DNS解析时间</span>
+        dnst<span class="token operator">:</span> timing<span class="token punctuation">.</span>domainLookupEnd <span class="token operator">-</span> timing<span class="token punctuation">.</span>domainLookupStart <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token comment">//TCP建立时间</span>
+        tcpt<span class="token operator">:</span> timing<span class="token punctuation">.</span>connectEnd <span class="token operator">-</span> timing<span class="token punctuation">.</span>connectStart <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token comment">// 白屏时间</span>
+        wit<span class="token operator">:</span> timing<span class="token punctuation">.</span>responseStart <span class="token operator">-</span> timing<span class="token punctuation">.</span>navigationStart <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token comment">//dom渲染完成时间</span>
+        domt<span class="token operator">:</span> timing<span class="token punctuation">.</span>domContentLoadedEventEnd <span class="token operator">-</span> timing<span class="token punctuation">.</span>navigationStart <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token comment">//页面onload时间</span>
+        lodt<span class="token operator">:</span> timing<span class="token punctuation">.</span>loadEventEnd <span class="token operator">-</span> timing<span class="token punctuation">.</span>navigationStart <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token comment">// 页面准备时间</span>
+        radt<span class="token operator">:</span> timing<span class="token punctuation">.</span>fetchStart <span class="token operator">-</span> timing<span class="token punctuation">.</span>navigationStart <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token comment">// 页面重定向时间</span>
+        rdit<span class="token operator">:</span> timing<span class="token punctuation">.</span>redirectEnd <span class="token operator">-</span> timing<span class="token punctuation">.</span>redirectStart <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token comment">// unload时间</span>
+        uodt<span class="token operator">:</span> timing<span class="token punctuation">.</span>unloadEventEnd <span class="token operator">-</span> timing<span class="token punctuation">.</span>unloadEventStart <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token comment">//request请求耗时</span>
+        reqt<span class="token operator">:</span> timing<span class="token punctuation">.</span>responseEnd <span class="token operator">-</span> timing<span class="token punctuation">.</span>requestStart <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token comment">//页面解析dom耗时</span>
+        andt<span class="token operator">:</span> timing<span class="token punctuation">.</span>domComplete <span class="token operator">-</span> timing<span class="token punctuation">.</span>domInteractive <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><blockquote><h3 id="performanceobserver"><a href="#performanceobserver" class="header-anchor">#</a> PerformanceObserver</h3></blockquote> <p>PerformanceObserver 为我们提供的新功能是，能够在性能事件发生时订阅这些事件，并以异步方式响应事件。 此 API 取代旧的 PerformanceTiming 界面，后者通常需要执行轮询才能查看数据可用的时间</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code> <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+
+      <span class="token keyword">const</span> observer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PerformanceObserver</span><span class="token punctuation">(</span><span class="token parameter">list</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> entry <span class="token keyword">of</span> list<span class="token punctuation">.</span><span class="token function">getEntries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+           <span class="token keyword">if</span> <span class="token punctuation">(</span>entry<span class="token punctuation">.</span>name <span class="token operator">===</span> <span class="token string">'first-paint'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">首次绘制 (FP)时间, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">parseInt</span><span class="token punctuation">(</span>entry<span class="token punctuation">.</span>startTime<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1000</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> s</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>entry<span class="token punctuation">.</span>name <span class="token operator">===</span> <span class="token string">'first-contentful-paint'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">首次内容绘制 (FCP)时间, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">parseInt</span><span class="token punctuation">(</span>entry<span class="token punctuation">.</span>startTime<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1000</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">  s</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>entry<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>entry<span class="token punctuation">.</span>startTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>entry<span class="token punctuation">.</span>duration<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>entry<span class="token punctuation">.</span>entryType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>entry<span class="token punctuation">.</span>initiatorType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>
+            <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><span class="token template-punctuation string">`</span></span>
+          <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">//paint 测量绘制 时间</span>
+      <span class="token comment">//longtask 测量js某任务运行耗时最长时间</span>
+      observer<span class="token punctuation">.</span><span class="token function">observe</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        entryTypes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'paint'</span><span class="token punctuation">,</span> <span class="token string">'longtask'</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><blockquote><h3 id="自定义标记测量"><a href="#自定义标记测量" class="header-anchor">#</a> 自定义标记测量</h3></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code> <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+      performance<span class="token punctuation">.</span><span class="token function">mark</span><span class="token punctuation">(</span><span class="token string">'test-start'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+      dom test
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+      performance<span class="token punctuation">.</span><span class="token function">mark</span><span class="token punctuation">(</span><span class="token string">'test-end'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      performance<span class="token punctuation">.</span><span class="token function">measure</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">,</span> <span class="token string">'test-start'</span><span class="token punctuation">,</span> <span class="token string">'test-end'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// 获取所有名称为mySetTimeout的measures</span>
+      <span class="token keyword">var</span> measures <span class="token operator">=</span> performance<span class="token punctuation">.</span><span class="token function">getEntriesByName</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">var</span> measure <span class="token operator">=</span> measures<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'dom test 加载 耗费的时间:'</span><span class="token punctuation">,</span> measure<span class="token punctuation">.</span>duration<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 清除标记</span>
+      performance<span class="token punctuation">.</span><span class="token function">clearMarks</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      performance<span class="token punctuation">.</span><span class="token function">clearMeasures</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// performance.clearMarks('laoyuan');</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/browser/origin.html" class="prev">
+        同源策略
+      </a></span> <span class="next"><a href="/pages/browser/optimization.html">
+        性能优化
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.955ec313.js" defer></script><script src="/assets/js/2.2796b56f.js" defer></script><script src="/assets/js/10.e7f00212.js" defer></script>
+  </body>
+</html>

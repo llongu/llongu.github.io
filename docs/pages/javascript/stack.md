@@ -1,5 +1,5 @@
-![](../../pages/javascript/img/stack.png)
-![](../../pages/javascript/img/stack2.png)
+![](./img/stack.png)
+![](./img/stack2.png)
 
 1. 栈内存中的变量一般都是已知大小或者有范围上限的
 2. 堆内存存储的对象类型数据对于大小，一般都是未知的

@@ -1,6 +1,6 @@
 # 时间节点图
 
-![](../../pages/browser/img/browserTime.png)
+![](./img/browserTime.png)
 
       navigationStart：当前浏览器窗口的前一个网页关闭，发生unload事件时的Unix毫秒时间戳。如果没有前一个网页，则等于fetchStart属性。
 
@@ -46,7 +46,7 @@
 
 # 性能指标
 
-![](../../pages/browser/img/pre.png)
+![](./img/pre.png)
 
 > ### PerformanceTiming
 

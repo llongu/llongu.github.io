@@ -27,7 +27,7 @@
 
 开启 Last-modified 后，服务器端返回资源时，如果头部带上了**last-modified: Wed, 16 May 2018 02:57:16 GMT**，那么资源下次请求时就会把值加⼊到请求头 **if-modified-since：Wed, 16 May 2018 05:55:38 GMT**，服务器可以对⽐这个值，确定资源是否发⽣变化，如果没有发⽣变化，则返回 304
 
-![](../../pages/browser/img/cache.jpg)
+![](./img/cache.jpg)
 
 > ### Tips
 
