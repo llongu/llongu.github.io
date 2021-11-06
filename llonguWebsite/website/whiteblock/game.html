@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title></title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	 <meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/game.css" />
+	<script type="text/javascript" src="js/flexible_css.debug.js" ></script>
+	<script type="text/javascript" src="js/flexible.debug.js" ></script>
+	</head>
+<body>
+	<img src="img/loading.gif" alt="" id="loading">
+		
+	<div class="warp">
+			<div class="main" id="main">
+				
+				<div class="container" id="container">
+					<div class="row">
+						<div class="cell begin begin_bg" id="begin"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell" ></div>
+					</div>
+				</div>
+				<!--分数-->
+				<div id="mark">
+				 	<div class="minutes">00</div>
+				 	<div class="fuhao">"</div>
+				 	<div class="seconds">00</div>
+				</div>
+	 	
+			</div>
+	</div>	
+	<!--音乐-->
+	<audio    id="mp3s"  src="audio/game.mp3" autoplay="autoplay" loop="loop" >
+		<source src="audio/game.mp3" type="audio/mpeg"></source>
+	</audio>
+</body>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/Block.js" type="text/javascript"></script>
+		<script>
+//			window.ontouchstart = function(e) { e.preventDefault(); };
+//          window.addEventListener("touchstart",function(){
+//                  	event.preventDefault();
+//          			event.stopPropagation();
+//          },false)
+
+			var oContainer = document.getElementById('container');
+			var block = new Block(oContainer);
+				
+					for( var i=0; i<4; i++ ){
+						block.addRow();
+					}
+					
+			var aduios=document.getElementById("mp3s");
+			
+			document.addEventListener("WeixinJSBridgeReady", function () {
+			  aduios.load();
+			}, false);	
+			
+			var container = document.getElementById('container');
+			var begin = document.getElementById('begin');
+			
+			begin.addEventListener("click",function(e){
+				aduios.play();
+				e.preventDefault();
+				this.innerHTML="<div class='shaow'></div>";
+				block.init();
+				block.start();
+			},false)
+			
+
+			function get_timers(){
+				var timers=$(".minutes").html();
+				var seconds=$(".seconds").html();
+				setTimeout(function(){
+					window.location.href="game_over.html?time="+timers+'&seconds='+seconds;
+				},1500)
+			}
+			
+			
+			//图片加载
+            function imgLoad(arr,callBack){
+                var len = arr.length;//所有图片的个数
+                var imgs = {};//创建一个空的JSON,去存我们的所有图片
+                var loaded = 0;//记录我们加载了多少张图片
+
+                for(var i = 0; i < len; i ++){
+                    var img = new Image();
+                    img.onload = function(){
+                        loaded ++ ;//增加了一张图片
+                        //加载完成
+                        if(loaded == len){
+                            //loading加载完毕
+                             callBack();
+                            
+                        }
+                    }
+                    img.src = arr[i];
+                    
+                     if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数
+						callBack();
+       					return; 
+    				}
+                    var name1 = arr[i].split("/");
+                    var name2 = name1[name1.length-1]; 
+                    var name = name2.split(".")[0];
+                    imgs[name] = arr[i];
+//                   console.log(imgs);
+                }
+            }
+	
+            //存放预加载图片数组 
+            var arr = [ "img/game6.jpg",
+                        "img/game5.jpg",
+                        "img/game4.jpg",
+                        "img/game3.jpg",
+                       "img/game2.jpg",
+                       "img/game1.jpg"
+                     ];
+ 			
+ 			
+ 			 imgLoad(arr,function(){
+                setTimeout(function(){
+                     document.getElementById("loading").style.display="none";//加载图片隐藏
+                     document.getElementsByClassName("warp").item(0).style.opacity="1";//加载图片隐藏
+                },500);
+            });
+		</script>
+		
+</html>

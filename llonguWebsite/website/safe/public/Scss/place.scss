@@ -1,0 +1,60 @@
+@import "style.scss";
+.wrap{
+    height: 100%;
+    font-family: $fontType;
+    background: $gray;
+    .banner{
+        width: 100%;
+        height: 4.666rem;  
+        overflow: hidden;
+    }
+     .main{
+        width: 100%;
+        margin-top: 0.16rem;
+        background: $white;
+         .main_title{
+            @include usualH;
+            font-weight: bold;
+            color: $orange;
+            font-size: 0.4rem;
+            text-indent: 0.4rem;
+         }
+    } 
+    .list{
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+       
+        li{
+            overflow: hidden;
+            font-size: 0.346rem;
+            border-bottom: 0.013rem solid #f2f2f2;
+            div{
+                float: left;
+                width: 50%;
+                text-align: center;
+                padding: .3rem 0;
+                color: #595959;
+            }
+        }
+        .list_scroll{
+            width: 100%;
+            height: 8rem;
+            overflow: scroll;
+            #div1,#div2{
+                height: auto;
+
+            }
+        }
+         .list_title div{
+            color: $orange;
+        }
+    }
+}
+
+
+    
+  
+    
+   
+    

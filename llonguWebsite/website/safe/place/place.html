@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>随e保</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<script type="text/javascript" src="../public/js/flexible.js"></script>
+		<link rel="stylesheet" type="text/css" href="../public/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../public/css/font.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/layui.css"/>
+		<link rel="stylesheet" type="text/css" href="css/place.css"/>
+	</head>
+	<body>
+		<div class="wrap ">
+			<div class="layui-carousel banner">
+					  <div carousel-item>
+					    <div><img src="img/gift_banner.jpg" alt="" /></div>
+					    <div><img src="img/gift_banner.jpg" alt="" /></div>
+					    <div><img src="img/shop_banner1.jpg" alt="" /></div>
+					  </div>
+			</div>
+			
+			<div class="main">
+				
+				<div class="main_title">
+					<i class="iconfont icon-shuxian"></i>
+					个销产精英
+				</div>
+				<ul class="list">
+					<li  class="list_title">
+						<div>姓名</div>
+						<div>营业区</div>
+					</li>
+					<div class="list_scroll">
+						<div id="div1">
+							<li>
+							<div>张三</div>
+							<div>九龙坡区</div>
+						</li>
+							<li>
+							<div>李四</div>
+							<div>渝中区</div>
+						</li>
+							<li>
+							<div>陈冬冬</div>
+							<div>沙坪坝区</div>
+						</li>
+							<li>
+							<div>王美丽</div>
+							<div>南岸区</div>
+						</li>
+							<li>
+							<div>付笑笑</div>
+							<div>九龙坡区</div>
+						</li>
+							<li>
+							<div>邓杨</div>
+							<div>南岸区</div>
+						</li>
+						<li>
+							<div>余欣</div>
+							<div>大渡口区</div>
+						</li>
+						<li>
+							<div>许国素</div>
+							<div>涪陵区</div>
+						</li>
+						<li>
+							<div>陈力</div>
+							<div>开州区</div>
+						</li>
+						<li>
+							<div>廖新</div>
+							<div>沙坪坝区</div>
+						</li>
+						</div>
+						<div id="div2"></div>
+					</div>
+				</ul>
+
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../public/js/layer.js"></script>
+	<script type="text/javascript" src="../public/js/layui.js"></script>
+	<script type="text/javascript">
+		//轮播
+	layui.use('carousel', function(){
+				var carousel = layui.carousel;
+				//建造实例
+				carousel.render({
+				    elem: '.banner'
+				    ,width: '100%' //设置容器宽度
+				    ,height:"5rem"
+				    ,arrow: 'none' //不显示箭头
+				      ,anim: 'default' //切换动画方式
+				      ,autoplay:true
+				      ,indicator:"block"
+
+				});
+	});
+	
+		var scorll=document.getElementsByClassName("list_scroll")[0];
+				var ul1=document.getElementById("div1");
+				var ul2=document.getElementById("div2");
+				
+				ul2.innerHTML=ul1.innerHTML;
+				function scrollLeft(){
+					scorll.scrollTop++;
+					if(scorll.scrollTop>=ul1.offsetHeight){
+						scorll.scrollTop=0;
+					}
+					
+					if(ul1.children[0]){
+						if(ul1.children[0].clientHeight*ul1.children.length>ul1.parentNode.clientHeight){
+							
+						}else{
+							ul2.innerHTML='';
+							clearInterval(timer)
+						}
+					}
+				}
+				var timer=setInterval(scrollLeft,25);
+	
+	</script>
+</html>

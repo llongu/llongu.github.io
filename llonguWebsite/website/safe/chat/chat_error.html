@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>随e保</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<script type="text/javascript" src="../public/js/flexible.js"></script>
+		<link rel="stylesheet" type="text/css" href="../public/css/style.css" />
+	</head>
+	<style type="text/css">
+		.wrap{background: #f4f5f7;}
+		.error { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); top: 40%; text-align: center;  }
+		.error .error_img { width: 2.24rem; height: 2.24rem; margin: 0 auto; }
+		.error .error_text { font-size: 0.4rem; font-family: "微软雅黑";color: #595959;  }
+		.error .error_text p:nth-child(2) { color: #ff5c00; font-size: 0.533rem;margin: .2rem 0; }
+		.error .error_text p:first-child { font-size: 0.533rem; margin: .3rem 0; color: #b3b3b3;}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="error">
+				<div class="error_img"><img src="img/error.jpg" alt=""></div>
+				<div class="error_text">
+					<p>很抱歉</p>
+					<p>你还不是精英</p>
+					<p>继续努力，大步向前！</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		setTimeout(function(){
+			window.history.go(-1);
+		},3500)
+	</script>
+</html>

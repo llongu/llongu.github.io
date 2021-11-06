@@ -1,0 +1,520 @@
+.banner,.New_Products,.September,.new,.newcompany{width: 100%;background: #fff;}
+
+.banner{height: 25.6rem;}/*背景banner*/
+
+.New_Products{height: 26.65rem;}/*新品推荐*/
+
+.September{height: 36.7rem;background: #f4f4f5;overflow: hidden;}/*9月中秋*/
+
+.new{height: 49.65rem;}/*新闻企业区域*/
+
+.newcompany{height: 16rem;background: #f4f4f5;overflow: hidden;}/*新入住厂家*/
+
+
+
+/*banner区域*/
+
+
+
+.goods_main li:first-child{display: block;}
+
+
+/*幻灯片*/
+.banner .warp{position: relative;}
+.banner_go{width: 51.3rem;height: 100%;position: absolute;right: 0;top: 0;}
+.banner_img{width: 100%;height: 100%;}
+.banner_go img{width: 100%;height: 100%;display: none;}
+.banner_go img:nth-child(2){display: block;}
+.bannerclick{width: 7.85rem;height: 1px;position: absolute;left: 50%;bottom: 0.7rem; transform: translateX(-47%);}
+.bannerclick span{width: 1.95rem;height: 0.05rem; display: inline-block;float: left;margin-right:0.65rem;background: #000;cursor: pointer;}
+.bannerclick span:nth-child(2){background: #fb565d;}
+
+/**/
+.warp .title{float: left; margin: 2.3rem 0  1.9rem 2.25rem;}
+.warp .title h3{font-size:0.8rem;color: #2d313d;float: left;}
+.warp .title h3 span{color: #fb565c;margin: 0 1rem 0 0.25rem ;}
+.warp .title h3 img{float:right;margin-top: 0.4rem;}
+
+.warp  .more{background: #2d313d;text-align:center;line-height: 9.5rem;width: 9.5rem;height: 9.5rem;}
+.warp .more a{color: #fff;font-size: 18px;display:inline-block;height:28px;line-height:28px;width:auto;}
+.warp .more a span{display:inline-block;height:18px;}
+.warp .more2{background: #fb565c;line-height: 12rem;}
+/*新品推荐*/
+
+.New_Products_picture{width: 100%;height: 21.35rem;}
+.New_Products_picture li{width: 9.5rem;height: 9.5rem;float: left;overflow: hidden;margin-right: 0.6rem;margin-bottom: 1.2rem; position: relative;}
+.New_Products_picture li img{width: 100%;}
+.New_Products_picture li:nth-child(6n){margin-right: 0;}
+
+
+/*9月中秋*/
+.September_picture{width: 100%;height: 31.5rem;}
+.September_top{width: 100%;height: 19.75rem;margin-bottom: .7rem;}
+.September_top div{float: left;height: 100%;}
+
+
+.September_click{width: 29.7rem;position: relative;overflow: hidden;}
+.September_top_center{width:19.55rem ;margin: 0 .6rem;overflow:hidden;}
+.September_top_right{width: 190px;}
+.September_top_right li{margin-bottom: 0.7rem;}
+/*中秋专场*/
+.September_click_show{width: 100%;height: 100%;position: absolute;left: 0;top: 82%;background: rgba(221,86,97,.85);text-align: center;font-size: .7rem;color: #fff;line-height: 24px;}
+.September_click_show span{display: inline-block;transform: rotate(-90deg);font-size: 15px;margin-top: 0.25rem;}
+.September_click_show h4{font-size: 1.1rem;margin: .5rem 0 2.7rem 0;}
+.September_click_show .show_go{width:10.2rem ;height:1.75rem;background: #fff;text-align: center;margin: 0 auto;float: none;line-height: 1.75rem;margin-top: 2.4rem;}
+.September_click_show .show_go a{font-size: .7rem;color: #2d313d;}
+
+.September_bottom{height: 9.5rem;width: 100%;}
+.September_bottom li{float: left;margin-right: 0.6rem;width: 9.5rem;height:9.5rem;position: relative;}
+.September_bottom a,.September_bottom img{width: 100%;height: 100%;}
+.September_bottom  .September_bottom_first{width: 19.6rem;}
+.September_bottom li:last-child{margin: 0;}
+/*文字*/
+.September_bottom_first_text{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	text-align: center;
+	color: #fff;
+	line-height: 9.5rem;
+	font-weight: bold;
+	letter-spacing: 4px;
+	opacity: 0;
+	transition: all 1s ;
+}
+/*图片hover线交接效果*/
+.September_bottom .line_four:after,
+.September_bottom .line_four:before{
+	position: absolute;
+	top: 20px;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;	
+	content: '';
+	transition: all 0.35s ;
+	pointer-events: none;
+	opacity: .9;
+	text-align: center;
+}
+
+.line_four:after{
+		border-top: 1px solid #fff;
+		border-bottom: 1px solid #fff;
+		transform: scaleX(0);
+	}
+.line_four:before{
+		border-left: 1px solid #fff;
+		border-right: 1px solid #fff;
+		transform: scaleY(0);
+	}
+.September_bottom_first:hover .line_four:after{
+	transform: scaleX(1);
+}
+.September_bottom_first:hover .line_four:before{
+	transform: scaleY(1);
+}	
+.September_bottom_first:hover .September_bottom_first_text {
+	opacity: 1;
+}	
+/*新闻&文化*/
+.new_picture{height:22.85rem ;width: 100%;}
+.new_picture li{float: left;margin-right: 0.6rem;margin-bottom: 0.55rem;}
+
+/*文章标题*/
+.new_text,.new_text2{background: #2d313d;position: relative;}
+
+/*文章标题1*/
+.new .new_picture .new_text{width:8.15rem;height: 8.5rem; padding-left: 0.5rem;padding-right: 0.85rem;padding-top: 1rem;}
+.new .new_picture .new_text img{position: absolute;right:-17px;top:50%;transform: translateY(-50%) rotate(90deg);}
+/*文章标题公共样式*/
+.new_picture .spandate{font-size:0.5rem ;color: #a5a6aa;float: left;}
+.new_picture .new_text_title{color: #fb565c;font-size: 14px;margin: .7rem 0 .7rem 0;line-height: 1.2rem;}
+.new_picture p{color: #898b8f;font-size: .6rem;line-height: 1rem;}
+.new_picture p:hover{text-decoration:underline;}
+.new_picture a{float: left;clear: both;}
+.new .new_picture .more a{float: none;}
+.new_picture .new_go{float: right;font-size: .6rem;margin-top: .5rem;color: #a5a6aa;}/*详细*/
+
+.new_picture li:nth-child(4){margin-right:0;}
+.new_picture li:last-child{margin-right:0;}
+/*文章标题2*/
+.new_text2{width: 16.85rem;height: 11.25rem;padding: 1rem 1.6rem 0 1.15rem;}
+.new_text2 img{position: absolute;top: -0.55rem;left: 50%;transform: translateX(-50%);}
+.new_picture  .new_text2 .new_text_title{margin:0.5rem 0 ;}
+/*文章标题3*/
+.new_text3 img{position: absolute;left: -17px;top: 50%;transform: translateY(-50%) rotate(-90deg);}
+
+
+/*企业&厂商*/
+.new_factory{width: 100%;height: 12.5rem;clear: both;}
+.new_factory li{width: 6.55rem;height: 5rem; float: left;text-align: center;margin-left: 0.8rem;margin-bottom: 1rem;}
+.new_factory li a{font-size: 0.5rem;color: #898884;}
+
+.warp .black_more a{float: right;font-size: .7rem;color: #2d313d;margin-right: 2.8rem;font-weight: bold;margin-top: 2.5rem;}
+
+/*新入住厂家*/
+.newcompany_list .title{margin-bottom:2.5rem;margin-top: 2.5rem;}
+.newcompany_list{width: 100%;height: 8.15rem;}
+.newcompany_list li{float: left;width: 18.6rem;height:6.8rem;padding-left: 1rem;padding-top: 1.4rem;background: #fff;margin-right: .6rem;}
+.newcompany_list .li2{background: #fb565c;}
+.newcompany_list .li2  .text span,.newcompany_list .li2  .text a{color: #fff;}
+.newcompany_list .li3{background: #fff;margin: 0;}
+
+.newcompany_list .text{width: 16.75rem;height: .7rem;line-height: .7rem;margin-bottom: .6rem;}
+.newcompany_list .text span{color: #fb565c;float: left;margin-right:.5rem;}
+.newcompany_list .text a{font-size: .7rem;color: #2d313d;float: left;}
+.newcompany_list .text p{font-size:0.6rem ;color: #b8b8bb;float: right;}
+.newcompany_list .text a:hover{text-decoration:underline;}
+
+
+
+/*文本框效果*/
+.hehe,
+.search  input {
+ color: #2d313d;
+ width: 20.2rem;height: 1.65rem;border: 1px solid #fb565c;box-sizing: border-box;padding-left: .5rem;padding-right: 1.7rem;
+  background: transparent;
+  -webkit-transition: all .100s;
+  transition: all .100s;
+  letter-spacing:1px;
+}
+.hehe:focus,
+.search input:focus {
+  outline: none;
+  color: #2d313d;
+  border-color: #fb565c;
+}
+.hehe.keyup,
+.search input.keyup {
+  color: #2d313d;
+  border-color: #fb565c;
+  
+  box-shadow: 0 0 .25em #fb565c,inset 0 0 .25em #fb565c;
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30px;
+  bottom: 0;
+  z-index:999;
+  pointer-events: none;
+}
+
+
+/*图片扭动区域*/
+.allls{width:500px;height:600px; margin-bottom:1000px;}
+
+.tilter {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	flex: none;
+	perspective: 1000px;
+}
+
+.tilter * {
+	pointer-events: none;
+}
+
+.tilter:hover,
+.tilter:focus {
+	color: #fff;
+	outline: none;
+}
+
+/*
+.tilter__figure,
+.tilter__deco,
+.tilter__caption {
+	will-change: transform;
+}*/
+
+.tilter__figure,
+.tilter__image {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.tilter__figure > * {
+	transform: translateZ(0px); /* Force correct stacking order */
+}
+
+.smooth .tilter__figure,
+.smooth .tilter__deco--overlay,
+.smooth .tilter__deco--lines,
+.smooth .tilter__deco--shine div,
+.smooth .tilter__caption {
+	transition: transform 0.2s ease-out;
+}
+
+.tilter__figure {
+	position: relative;
+}
+
+.tilter__figure::before {
+	content: '';
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	top: 5%;
+	left: 5%;
+	/*box-shadow: 0 30px 20px rgba(35,32,39,0.5);*/
+}
+
+.tilter__deco {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.tilter__deco--overlay {
+	background-image: linear-gradient(45deg, rgba(226, 60, 99, 0.4), rgba(145, 58, 252, 0.4), rgba(16, 11, 192, 0.4));
+}
+
+.tilter__deco--shine div {
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: -50%;
+	left: -50%;
+	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%);
+}
+
+.tilter__deco--lines {
+	fill: none;
+	stroke: #fff;
+	stroke-width: 1.5px;
+}
+
+.tilter__caption {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 4em;
+}
+
+.tilter__title {
+	margin: 0;
+	font-weight: normal;
+	font-size: 2.5em;
+	font-family: 'Abril Fatface', serif;
+	line-height: 1;
+}
+
+.tilter__description {
+	margin: 1em 0 0 0;
+	font-size: 0.85em;
+	letter-spacing: 0.15em;
+}
+
+/* Individual styles */
+
+/* Example 1 (Default) */
+/*.tilter--1 .tilter__figure::before {
+	box-shadow: 0 30px 20px rgba(0,0,0,0.5);
+}
+*/
+/* Example 2 (thicker lines, overlay) */
+.tilter--2,
+.tilter--2:hover,
+.tilter--2:focus {
+	color: #2e27ad;
+}
+
+.tilter--2 .tilter__deco--overlay {
+	background-image: linear-gradient(45deg, rgba(245, 239, 40, 0.6), rgba(164, 22, 169, 0.6));
+}
+
+.tilter--2 .tilter__deco--lines {
+	stroke: #2e27ad;
+	stroke-width: 4px;
+}
+
+/* Example 3 (no lines, overlay hard-light) */
+.tilter--3 .tilter__deco--overlay {
+	background-image: linear-gradient(45deg, rgba(205, 81, 220, 0.6), rgba(41, 94, 230,0.5));
+}
+
+.tilter--3 .tilter__caption {
+	padding: 2em;
+	text-align: right;
+	text-shadow: 0.1em 0.8em 1em rgba(0,0,0,0.35);
+}
+
+/* Example 4 (caption sliding in) */
+.tilter--4 .tilter__deco--overlay {
+	background-image: linear-gradient(20deg, rgb(214, 100, 40), rgba(46, 39, 173, 0.58), rgba(53, 74, 165, 0.6));
+}
+
+@media screen and (min-width: 30em) {
+	.tilter--4 .tilter__deco--lines {
+		transform: scale3d(0.8,0.8,1);
+		transition: transform 0.4s;
+	}
+	.tilter--4:hover .tilter__deco--lines {
+		transform: scale3d(1,1,1);
+	}
+	.tilter--4 .tilter__title,
+	.tilter--4 .tilter__description {
+		transform: translate3d(0,80px,0);
+		opacity: 0;
+		transition: transform 0.4s, opacity 0.4s;
+	}
+	.tilter--4:hover .tilter__description {
+		transition-delay: 0.1s;
+	}
+	.tilter--4:hover .tilter__title,
+	.tilter--4:hover .tilter__description {
+		transform: translate3d(0,0,0);
+		opacity: 1;
+	}
+}
+
+/* Example 5 (line animating) */
+.tilter--5 .tilter__deco--lines path {
+	stroke-dasharray: 1270;
+	stroke-dashoffset: 1270;
+	transition: stroke-dashoffset 0.7s;
+}
+
+.tilter--5:hover .tilter__deco--lines path {
+	stroke-dashoffset: 0;
+}
+
+.tilter--5 .tilter__figure::before {
+	box-shadow: none;
+}
+
+/* Example 6 (different line position) */
+.tilter--6,
+.tilter--6:hover,
+.tilter--6:focus {
+	color: #2e27ad;
+}
+
+.tilter--6 .tilter__deco--overlay {
+	background-image: linear-gradient(45deg, rgba(46, 39, 173, 0.2), rgba(255, 186, 59, 0.58));
+}
+
+.tilter--6 .tilter__deco--lines {
+	stroke: #2e27ad;
+	stroke-width: 6px;
+	top: -50px;
+	left: -50px;
+}
+
+.tilter--6 .tilter__caption {
+	padding: 0 4em 5.5em 1em;
+}
+
+.tilter--6 .tilter__figure::before {
+	box-shadow: none;
+}
+
+/* Example 7 (different line) */
+.tilter--7 .tilter__deco--overlay {
+	background-image: linear-gradient(45deg, rgba(93, 203, 106, 0.48), rgba(59, 239, 255, 0.58));
+}
+
+.tilter--7 .tilter__deco--lines {
+	stroke-width: 20px;
+	transform: scale3d(0.9,0.9,1);
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.tilter--7:hover .tilter__deco--lines {
+	opacity: 1;
+	transform: scale3d(1,1,1);
+}
+
+.tilter--7 .tilter__figure::before {
+	box-shadow: none;
+}
+
+/* Example 8 (different line) */
+.tilter--8 {
+	perspective: none;
+}
+
+.tilter--8 .tilter__figure {
+	transform-style: flat;
+}
+
+.tilter--8 .tilter__deco--lines {
+	stroke: #9255ae;
+	stroke-width: 6px;
+	mix-blend-mode: color-burn;
+}
+
+.tilter--8 .tilter__caption {
+	color: #9255ae;
+	mix-blend-mode: color-burn;
+}
+
+.tilter--8 .tilter__figure::before {
+	box-shadow: none;
+}
+
+
+/*渐变扫描效果*/
+ .content {
+            position: absolute;
+            z-index: 2;
+         
+            width: 100%;
+            height: 100%;
+            left: -100%;
+            top: -100%;
+            line-height: 198px;
+            text-align: center;
+            color: #fff;
+           
+        }
+		
+		.content .white{
+			width:100px;
+			height:100%;
+			background: -webkit-linear-gradient(left, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+			
+			}
+		.content .lefts	{
+			
+			-webkit-transform: skewX(-25deg);
+			position:absolute;left:-100%;top:0;
+			}
+		.content .rights{
+			
+			-webkit-transform: skewX(25deg);
+			position:absolute;right:-100%;top:0;
+			}	
+		.content .tops{
+			width:100%;
+			height:40px;
+			background: -webkit-linear-gradient(top, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+			position:absolute;top:-50%;left:0;
+			}	
+		.content .bottoms{
+			width:100%;
+			height:40px;
+			background: -webkit-linear-gradient(top, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+			position:absolute;bottom:-50%;left:0;
+			}			
+		
+        .content.trans {
+            
+            backface-visibility: hidden;
+			 pointer-events: none;
+        }

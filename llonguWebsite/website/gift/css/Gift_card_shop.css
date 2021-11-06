@@ -1,0 +1,17 @@
+/*新闻导航*/
+.new_nav{height:3.4rem;width: 100%;}
+.new_nav .left li{float: left;font-size: 0.8rem;color: #2d313d;line-height: 3.4rem;margin-right: 1.25rem;}
+/*标题定位*/
+.title_nav{margin-top: 1.3rem }
+.title_nav img{float: left;margin: 0 0.65rem;}
+.title_nav a{float: left;font-size: 0.6rem;color: #838281;}
+.title_nav .sanjao{margin-top: 0.25rem;}
+
+/*新闻主体*/
+.new_main{width: 100%;height: auto;border-top: 1px solid #eaeaeb;}
+.new_main .new_main_inner{width: 100%;height: auto;margin-bottom: 3.15rem;}
+.new_main_inner ul{width: 100%;height: 12.5rem;margin-top: 5.25rem;}
+.new_main_inner ul li{width: 15.95rem;height: 100%;float: left;text-align: center;font-size: 0.7rem;color: #2d313d;margin-left: 3.5rem;}
+.new_main_inner ul li .li_picture{width: 100%;height: 10.1rem;background: black;border-radius: 0.2rem;}
+.new_main_inner ul li span{margin-top: 1.5rem;display: inline-block;}
+.new_main button{font-size: 0.7rem;color: #fff; width: 6rem;height: 1.2rem;background: #fb565c;text-align: center;line-height: 1.2rem;border: none;margin-left: 28rem;margin-bottom: 9.5rem; clear: both;cursor: pointer;}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+		<title></title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	 <meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<script type="text/javascript" src="js/flexible.debug.js" ></script>
+	</head>
+<body>
+	<img src="img/loading.gif" alt="" id="loading">
+		
+	<div class="warp">
+			<img src="img/index_bg.jpg" alt="" class="index_bg">
+			
+			<!--首页标题-->
+			<div class="index_title">
+				<img src="img/index_title.png" alt="" class="title_bg">
+				<!--財妹-->
+				<div class="girl">
+					<img src="img/girl.png" alt="">
+				</div>
+				<!--红旗-->
+				<div class="red">
+					<img src="img/red.png" alt="">
+				</div>
+				<!--客户节-->
+				<div class="user_day">
+					<img src="img/user.png" alt="">
+				</div>
+				<!--光-->
+				<div class="sun">
+					<img src="img/boom.png" alt="">
+				</div>
+			</div>
+			
+			<!--线路图-->
+			<div class="wire">
+				<img src="img/wire.png" alt="" class="wire_bg">
+				
+				<!--排行榜按钮-->
+				<div class="list">
+					<a href="">
+						<img src="img/list_b.png" alt="">
+					</a>
+				</div>
+				<!--开始游戏按钮-->
+				<div class="begin">
+					<a href="game.html">
+						<img src="img/begin.png" alt="">
+					</a>	
+				</div>
+				<!--领取10万礼包按钮-->
+				<div class="ten">
+					<a href="">
+						<img src="img/ten.png" alt="">
+					</a>	
+				</div>
+				<!--纪录按钮-->
+				<div class="gift_message_b">
+					<img src="img/gift_message2.png" alt="">
+				</div>
+			</div>
+			
+			<!--游戏规则按钮-->
+			<div class="rule">
+					<a href="">
+						<img src="img/rule2.png" alt="">
+					</a>	
+			</div>
+			
+			<div class="pop">
+				<!--中奖纪录页面-->
+				<div class="gift_message">
+					<!--关闭按钮-->
+					<div class="close"></div>
+					<img src="img/gift_list_bg.png" alt="" class="gift_message_bg">
+						
+					<!--信息盒子-->	
+					<div class="message_box">
+						<!--每层信息-->
+						<div class="message_box_list">
+							<p>2017/6/18 22:13 获得了福耀汽车玻璃礼包</p>
+							<a href="">查看</a>
+						</div>
+						<div class="message_box_list">
+							<p>2017/6/18 22:13 获得了 科沃斯扫地机器人一台</p>
+						</div>
+						<div class="message_box_list">
+							<p>撒中奖信息填写旦法阿斯蒂芬爱的爱的</p>
+						</div>
+					</div>	
+			
+				</div>
+			</div>
+		
+	</div>	
+</body>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/index.js" type="text/javascript"></script>
+		<script>
+		//关闭弹层
+		$(".close").on("click",function(){
+			$(this).parent().hide();
+			$(".pop").hide();
+		})
+		//中奖纪录
+			$(".gift_message_b").click(function(){
+				$(".pop").show();
+				$(".gift_message").show();
+			})
+			
+			$(".girl").css("right","-1.5rem");
+			setTimeout(function(){
+					$(".girl").css("animation","goes ease-in-out 2s infinite alternate");
+			},1000)
+			
+			
+			
+			
+			//图片加载
+            function imgLoad(arr,callBack){
+                var len = arr.length;//所有图片的个数
+                var imgs = {};//创建一个空的JSON,去存我们的所有图片
+                var loaded = 0;//记录我们加载了多少张图片
+
+                for(var i = 0; i < len; i ++){
+                    var img = new Image();
+                    img.onload = function(){
+                        loaded ++ ;//增加了一张图片
+                        //加载完成
+                        if(loaded == len){
+                            //loading加载完毕
+                             callBack();
+                            
+                        }
+                    }
+                    img.src = arr[i];
+                    
+                     if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数
+						document.getElementById("loading").style.display="none";//加载图片隐藏
+						document.getElementsByClassName("warp").item(0).style.display="block";//加载图片隐藏
+						callBack();
+       					return; // 直接返回，不用再处理onload事件
+    				}
+                    var name1 = arr[i].split("/");
+                    var name2 = name1[name1.length-1]; 
+                    var name = name2.split(".")[0];
+                    imgs[name] = arr[i];
+//                   console.log(imgs);
+                }
+            }
+	
+            //存放预加载图片数组 
+            var arr = [ "img/index_bg.jpg",
+                        "img/index_title.png",
+                        "img/girl.png",
+                        "img/red.png",
+                       "img/user.png",
+                       "img/boom.png",
+                       "img/wire.png",
+                       "img/rule.png",
+                        "img/list_b.png",
+                        "img/ten.png",
+                        "img/begin.png"
+
+                        
+                     ];
+ 			
+ 			
+ 			 imgLoad(arr,function(){
+                setTimeout(function(){
+                     document.getElementById("loading").style.display="none";//加载图片隐藏
+                     document.getElementsByClassName("warp").item(0).style.display="block";//加载图片隐藏
+                },500);
+            });
+		</script>
+		
+</html>

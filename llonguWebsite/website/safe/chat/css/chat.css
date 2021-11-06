@@ -1,0 +1,54 @@
+@charset "UTF-8";
+.iconfont { font-size: inherit; }
+
+.sortOrange { color: #ff5c00; }
+
+.sortGray { color: #595959; }
+
+.lineL:before, .lineR:after { content: ""; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); left: 100%; width: 0.5%; height: 60%; background: #f4f5f7; }
+
+.lineR:before { left: 0; }
+
+.wrap { font-family: "微软雅黑"; background: #fff; border-top: 0.266rem solid #f4f5f7; }
+
+.index_wrap .logo_box { width: 100%; height: 5.466rem; border-bottom: 0.013rem solid #f4f5f7; overflow: hidden; }
+.index_wrap .logo_box .logo { width: 2.266rem; height: auto; color: #000; font-size: 0.4rem; text-align: center; margin: 0 auto; margin-top: 1.8rem; }
+.index_wrap .logo_box .logo p { margin-top: .3rem; }
+.index_wrap .list { background: #fff; }
+.index_wrap .list li { width: 95%; -webkit-box-sizing: border-box; box-sizing: border-box; border-bottom: 0.026rem solid #f2f2f2; float: right; overflow: hidden; }
+.index_wrap .list li { padding: 0.2rem; }
+.index_wrap .list li .li_box { width: 100%; height: auto; overflow: hidden; }
+.index_wrap .list li .li_box .li_box_left { width: 1.413rem; height: 1.413rem; float: left; margin-right: .3rem; position: relative; }
+.index_wrap .list li .li_box .li_box_left .li_box_img { width: 100%; height: 100%; border-radius: 50%; background: #7ecef4; overflow: hidden; }
+.index_wrap .list li .li_box .li_box_left img { width: 80%; height: auto; display: block; margin: 0 auto; margin-top: .2rem; }
+.index_wrap .list li .li_box .li_box_left .new_msg { width: 0.266rem; height: 0.266rem; border-radius: 0.133rem; background: #fa0909; position: absolute; top: 0.066rem; right: 0.066rem; -webkit-box-shadow: 0 0  0.133rem  #ffeade; box-shadow: 0 0  0.133rem  #ffeade; z-index: 1; }
+.index_wrap .list li .li_box .li_box_right { width: 7.2rem; height: auto; float: left; color: #000; letter-spacing: 0.013rem; position: relative; }
+.index_wrap .list li .li_box .li_box_right .title { font-size: 0.48rem; }
+.index_wrap .list li .li_box .li_box_right .chat_first { word-break: break-all; font-size: 0.373rem; text-overflow: ellipsis; display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/ -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/ -webkit-line-clamp: 1; /** 显示的行数 **/ overflow: hidden; /** 隐藏超出的内容 **/ margin-top: .1rem; }
+.index_wrap .list li .li_box .li_box_right .date { color: #b3b3b3; font-size: 0.266rem; position: absolute; right: 0; top: 0; }
+
+.type_wrap { height: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.type_wrap .meun { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.type_wrap .meun li { width: 6.506rem; height: 1.146rem; line-height: 1.146rem; text-align: center; border-radius: 0.453rem; background: #ff5c00; color: #fff; font-size: 0.453rem; font-weight: bold; margin: 0 auto; margin-bottom: 0.8rem; letter-spacing: 0.013rem; }
+.type_wrap .meun li i { vertical-align: middle; }
+
+.msg_wrap { height: 100%; background: #f4f5f7; border-top: 0; }
+.msg_wrap #msg_main { width: 100%; height: 100%; overflow-y: scroll; position: relative; }
+.msg_wrap #send_box { width: 100%; height: auto; padding: 0.4rem 0; background: #f2f2f2; position: absolute; bottom: 0; left: 0; overflow: hidden; }
+.msg_wrap #send_msg { width: 7.5rem; max-height: 2rem; padding: .3rem 0.25rem; border-radius: 0.106rem; background: #fff; float: left; margin-left: 0.4rem; outline: none; font-size: .35rem; color: #000; line-height: .4rem; text-indent: .3rem; letter-spacing: 0.013rem; overflow: scroll; }
+.msg_wrap #send_button { float: left; font-size: 0.4rem; line-height: 1.066rem; color: #595959; letter-spacing: 0.013rem; position: absolute; right: 0.5rem; bottom: 0.35rem; }
+.msg_wrap .msg_box { width: 9rem; height: auto; position: relative; padding-bottom: 0.666rem; overflow: hidden; margin: 0 auto; }
+.msg_wrap .msg_box:first-child { padding-top: 0.666rem; }
+.msg_wrap .msg_box .msg_img { width: 1.146rem; height: 1.146rem; background: #fff; border-radius: 50%; overflow: hidden; }
+.msg_wrap .msg_box .msg_text { max-width: 6.2rem; padding: .2rem; text-indent: .05rem; font-size: 0.426rem; margin-top: .1rem; border-radius: 0.106rem; word-wrap: break-word; }
+.msg_wrap .msg_box .msg_time { clear: both; color: #b3b3b3; padding-top: .1rem; }
+.msg_wrap .msg_box .time { text-align: center; color: #595959; font-size: 0.32rem; text-align: center; }
+.msg_wrap .msg_box .msg_error { color: #ff5c00; font-size: .4rem; position: absolute; left: 0; top: 50%; -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+.msg_wrap .other .msg_text { float: left; background: #fff; color: #595959; -webkit-box-shadow: 0px 0px 0.066rem 0.066rem #f2f3f6; box-shadow: 0px 0px 0.066rem 0.066rem #f2f3f6; }
+.msg_wrap .other .msg_img { float: left; margin-right: .2rem; }
+.msg_wrap .other .msg_time { padding-left: 1.35rem; }
+.msg_wrap .self .msg_text { float: right; background: #ff5c00; color: #fff; -webkit-box-shadow: 0px 0px 0.066rem 0.066rem #fdf1ea; box-shadow: 0px 0px 0.066rem 0.066rem #fdf1ea; }
+.msg_wrap .self .msg_img { float: right; margin-left: .2rem; }
+.msg_wrap .self .msg_time { padding-right: 1.35rem; text-align: right; }
+
+/*# sourceMappingURL=chat.css.map */
