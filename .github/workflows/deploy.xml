@@ -17,8 +17,8 @@ jobs:
           npm run build
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.5.9  // 引用别人的部署插件
+        uses: JamesIves/github-pages-deploy-action@3.5.9  
         with: 
-          ACCESS_TOKEN: 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   // 这里需要设置成你的 token
+          ACCESS_TOKEN: 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   
           BRANCH: gh-pages
           FOLDER: docs/.vuepress/dist
