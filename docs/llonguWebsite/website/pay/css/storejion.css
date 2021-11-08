@@ -1,0 +1,257 @@
+		#app {
+			height: auto;
+			position: relative;
+		}
+		
+		.aui-bar-nav {
+			background: #fff !important;
+			color: #000;
+		}
+		
+		.jion_list {
+			margin-bottom: 10px;
+			padding: 14px;
+			background: #fff;
+			overflow: hidden;
+		}
+		
+		.jion_t {
+			font-size: 16px;
+			color: #171717;
+			float: left;
+		}
+		
+		.jion_box {
+			clear: both;
+		}
+		
+		.jion_box li {
+			/*width: 62px;*/
+			width: 18%;
+			padding: 12px 0;
+			color: #323232;
+			font-size: 12px;
+			-webkit-box-sizing: border-box;
+			        box-sizing: border-box;
+			border: 1px solid #E3E3E3;
+			float: left;
+			background: #fff;
+			text-align: center;
+			margin-right: 2.5%;
+			margin-top: 10px;
+			position: relative;
+		}
+		
+		.jion_box .jionactive {
+			border-color: #FFB34D;
+		}
+		
+		.jion_box .jionactive::after {
+			content: '';
+			width: 25px;
+			height: 22px;
+			background: url(../image/xuanze.png) no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		
+		.jion_box li:nth-child(5n) {
+			margin-right: 0;
+		}
+		
+		.border_list div {
+			padding: 14px 0;
+			border-bottom: 1px solid #EEEEEE;
+			color: #595959;
+			font-size: 14px;
+			overflow: hidden;
+		}
+		
+		.border_list label {
+			width: 25%;
+			height: 30px;
+			line-height: 30px;
+			display: block;
+			float: left;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		
+		.border_list input,
+		.border_list select {
+			width: 75%;
+			height: 30px;
+			line-height: 30px;
+			float: left;
+		}
+		
+		.border_list textarea {
+			width: 75%;
+			height: auto;
+			line-height: 30px;
+		}
+		
+		.border_list input::-webkit-input-placeholder,
+		.border_list select,
+		.border_list textarea::-webkit-input-placeholder {
+			color: #B8B8B8;
+			font-size: 14px;
+		}
+		
+		.picture_box {
+			width: 75%;
+			height: auto;
+			float: left;
+		}
+		
+		.picture_box li {
+			width: 50px;
+			height: 50px;
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			-webkit-box-sizing: border-box;
+			        box-sizing: border-box;
+			border: 1px dashed #D6D6D6;
+			position: relative;
+		}
+		
+		.picture_box li img {
+			width: 100%;
+			height: 100%;
+		}
+		
+		.picture_box .uploadbg {
+			background: url(../image/upload_bg.png) no-repeat;
+			background-size: 100% 100%;
+		}
+		
+		.picture_box .iconfont {
+			font-size: 12px;
+			color: red;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		
+		#user_code {
+			width: 40%;
+		}
+		
+		#get_code {
+			width: 80px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			border-radius: 1px;
+			background: #368DE5;
+			float: left;
+			color: #fff;
+			font-size: 12px;
+			border: none;
+		}
+		
+		.codetime {
+			background: #C9C9C9 !important;
+			color: #fff !important;
+		}
+		
+		#submit {
+			width: 90%;
+			padding: 13px 0;
+			background: #368DE5;
+			color: #fff;
+			border-radius: 5px;
+			font-size: 14px;
+			text-align: center;
+			clear: both;
+			margin: 20px auto;
+		}
+		
+		.submits {
+			background: #d1d1d1 !important;
+			color: #fff !important;
+		}
+		
+		#pop {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 10;
+			background: rgba(0, 0, 0, .6);
+		}
+		
+		#popcity {
+			width: 100%;
+			position: absolute;
+			left: 0;
+			overflow: hidden;
+			background: #fff;
+			animation: bottomt .3s linear forwards;
+			-webkit-animation: bottomt .3s linear forwards;
+		}
+		
+		#cancelcity,
+		#surestore {
+			width: 100%;
+			padding: 6px 10px;
+			text-align: right;
+			color: #0075F0;
+			font-size: 18px;
+			border-bottom: 1px solid #EEEEEE;
+		}
+		
+		#citylist,
+		#storelist {
+			max-height: 10rem;
+			overflow: scroll;
+		}
+		
+		#citylist li {
+			line-height: 24px;
+			padding: 5px 0;
+			font-size: 16px;
+			color: #171717;
+			text-align: center;
+		}
+		
+		#storelist li {
+			font-size: 14px;
+			color: #171717;
+			border: 1px solid #EEEEEE;
+			width: 20%;
+			-webkit-box-sizing: border-box;
+			        box-sizing: border-box;
+			padding: 5px 0;
+			text-align: center;
+			margin: 8px 2.5%;
+			float: left;
+		}
+		
+		.checkedstore {
+			border-color: #0075F0 !important;
+			color: #0075F0 !important;
+		}
+		
+		@keyframes bottomt {
+			from {
+				bottom: -50%;
+			}
+			to {
+				bottom: 0;
+			}
+		}
+		
+		@-webkit-keyframes bottomt {
+			from {
+				bottom: -50%;
+			}
+			to {
+				bottom: 0;
+			}
+		}

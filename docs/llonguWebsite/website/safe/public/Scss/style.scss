@@ -1,0 +1,141 @@
+//字体
+$fontType:"微软雅黑";
+.iconfont{font-size: inherit;}
+//橙色 
+$orange:#ff5c00;
+//红色
+$red:red;
+//白色
+$white:#fff;
+//灰色3级（正文）
+$gray3:#595959;
+//灰色2级（绑定）
+$gray2:#b3b3b3;
+//灰色1级（提示）
+$gray1:#d8d8d8;
+//背景
+$gray:#f4f5f7;
+//加粗
+$blod:bold;
+//圆弧
+$Bradius:0.453rem;
+//居中
+@mixin center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//阴影
+@mixin shadow {
+    box-shadow: 0 0 0.053rem 0.026rem #ffe2d2;
+}
+
+//背景
+@mixin bsz {
+    background-size: 100% 100%;
+}
+
+//列表
+@mixin list {
+    background: $white;
+    li {
+        width: 95%;
+        box-sizing: border-box;
+        border-bottom: 0.026rem solid #f2f2f2;
+        float: right;
+        overflow: hidden;
+    }
+}
+
+//排序高度
+@mixin usualH {
+    height: 1.146rem;
+    background: $white;
+    line-height: 1.146rem;
+}
+
+//排序盒子
+.sortOrange{
+    color: $orange;
+}
+.sortGray{
+    color: $gray3;
+}
+@mixin sortBox {
+    float: left;
+    @include center;
+    position: relative;
+    padding-right: .4rem;
+    .sort_title{}
+    .sort_icon{
+        line-height: normal;
+        @include center;
+        left:94%;
+        width: 0.4rem;
+        i {
+            display: block;
+            font-size: 0.24rem;
+
+        }
+    }
+}
+//排序线条
+.lineL:before,.lineR:after{
+            content: "";
+            @include center;
+            left: 100%;
+            width:0.5%;
+            height: 60%;
+            background: $gray;
+        }
+ .lineR:before{
+            left:0;
+ }
+ 
+// 下拉框
+ @mixin dropdown{
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 150%;
+    height: auto;
+    box-shadow:0px 0 0.2rem #c3c3c3 ;
+    border-radius: 0.1rem;
+    background: #fbf9f8;
+    z-index: 1;
+    font-size: .35rem;
+    &::before{
+        content: "";
+        width: 0.3rem;
+        height: 0.3rem;
+        transform: rotateZ(45deg);
+        background: $white;
+        position: absolute;
+        top:-0.15rem ;
+        left: .3rem;
+        box-shadow: 0px 0 0.1rem #c3c3c3 ;
+        z-index: -1;
+    }
+    li{
+        width: 100%;
+        padding: .15rem 0;
+        position: relative;
+        background: $white;
+        text-align: center;
+        line-height: normal;
+        z-index: 10;
+        cursor: pointer;
+    }
+    .dropdown_active{
+        background: $orange;
+        color: $white;
+    }
+ }
+
+  
+
+
+
+

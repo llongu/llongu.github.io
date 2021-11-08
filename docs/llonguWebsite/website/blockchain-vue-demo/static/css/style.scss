@@ -1,0 +1,223 @@
+$drownbg:#f5f7fa;//下拉菜单bg
+$bg:#222D3B; //深色bg
+$mbg:#f5f5f5;//主体bg
+$blue:#3E87EB;
+$fff:#fff;
+$ccc:#7F8182;
+$trhover:#FCF9EF;//表格 hoverbg
+$font8:#808080;
+
+//main border shadow
+@mixin mbs {
+    border:1px solid #E5E5E5;
+    -webkit-box-shadow: #E5E5E5 0px 0px 5px;
+            box-shadow: #E5E5E5 0px 0px 5px;
+}
+//textoverflow
+@mixin textshide($num){
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+   -webkit-line-clamp: $num;
+   -webkit-box-orient: vertical;
+}
+//tr hover
+.el-table--enable-row-hover .el-table__body tr{
+    cursor: pointer;
+    &:hover{
+        background-color: $trhover;
+      td{
+        background-color: initial;
+      }
+    }
+}
+//table search dropdown meun
+@mixin searchDown{
+    .search_dropdown{
+        width:420px;
+        position: absolute;
+        top: 115%;
+        right: 0;
+        background: #fff;
+        z-index: 100;
+        padding:30px 0; 
+        border: 1px solid #ebeef5;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+                box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+        form{
+            padding:0 25px;
+        }
+        .el-form-item{
+          .el-form-item__label{
+            display: block;
+            float: left;
+            width: 130px;
+            word-break: break-all;
+          }
+          .el-form-item__content{
+            width: 240px;
+            float: right;
+            clear: initial;
+            margin-left: 0;
+            .el-select{
+              width: 100%;
+            }
+          }
+        }
+         .searchb{
+           font-size: 14px;
+           border-top: 1px solid #F2F2F2;
+            color: #333333;
+            padding: 25px;
+             line-height: 36px;
+           span{
+             float: right;
+           }
+           button{
+             height: 36px;
+             color: $fff;
+             margin-left: 20px;
+             float: right;
+           }
+         }
+        .arrow{
+            position: absolute;
+               display: block;
+               width: 0;
+               height: 0;
+                border-width: 6px;
+               border-color: transparent;
+               border-style: solid;
+               top: -6px;
+               right: 30%;
+               border-top-width: 0;
+               border-bottom-color: #fff;
+             -webkit-filter: drop-shadow(0 2px 12px rgba(0, 0, 0, .03));
+             filter: drop-shadow(0 2px 12px rgba(0, 0, 0, .03));
+        }
+         .el-range-editor.el-input__inner{
+           max-width: 100%;
+         }
+       }
+}
+
+
+//el-dialog
+.el-dialog__wrapper{
+  text-align: center;
+  .pop{
+    width: auto;
+    display: inline-block;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+    .el-dialog__header{
+      border-bottom: 2px solid #CCCCCC;
+      text-align: left;
+      font-size: 18px;
+      color: #222D3B;
+        .el-dialog__headerbtn{
+          font-size: 24px;
+        }
+      }
+
+    .el-dialog__body{
+      .el-form { 
+        margin: 0 auto;
+        overflow: hidden;
+        .el-form-item{
+          width: 300px;
+          min-height: 100px;
+          margin-bottom: 0;
+          .el-form-item__label{
+            padding: 0;
+          }
+          .el-input__inner,.el-input__suffix-inner{
+            color: #333333;
+          }
+          .el-select{
+            width: 100%;
+          }
+        }
+
+        .el-form-item-codebox{
+          .el-input{
+             width: 50% !important; 
+            float: left;
+          }
+          .sendcode{
+            width: 40%;
+            background: $blue;
+            float: right;
+          }
+        }
+        
+      }
+
+      // 6 row
+      .el-form-6{
+        max-width: 640px;
+        .el-form-item{
+          float: left;
+          &:nth-child(2n){
+            margin-left: 40px;
+          }
+        }
+      }
+      // 9 row
+      .el-form-9{
+        max-width: 1020px;
+        margin-left: -40px;
+        .el-form-item{
+          float: left;
+          &:nth-child(1n){
+            margin-left: 40px;
+          }
+         
+        }
+      }
+    }
+
+    .el-b{
+      padding-top:25px;
+      overflow: hidden;
+      span{
+        color: $blue;
+      }
+      .el-checkbox{
+        margin-top: -20px;
+        .el-checkbox-t{
+          font-size: 16px;
+          color: $font8;
+          padding-bottom: 15px;
+        }
+        .el-checkbox-b{
+          span{
+            color: #323245;
+          }
+        }
+      }
+      .el-money{
+        font-size: 16px;
+        color:#323245;
+      }
+      .el-money-s{
+        font-size: 26px;
+      }
+    }
+
+    .el-dialog__footer{
+      padding-bottom:30px ;
+      button{
+        background: $blue;
+        font-size: 18px;
+        width: 100%;
+      }
+    }
+    
+  }
+}

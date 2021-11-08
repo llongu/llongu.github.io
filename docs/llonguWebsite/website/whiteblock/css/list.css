@@ -1,0 +1,111 @@
+﻿.warp{
+	width:10rem;
+	margin:  0 auto;
+	height: auto;
+	position: relative;
+	min-height: 100%;
+	clear: both;
+}
+body{
+	background: #ccc;
+	/*overflow: hidden;*/
+}
+.warp img{
+	width: 100%;
+	height: 100%;
+}
+/*首页背景*/
+.list_bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.message_name_never .span1,.message_name_never .span2{
+	opacity: 0;
+	transition: all 1s ease;
+}
+/*排行榜主体*/
+.list_main{
+	width:9.573333rem;
+	height:15.066666rem;
+	margin: 0 auto;
+	margin-top: 0.613333rem;
+	position: relative;
+}
+.list_main_bg{
+	position: absolute;
+}
+
+/*信息主体可滑动*/
+.message_main{
+	width:7.8rem ;
+	height:8.7rem;
+	padding-top: .2rem;
+	position: absolute;
+	top: 3.7rem;
+	left: 50%;
+	transform: translateX(-50%);
+	overflow-y: scroll;
+}
+
+/*每层信息*/
+.message_box{
+	width: 95%;
+	height: 0.826666rem;
+	margin: 0.133333rem auto;
+	
+}
+.message_box li{
+	float: left;
+	height: 100%;
+	text-align: center;
+	font-size: 0.4rem;
+	color: #d91d52;
+	line-height: 0.826666rem;
+	overflow: hidden;
+}
+
+/*序列号*/
+.message_box .message_num{
+	width: 0.733333rem;
+	height: 0.733333rem;
+	box-sizing: border-box;
+	line-height: 0.733333rem;
+	
+}
+/*姓名*/
+.message_name{
+	width: 3.7rem;
+	
+}
+
+/*挑战时间*/
+.message_time{
+	width:auto;
+}
+/*领奖按钮*/
+.message_giftb{
+	width:1.36rem ;
+	margin-left: .1rem;
+	display: none;
+}
+
+.inputs{
+	display: none;
+}
+/*设置排行榜前3位 序列号有边框*/
+.message_main .message_box:first-child .message_num{
+	border: 0.053333rem solid #d91d52;
+	border-radius: 50%;
+}
+.message_main .message_box:nth-child(2) .message_num{
+	border: 0.053333rem solid #d91d52;
+	border-radius: 50%;
+}
+.message_main .message_box:nth-child(3) .message_num{
+	border: 0.053333rem solid #d91d52;
+	border-radius: 50%;
+}

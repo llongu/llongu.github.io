@@ -1,0 +1,64 @@
+.banner,.New_Products,.main_bottom{width: 100%;background: #fff;}
+
+
+.banner{height:20rem;background: url(../images/index_banners.png) no-repeat;background-position: center;}/*背景banner*/
+
+.New_Products{height: 26.65rem;}/*产品中心*/
+
+.main_bottom{height:26.35rem;overflow: hidden;margin-top: 1rem;}/*主体下方*/
+
+
+/*公用标题*/
+.warp .title{float: left; margin: 2.3rem 0  1.9rem 2.25rem;}
+.warp .title h3{font-size:0.8rem;color: #2d313d;float: left;}
+.warp .title h3 span{color: #fb565c;margin: 0 1rem 0 0.25rem ;}
+.warp .title h3 img{float:right;margin-top: 0.4rem;}
+
+/*产品中心*/
+.New_Products .warp{position: relative;}
+.New_Products .warp_inner{overflow: hidden;width: 57rem;height: 21.35rem;margin: 0 auto;}
+.New_Products_list{width:400%;height:21.35rem;clear: both;}
+.New_Products_picture{width: 57rem;height: 21.35rem;float: left;margin-right: 1.5rem;}
+.New_Products_picture li{width:9.35rem;height: 9.35rem;float: left;overflow: hidden;margin-right:2.5rem;margin-bottom: 1.2rem;}
+.New_Products_picture li img{width: 100%;}
+.New_Products_picture li:nth-child(5n){margin-right: 0;}
+
+/*左右切换按钮*/
+.clicks{position: absolute;top:14.5rem;cursor: pointer;}
+.next{right: 0;}
+
+/*主体下方*/
+.main_bottom .warp{border-top: 1px solid #d5d6d8;}
+/*公司&介绍*/
+.company_about{width: 36.9rem;height: 100%;}
+
+.warp .company_about .title{margin-bottom: 0.6rem;margin-left: 0.8rem;}
+
+.company_about_text{width: 100%;height: 13.05rem;clear: both;}
+.left_text{width:17.5rem;height: 100%;font-size: 0.7rem;color: #2d313d;text-indent: 1.2rem;margin-left: 1rem;}
+.left_text p{line-height: 1.15rem;margin-top:1.8rem;}
+
+/*联系&方式*/
+.main_bottom .number {margin-top: .8rem;}
+.main_bottom .number li{line-height: 1.4rem; width: auto; height: 1.4rem; float: left;font-size: 0.8rem;color: #2d313d;margin-right: 2.85rem;}
+.main_bottom .number img{margin-right: 0.4rem;float: left;}
+
+/*交易&档案*/
+.main_bottom .file{width: 23.05rem;height: 100%; border-left: 1px solid #d5d6d8;}
+.main_bottom .file .title{margin: 1.75rem 0 0.3rem 1.55rem;}
+.file_text{width: 21.05rem;height: auto;margin-left: 1.55rem;}
+.file_text p{width: 100%; margin-top: 1.45rem;clear: both;float: left;font-size: 0.7rem;color: #2d313d;}
+.file_text p span{float: right;}
+.file_text .p1{font-size:0.8rem ;}
+.file_text .p1 span{color: #fb565c;margin-right: 1.5rem;float: none;}
+/*表单*/
+.file_text form{width: 100%; margin-top: 1rem;clear: both;float: left;font-size: 0.7rem;color: #2d313d;}
+.file_text form input {border: 1px solid #fb565c;box-sizing: border-box;height: 1.2rem;text-indent: .4rem;}
+.file_text form span{margin-right: 0.6rem;}
+.file_text form .phone{margin-left: 1.7rem;}
+.file_text form textarea{text-indent: .4rem;margin: 18px 0; border: 1px solid #fb565c;float: right;width:19rem;height: 3.05rem;box-sizing: border-box;resize: none;}
+.file_text form .textarea_span{display: block;float: left;margin-top: 1rem;}
+.file_text form div{width: 100%;height: auto;clear: both;float: left;}
+.file_text form .div3{width: 100%; margin-left: -.7rem;}
+.file_text form .test{width: 4.55rem;}
+.file_text form .div3 .submits{width: 6rem;color: #fff; float: right;border: none;background: #fb565c;text-align: center;line-height: 1.2rem;cursor: pointer;margin-right: -.7rem;}

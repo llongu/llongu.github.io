@@ -1,0 +1,63 @@
+@import "style.scss";
+.wrap{
+    font-family: $fontType;
+    background: $gray;
+    letter-spacing: 0.013rem;
+    .title{
+        line-height: 1.04rem;
+        background: $white;
+        text-align: center;
+        color: $orange;
+        margin-bottom: 0.16rem;
+        font-size: 0.346rem;
+    }
+    
+     .list{
+        @include list;
+        li{
+            width: 100%;
+            padding: 0.466rem 0.4rem;
+            background: $white;
+            margin-bottom: 0.08rem;
+            word-wrap: break-word;
+            color: $gray2;
+            font-size: 0.32rem;
+            &:last-child{margin-bottom: 0;}
+           .li_title{
+               font-size:0.426rem ;
+               position: relative;
+               text-indent: .5rem;
+           }
+           .new{
+               color: $gray3;
+                &::before{
+                   content: "";
+                   width: 0.24rem;
+                   height: 0.24rem;
+                   border-radius: 50%;
+                   background: $orange;
+                   @include shadow;
+                   position: absolute;
+                   left: 0;
+                   top: .2rem;
+               }
+           }
+           .read{
+               color: $gray2;
+           }
+           p{
+               text-indent: .5rem;
+              
+               line-height: 0.666rem;
+           }
+           .date{
+               float: right;
+           }
+
+        }
+    }
+
+}
+
+   
+

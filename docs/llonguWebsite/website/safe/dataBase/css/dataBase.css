@@ -1,0 +1,75 @@
+@charset "UTF-8";
+.iconfont { font-size: inherit; }
+
+.sortOrange { color: #ff5c00; }
+
+.sortGray { color: #595959; }
+
+.lineL:before, .lineR:after { content: ""; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); left: 100%; width: 0.5%; height: 60%; background: #f4f5f7; }
+
+.lineR:before { left: 0; }
+
+.wrap { font-family: "微软雅黑"; background: #f4f5f7; }
+.wrap .list { width: 100%; height: auto; overflow: hidden; }
+.wrap .list li { margin-bottom: 0.08rem; padding: 0.6rem 0.4rem 0.6rem 0.5rem; overflow: hidden; background: #fff; }
+.wrap .list li .li_box { float: left; }
+.wrap .list li .li_box .data_img { width: 2.346rem; height: 2.48rem; margin-right: .2rem; }
+.wrap .list li .li_box .data_text { width: 5.5rem; height: auto; font-size: 0.36rem; letter-spacing: 0.013rem; position: relative; color: #595959; }
+.wrap .list li .li_box .data_text .data_title { color: #000; }
+.wrap .list li .li_box .data_text .data_detail { word-break: break-all; text-overflow: ellipsis; display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/ -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/ -webkit-line-clamp: 3; /** 显示的行数 **/ overflow: hidden; /** 隐藏超出的内容 **/ margin: .2rem 0; }
+.wrap .list li .li_box .data_text .data_way { color: #b3b3b3; }
+.wrap .list li .li_box .data_text .data_way .book_time { margin-left: .1rem; }
+.wrap .list li .li_box .data_text .data_two { margin: .2rem 0; }
+.wrap .list li .li_box .data_text .icon-fanhuir { position: absolute; right: 0; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.wrap .list li .li_box .data_text .data_button { position: absolute; bottom: -.2rem; right: 0; padding: 0 .2rem; height: 0.8rem; background: #ff5c00; -webkit-box-shadow: 0 0 0.053rem 0.026rem #ffe2d2; box-shadow: 0 0 0.053rem 0.026rem #ffe2d2; border-radius: 0.453rem; color: #fff; text-align: center; line-height: 0.8rem; font-size: 0.4rem; }
+.wrap .list li .li_box .data_text .data_button a { color: inherit; }
+.wrap .list li .li_box .data_text .see_num { position: absolute; right: 0; top: -.2rem; color: #b3b3b3; }
+.wrap .list li .li_box .data_text .see_num i { font-size: 0.48rem; vertical-align: middle; }
+
+.index_wrap .list { background: #fff; margin-top: 0.266rem; }
+.index_wrap .list li { border-bottom: 0.08rem solid #f4f5f7; -webkit-box-sizing: border-box; box-sizing: border-box; margin-bottom: 0; }
+.index_wrap .list li .li_box .data_img { width: 3.16rem; border-radius: 0.48rem; position: relative; overflow: hidden; margin-right: .4rem; -webkit-box-shadow: 0px 0px 0.266rem 0.066rem #cfcfcf; box-shadow: 0px 0px 0.266rem 0.066rem #cfcfcf; }
+.index_wrap .list li .li_box .data_img .data_img_shadow { width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: rgba(0, 0, 0, 0.5); font-size: 0.453rem; font-weight: bold; color: #fff; text-align: center; display: table; }
+.index_wrap .list li .li_box .data_img .data_img_shadow p { display: table-cell; vertical-align: middle; line-height: 0.8rem; margin-top: .3rem; }
+.index_wrap .list li .li_box .data_text { padding-top: .2rem; }
+.index_wrap .list li .li_box .data_text .data_title i { color: #ff5c00; }
+.index_wrap .list li .li_box .data_text .data_title .data_hot { margin-left: .1rem; }
+
+.search_wrap .banner { max-height: 5rem; }
+.search_wrap .nav_main { padding: 0.3rem; font-size: 0.32rem; background: #fff; overflow: hidden; }
+.search_wrap .nav_main li { width: 32%; height: 1.2rem; background: #f2f2f2; color: #595959; text-align: center; float: left; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+.search_wrap .nav_main li:first-child { border-top-left-radius: 0.2rem; border-bottom-left-radius: 0.2rem; }
+.search_wrap .nav_main li:nth-child(2) { margin: 0 1%; }
+.search_wrap .nav_main li:last-child { border-top-right-radius: 0.2rem; border-bottom-right-radius: 0.2rem; }
+.search_wrap .nav_main .nav_li { color: #fff; background: #ff5c00; }
+.search_wrap header { width: 100%; padding: 0.266rem 0; overflow: hidden; }
+.search_wrap header .header_main { width: 7.813rem; height: 0.906rem; float: left; margin-left: .5rem; color: #aeaeae; border-radius: 0.4rem; overflow: hidden; position: relative; }
+.search_wrap header .header_main input { width: 100%; height: 100%; text-align: center; background: #fff; text-indent: 0.8rem; font-size: 0.35rem; letter-spacing: 0.013rem; }
+.search_wrap header .header_main #search::-webkit-search-cancel-button { display: none; }
+.search_wrap header .header_main #search::-webkit-input-placeholder { color: #595959; font-family: "微软雅黑"; }
+.search_wrap header .header_main .search_lable { width: 100%; height: 100%; position: absolute; top: 0; left: 0; font-size: 0.35rem; text-align: center; line-height: 0.906rem; text-indent: .3rem; letter-spacing: 0.013rem; }
+.search_wrap header .header_main .search_lable i { color: #b3b3b3; }
+.search_wrap header .header_main .search_lable i span { color: #595959; font-family: "微软雅黑"; }
+.search_wrap header .search_button { text-align: center; margin-top: .15rem; padding: .1rem  .2rem; font-size: .35rem; color: #fff; background: #ff5c00; border-radius: .3rem; float: left; margin-left: .1rem; }
+.search_wrap .list li .li_box .data_text { width: 6.2rem; }
+.search_wrap .sort_wrap { height: 1.146rem; background: #fff; line-height: 1.146rem; position: relative; margin-bottom: 0.08rem; }
+.search_wrap .sort_wrap .line { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 0.5%; left: 33%; height: 60%; background: red; }
+.search_wrap .sort_wrap .line:nth-child(2) { left: 66%; }
+.search_wrap .sort_wrap .time_sort, .search_wrap .sort_wrap .click_sort { width: 50%; height: 100%; text-align: center; font-size: 0.373rem; color: #595959; position: relative; }
+.search_wrap .sort_wrap .time_sort .sort_box, .search_wrap .sort_wrap .click_sort .sort_box { float: left; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); position: relative; padding-right: .4rem; }
+.search_wrap .sort_wrap .time_sort .sort_box .sort_icon, .search_wrap .sort_wrap .click_sort .sort_box .sort_icon { line-height: normal; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); left: 94%; width: 0.4rem; }
+.search_wrap .sort_wrap .time_sort .sort_box .sort_icon i, .search_wrap .sort_wrap .click_sort .sort_box .sort_icon i { display: block; font-size: 0.24rem; }
+.search_wrap .title { height: 1.146rem; background: #fff; line-height: 1.146rem; position: relative; margin-bottom: 0.066rem; font-size: 0.4rem; font-weight: bold; color: #ff5c00; text-indent: 0.506rem; }
+.search_wrap .title i { font-size: 0.4rem; }
+
+.detail_wrap { border-top: 0.266rem solid #f4f5f7; padding-bottom: .5rem; background: #fff; }
+.detail_wrap .detail_main { width: 90%; margin: 0 auto; color: #595959; font-size: 0.373rem; letter-spacing: 0.013rem; text-align: center; }
+.detail_wrap .detail_main .title { color: #000; font-size: 0.453rem; margin: 0.6rem 0; }
+.detail_wrap .detail_main p { text-indent: .5rem; text-align: left; line-height: .7rem; }
+.detail_wrap .detail_main .detail_bottom { margin-top: .3rem; font-size: 0.293rem; color: #b3b3b3; text-align: left; }
+.detail_wrap .detail_main .detail_bottom span { margin-right: .2rem; }
+.detail_wrap .detail_main .detail_bottom span i { font-size: 0.293rem; margin-right: .1rem; }
+.detail_wrap .detail_main .download { width: 4.4rem; height: 1.12rem; line-height: 1.12rem; background: #ff5c00; color: #fff; text-align: center; border-radius: 0.453rem; -webkit-box-shadow: 0 0 0.053rem 0.026rem #ffe2d2; box-shadow: 0 0 0.053rem 0.026rem #ffe2d2; font-size: 0.453rem; font-weight: bold; letter-spacing: 0.026rem; margin: 0 auto; margin-top: 1rem; }
+.detail_wrap .detail_main .download i { margin-right: .2rem; }
+
+/*# sourceMappingURL=dataBase.css.map */

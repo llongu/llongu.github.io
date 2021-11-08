@@ -1,0 +1,36 @@
+.pierce,.main_pircture{width: 100%;height: auto;background: #fff;padding-bottom:1rem;overflow: hidden;}
+
+/*商品价格筛选区域*/
+.pierce{border-bottom: 0.25rem #d95661 solid;padding-top: 1rem;}
+.pierce .warp{padding-left: 0.7rem;}
+.pierce_inner{width: 100%;height:auto;float: left;}
+.pierce_inner a{font-size: 0.8rem;color: #2d313d;margin-right: 0.7rem;float: left;}
+.pierce_inner span{font-size: .6rem;margin-right: 0.5rem;color: #c0c1c4;margin-top:2px;display: block;float: left;}
+.pierce_line{width: 98%;border: 0.05rem solid #eaeaeb;margin: 0.5rem 0 .2rem 0;float: left;}
+.pierce_inner .null{color: #fb565c;}
+.pierce_inner .br{margin-left: 4.6rem;}
+/*主体图片区域*/
+.main_pircture{height:auto;}
+.main_pircture .warp{height: auto;}
+/*层级定位*/
+.title_nav{margin-top: 0.8rem }
+.title_nav img{float: left;margin: 0 0.65rem;}
+.title_nav a{float: left;font-size: 0.6rem;color: #838281;}
+.title_nav .sanjao{margin-top: 0.25rem;}
+/*图片列表*/
+.picture_list{width: 100%;height: auto;padding-top: .9rem;clear: both;}
+.picture_list li{float: left;width:8.65rem;height:6.9rem;text-align: center;margin-left: 1.25rem;margin-bottom: 1.5rem;}
+
+.picture_list li img{width: 100%;}
+.picture_list li p{font-size: 0.6rem;color: #666666;}
+
+/*上一页下一页*/
+.page{height: 6.1rem;width: 100%;}
+.page_go{width:27.2rem;height: auto;margin: 0 auto;margin-top: 1.7rem;}
+.page_go li{width: 0.85rem;height: 0.85rem;box-sizing: border-box;float: left;margin-right: 1.85rem;text-align: center;font-size: 0.6rem;color: #cfd0d1;line-height: .85rem;cursor: pointer;}
+
+.page_go .number_page{border: 1px solid #c0c1c4;}
+.page_go .click_page{background: #fb565c;padding-top: 0.05rem;height: 0.8rem;}
+
+
+

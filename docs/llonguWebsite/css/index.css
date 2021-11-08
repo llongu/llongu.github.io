@@ -1,0 +1,646 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+img,
+ol,
+ul,
+li,
+form,
+label,
+table,
+footer,
+header,
+menu,
+nav,
+a {
+  margin: 0 auto;
+  padding: 0;
+}
+
+img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  font-style: normal;
+}
+
+body,
+html {
+  width: 100%;
+  position: relative;
+  font-family: "宋体";
+  overflow: auto;
+  overflow-x: hidden !important;
+  height: auto;
+}
+
+.clear {
+  clear: both;
+}
+
+.warp {
+  width: auto;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* -----------------------------华丽的分割线---------------------------------- */
+
+@keyframes upd {
+  from {
+    transform: translateY(48px);
+  }
+  to {
+    transform: translateY(55px);
+  }
+}
+/*主体页面*/
+
+.main_html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* display: none; */
+}
+
+/*banner头部区域*/
+
+.banner {
+  width: 100%;
+  height: 100%;
+  background: url(./img/banner.jpg) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner_shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/*时间*/
+
+#time_warp {
+  /*width: 50px;*/
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  left: 20%;
+  top: 35%;
+  line-height: 50px;
+  text-align: center;
+  perspective: 300px;
+  font-size: 30px;
+  color: #fff;
+  font-family: "微软雅黑";
+  opacity: 0;
+}
+
+#time {
+  width: 100%;
+  height: 100%;
+  transform: rotateX(40deg);
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+#time span {
+  display: inline-block;
+}
+
+/*按钮翻转效果*/
+
+#study,
+#study div {
+  transition-duration: 0.6s;
+}
+#study {
+  width: 384px;
+  height: 79px;
+  border-radius: 8px;
+  border: 3px solid #fff;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  perspective: 300px;
+}
+
+.cover {
+  /*翻转层*/
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 79px;
+  font-size: 40px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 4px;
+  z-index: 100;
+  pointer-events: none;
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+  z-index: 10;
+}
+
+.banner_shadow .button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  transform: rotateX(90deg);
+  line-height: 79px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.banner_shadow .button a {
+  font-size: 30px;
+  color: #fff;
+}
+
+.innie {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 8px;
+}
+
+#study:hover .cover {
+  transform: rotateX(-160deg);
+}
+.sopen .cover {
+  transform: rotateX(-160deg);
+}
+#study:hover {
+  overflow: visible;
+}
+
+#study:hover .button {
+  top: 0;
+  transform: rotateX(0);
+}
+
+/*个人介绍区域*/
+
+.myself {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: #534a3a;
+  overflow: hidden;
+}
+
+.myself p {
+  height: 100px;
+  line-height: 100px;
+  visibility: hidden;
+}
+
+.myself p i {
+  display: none;
+}
+
+.myself .p1 {
+  font-size: 38px;
+  color: #776f61;
+  letter-spacing: 10px;
+}
+
+.myself .p2 {
+  font-size: 36px;
+  color: #776f61;
+  letter-spacing: 8px;
+}
+
+.myself .p3 {
+  font-size: 34px;
+  color: #7c766c;
+  letter-spacing: 6px;
+}
+
+.myself .p4 {
+  font-size: 32px;
+  color: #958976;
+  letter-spacing: 6px;
+}
+
+/*个人技能区域*/
+
+.my_skill {
+  width: 100%;
+  height: 700px;
+  background: #faf9f7;
+  text-align: center;
+  font-size: 30px;
+  color: #908165;
+  letter-spacing: 6px;
+  overflow: hidden;
+  font-family: "微软雅黑";
+}
+
+.my_skill h2 {
+  margin-top: 40px;
+  font-family: "宋体";
+}
+
+.percent {
+  float: left;
+  font-size: 18px;
+  color: #e07881;
+  margin-top: 90px;
+}
+
+/*我会什么*/
+
+.what_can {
+  width: 100%;
+  height: 700px;
+}
+
+.what_can .warp {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.what_can h2 {
+  font-size: 30px;
+  color: #554c3b;
+  letter-spacing: 6px;
+  margin: 40px 0;
+  transform: translateY(-500px);
+  transition: all 1s ease;
+}
+
+.text_main {
+  width: auto;
+  height: 400px;
+  padding: 60px 0 0 100px;
+  background: #faf9f7;
+}
+
+.text_main li {
+  position: relative;
+  width: auto;
+  height: auto;
+  font-size: 21px;
+  color: #776f61;
+  line-height: 30px;
+  font-family: "微软雅黑";
+  text-align: left;
+  list-style: decimal;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  float: left;
+  clear: both;
+}
+
+.can_line {
+  position: absolute;
+  width: 0;
+  height: 0px;
+  border-bottom: 2px solid #e07881;
+  left: 0;
+  bottom: -2px;
+  transition: all 1s ease;
+}
+
+/*作品展示*/
+.ppt_show {
+  width: 100%;
+  height: 955px;
+  background: url(./img/bg.jpg) no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.works_show {
+  width: 100%;
+  height: 105px;
+  background-position: center center;
+  background-size: cover;
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+  line-height: 105px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+.works_show .pen {
+  vertical-align: middle;
+  margin-left: 30px;
+  margin-top: -300px;
+  transition: 1s cubic-bezier(0.52, 1.68, 0.37, 0.66);
+}
+
+.portfolio-items {
+  height: 600px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 50px 0;
+  position: relative;
+}
+.portfolio-items img {
+  width: 100%;
+  height: 100%;
+}
+.portfolio-items > li {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.item {
+  width: 200px;
+  height: 380px;
+  margin: 50px 20px 0;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: white;
+  font-size: 14px;
+  opacity: 0;
+  position: relative;
+  top: -300px;
+  box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  -webkit-transition: all 0.3s ease, opacity 2s ease, top 1s ease;
+  -o-transition: all 0.3s ease, opacity 2s ease, top 1s ease;
+  transition: all 0.3s ease, opacity 2s ease, top 1s ease;
+  display: inline-block;
+}
+.item .item_t {
+  width: 100%;
+  height: auto;
+  padding: 15px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 26px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+}
+.item .item_ts {
+  height: 110px;
+  top: -110px;
+}
+.item:nth-child(even) {
+  margin-top: 0px;
+}
+
+.falldown {
+  top: 0;
+  opacity: 1;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0);
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+}
+
+.view {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+@keyframes slideOut {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+
+  95% {
+    left: 0;
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  cursor: pointer
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ddd;
+  border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ef515f;
+} */
+
+/*webkit内核*/
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ef515f;
+}
+
+/*o内核*/
+.-o-scrollbar {
+  -moz-appearance: none !important;
+  background: rgba(0, 255, 0, 0) !important;
+}
+::-o-scrollbar-button {
+  background-color: rgba(0, 0, 0, 0);
+}
+::-o-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+::-o-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0);
+}
+::-o-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+}
+::-o-scrollbar-corner {
+  background-color: rgba(0, 0, 0, 0);
+}
+::-o-scrollbar-resizer {
+  background-color: rgba(0, 0, 0, 0);
+}
+/*IE10,IE11,IE12*/
+* {
+  scrollbar-arrow-color: red;
+  /*滚动条滑块按钮的颜色*/
+  scrollbar-face-color: #ef515f;
+  /*滚动条整体颜色*/
+  scrollbar-highlight-color: #ddd;
+  /*滚动条阴影*/
+  scrollbar-shadow-color: #ddd;
+  /*滚动条轨道颜色*/
+  scrollbar-track-color: #ddd;
+}
+
+@-webkit-keyframes slideOut {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+
+  95% {
+    left: 0;
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@-o-keyframes slideOut {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+
+  95% {
+    left: 0;
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+/*钢铁侠*/
+#IronM {
+  width: 50px;
+  height: 70px;
+  line-height: 30px;
+  text-align: center;
+  transition: transform linear 0.3s;
+  -webkit-transition: transform linear 0.3s;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
+#IronM img {
+  width: 100%;
+  height: 100%;
+}
+
+#IronM #fire {
+  width: 100%;
+  height: 20px;
+  overflow: hidden;
+  position: absolute;
+  top: 99%;
+  display: none;
+  animation: height 0.1s linear alternate infinite;
+  -webkit-animation: height 0.1s linear alternate infinite;
+}
+
+#IronM .fire {
+  width: 10px;
+  height: 100%;
+  position: absolute;
+}
+
+.fire_l {
+  left: 12px;
+}
+
+.fire_r {
+  right: 12px;
+}
+
+@keyframes height {
+  from {
+    height: 30px;
+  }
+  to {
+    height: 20px;
+  }
+}
+
+@-webkit-keyframes height {
+  from {
+    height: 30px;
+  }
+  to {
+    height: 20px;
+  }
+}

@@ -1,0 +1,84 @@
+@import "style.scss";
+
+
+//详情
+.wrap{
+    background: $gray;
+    font-family: $fontType;
+    letter-spacing: 1px;
+    overflow-y: scroll;
+    .list_box{
+        @include list;
+        margin-bottom: 0.133rem;
+        overflow: hidden;
+        &:first-child{
+         margin-top: 0.266rem;
+        }
+        .title{
+            @include usualH;
+            font-weight: bold;
+            color: $orange;
+            font-size: 0.4rem;
+            text-indent: 0.4rem;
+         }
+         .list_xuan{
+             .icon-xuanze{
+                 transform: rotateZ(-180deg);
+             }
+             .list_box_inner{display: block !important;}
+         }
+         .list{
+             width: 100%;
+             padding: .2rem 0;
+             padding-top: 0;
+             overflow: hidden;
+             border-bottom: 0.026rem solid #f4f5f7;
+             .list_t{
+                 width: 33.3%;
+                 text-align: center;
+                 color: $gray3;
+                 font-size: 0.4rem;
+                 float: left;
+                 padding: .2rem 0;
+                i{font-size: .6rem;color:#8f8f8f;display: inline-block;transition: all .1s linear;}
+                
+             }
+             .list_box_inner{
+                  @include list;
+                  clear: both;
+                  overflow: hidden;
+                  display: none;
+                  .list_box_inner_b{
+                      max-height: 4rem;
+                      overflow: scroll;
+                  }
+                  .title{
+                      border-bottom: 0.053rem solid #f4f5f7;
+                      border-top: 0.053rem solid #f4f5f7;
+                      text-indent: .8rem;
+                  }
+                  .title2 span{
+                      color: #000 !important;
+                  }
+                  li{
+                      padding: .4rem 0;
+                      margin: 0 auto;
+                      float: none;
+                    span{
+                         width: 33.3%;
+                         text-align: center;
+                         color: $gray3;
+                         font-size: 0.4rem;
+                         float: left;
+                    }
+                    span:nth-child(2){
+                        color: $orange;
+                    }
+                  }
+                 
+             }
+             
+         }
+    }
+   
+}

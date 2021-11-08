@@ -1,0 +1,234 @@
+@import "style.scss";
+.wrap{
+    font-family: $fontType;
+    background: $white;
+    border-top: 0.266rem solid $gray;
+}
+
+//首页
+.index_wrap{
+    .logo_box{
+        width: 100%;
+        height: 5.466rem;
+        border-bottom: 0.013rem solid $gray;
+        overflow: hidden;
+        .logo{
+            width: 2.266rem;
+            height: auto;
+            color: #000;
+            font-size:0.4rem ;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 1.8rem;
+            p{margin-top: .3rem;}
+        }
+    }
+    
+    .list{
+        @include list;
+        li{
+            padding: .2rem ;
+            .li_box{
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+                .li_box_left{
+                    width: 1.413rem;
+                    height: 1.413rem;
+                    float: left;
+                    margin-right: .3rem;
+                    position: relative;
+                    .li_box_img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        background: #7ecef4;
+                       overflow: hidden;
+                    }
+                    img{
+                        width: 80%;
+                        height: auto;
+                        display: block;
+                        margin: 0 auto;
+                        margin-top: .2rem;
+                    }
+                    .new_msg{
+                        width: 0.266rem;
+                        height: 0.266rem;
+                        border-radius: 0.133rem;
+                        background: #fa0909;
+                        position: absolute;
+                        top: 0.066rem;
+                        right: 0.066rem;
+                        box-shadow: 0 0  0.133rem  #ffeade;
+                        z-index: 1;
+                    }
+                }
+                .li_box_right{
+                    width: 7.2rem;
+                    height: auto;
+                    float: left;
+                    color: #000;
+                    letter-spacing: 0.013rem;
+                    position: relative;
+                    .title{
+                        font-size: 0.48rem;
+                    }
+                    .chat_first{
+                         word-break: break-all;
+                         font-size: 0.373rem;
+                        text-overflow: ellipsis;
+                        display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+                        -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+                        -webkit-line-clamp:1; /** 显示的行数 **/
+                        overflow: hidden;  /** 隐藏超出的内容 **/
+                         margin-top: .1rem;
+                    }
+                    .date{
+                        color: $gray2;
+                        font-size: 0.266rem;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//类型
+.type_wrap{
+    height: 100%;
+    box-sizing: border-box;
+    .meun{
+        @include center;
+       li{
+           width: 6.506rem;
+           height: 1.146rem;
+           line-height: 1.146rem;
+           text-align: center;
+           border-radius: $Bradius;
+           background: $orange;
+           color: $white;
+           font-size: 0.453rem;
+           font-weight: bold;
+           margin: 0 auto;
+           margin-bottom: 0.8rem;
+           letter-spacing: 0.013rem;
+           i{vertical-align: middle;}
+       }
+    }
+}
+
+//消息
+.msg_wrap{
+        height: 100%;
+        background:$gray;
+        border-top: 0;
+        #msg_main{
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            position: relative;
+        }
+        #send_box{
+            width: 100%;
+            height: auto;
+            padding: 0.4rem 0;
+            background: #f2f2f2;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+        }
+        #send_msg{
+            width:7.5rem ;
+            max-height: 2rem;
+            padding: .3rem 0.25rem;
+            border-radius: 0.106rem;
+            background: $white;
+            float: left;
+            margin-left: 0.4rem;
+            outline:none;
+            font-size: .35rem;
+            color: #000;
+            line-height: .4rem;
+            text-indent: .3rem;
+            letter-spacing: 0.013rem;
+            overflow: scroll;
+        }
+        #send_button{
+            float: left;
+            font-size: 0.4rem;
+            line-height: 1.066rem;
+            color: $gray3;
+            letter-spacing: 0.013rem;
+            position: absolute;
+            right: 0.5rem;
+            bottom: 0.35rem;
+        }
+        
+        
+        
+        //信息框
+        .msg_box{
+            width: 9rem;
+            height: auto;
+            position: relative;
+            padding-bottom: 0.666rem;
+            &:first-child{
+                padding-top: 0.666rem;
+            }
+            overflow: hidden;
+            margin: 0 auto;
+            .msg_img{
+                width:1.146rem ;
+                height: 1.146rem;
+                background: $white;
+                border-radius: 50%;
+                overflow: hidden;
+                img{  }
+            } 
+            .msg_text{
+                max-width: 6.2rem;
+                padding: .2rem;
+                text-indent: .05rem;
+                font-size: 0.426rem;
+                margin-top: .1rem;
+                border-radius: 0.106rem;
+                word-wrap:break-word;
+            }
+            .msg_time{
+                clear: both;
+                color: $gray2;
+                padding-top: .1rem;
+            }            
+            .time{
+                text-align: center;
+                color: $gray3;
+                font-size: 0.32rem;
+                text-align: center;
+            }
+            .msg_error{
+                color: $orange;
+                font-size: .4rem;
+                position: absolute;
+                left:0;
+                top: 50%;
+                transform: translateY(-100%);
+            }
+        }
+        //对方
+         .other{
+             .msg_text{float: left;background: $white;color: $gray3;box-shadow: 0px 0px 0.066rem 0.066rem #f2f3f6;}
+             .msg_img{float: left;margin-right: .2rem;}
+             .msg_time{padding-left: 1.35rem;}
+         }
+        //自己
+        .self{
+             .msg_text{float: right;background: $orange;color: #fff;box-shadow: 0px 0px 0.066rem 0.066rem #fdf1ea;}
+             .msg_img{float: right;margin-left: .2rem;}
+             .msg_time{padding-right: 1.35rem;text-align: right;}
+         }
+}
