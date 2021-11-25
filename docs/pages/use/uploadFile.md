@@ -1,4 +1,4 @@
-## 文件上传的几种方式
+## 1. 文件上传的几种方式
 
 首先我们来看看文件上传的几种方式。
 
@@ -136,7 +136,7 @@ function upload(){
 
 ```
 
-## 大文件上传
+## 2. 大文件上传
 
 现在来看看在上面提到的几种上传方式中实现大文件上传会遇见的超时问题，
 
@@ -412,3 +412,89 @@ chunks.forEach((chunk, index) => {
 作者：橙红年代  
 链接：https://juejin.im/post/5cf765275188257c6b51775f  
 来源：掘金
+
+
+
+
+
+
+
+
+
+
+## 3. 第三方上传
+
+### 3.1 阿里云上传实践
+
+  [文档](https://help.aliyun.com/document_detail/64047.htm?)
+
+  1. 开通oss 服务，[使用STS临时访问凭证访问OSS](https://help.aliyun.com/document_detail/100624.htm?spm=a2c4g.11186623.0.0.683662e7icOmtd#concept-xzh-nzk-2gb)
+
+  2. 普通上传(不支持使用进度函数,建议100M内使用，大文件会崩溃)：
+
+  ```js
+    async uploads(e) {
+            const client = new OSS({
+                  region: 'oss-cn-shenzhen',
+                  accessKeyId: 'STS.xxx',
+                  accessKeySecret: 'xxx',
+                  stsToken: 'xxx',
+                  bucket: 'xxx',
+                });
+
+            const files = e.target.files[0]
+            this.path='test/file/'+files.name;
+            this.files=files
+           try {
+             const result = await client.put(this.path, data);
+             console.log(result);//回调  
+           } catch (e) {
+             console.log(e);
+           }
+            
+      }
+  ```
+  3. 分片上传
+
+  ```js
+    let tempCheckpoint=null  // 该字段保存分片上传信息，用于重传
+    try {
+      const result = await client.multipartUpload(this.path, files, { 
+        progress:  (p, checkpoint) =>{
+          console.log('进度',p);
+          this.tempCheckpoint=checkpoint
+        },
+        parallel: 4,
+        // 设置分片大小。默认值为1 MB，最小值为100 KB。
+        partSize: 1024 * 1024,
+        meta: { year: 2020, people: 'test',},//meta 元信息，如开启 md5校验可以 传递 Content-MD5 进行比对保证文件上传一致性
+        mime: 'text/plain',
+        })
+    } catch(e){
+      client.cancel();
+      console.log('出错了，请点击按钮重传');
+      console.log(e);
+    }
+
+    //分片 重传
+    async  resumeUpload () {
+        const resumeclient = new OSS(this.ossConfig);//需要重新new 
+          try {
+            const result = await resumeclient.multipartUpload(this.path, files, {
+              progress:  (p, checkpoint) =>{
+                console.log('重传进度',p);
+                this.tempCheckpoint = checkpoint;
+              },
+              checkpoint: this.tempCheckpoint,
+              meta: { year: 2020, people: 'test' },
+              mime: 'text/plain'
+          })
+          } catch (e) {
+            console.log(e);
+          }
+    }
+
+  ```              
+
+
+### 3.2 又拍云上传实践

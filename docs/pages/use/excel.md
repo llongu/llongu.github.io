@@ -86,7 +86,7 @@ function getFile(e){
 
 ```
 
-## [导入模板.xls](https://llongu.github.io/pages/use/file/导入模板.xls)
+## [导入模板.xls](../..//file/导入模板.xls)
 
 
 
@@ -106,7 +106,7 @@ import XLSX from "xlsx";
       exports(){
         //为二维数组，第一个数组是header ,其余为数据（获取接口list解析后按header顺序对应排列）
         const tables=[
-            ['订单号', '运营商', '启动充电时间', '结束充电时间','客户应付总额', '客户应付电费', '客户应付服务费', '客户实付总额','客户支付状态','哪吒应付费用总额','哪吒应付电费','哪吒应付服务费']
+            ['订单号', '运营商', '启动充电时间', '结束充电时间','客户应付总额', '客户应付电费', '客户应付服务费', '客户实付总额','客户支付状态','应付费用总额','应付电费','应付服务费']
         ]
 
         this.exportLoad=true
@@ -183,6 +183,6 @@ import XLSX from "xlsx";
     },
 ```
 
-## [导出结果示例.xlsx](https://llongu.github.io/use/file/导出结果示例.xlsx)
+## [导出结果示例.xlsx](../../file/导出结果示例.xlsx)
 
 
