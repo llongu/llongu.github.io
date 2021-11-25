@@ -42,8 +42,10 @@ module.exports = {
             items: [
               { text:'前端开发所需的环境配置',link:'/pages/notes/vuepress1.md'},
               { text:'前端标准项目搭建配置流程' ,link:'/pages/notes/vuepress1.md'},
+              { text:'使用nvm 管理node版本' ,link:'/pages/notes/vuepress1.md'},
+              { text:'本地搭建npm 环境' ,link:'/pages/notes/vuepress1.md'},
               { text:'vuepress1.x 博客搭建流程',link:'/pages/notes/vuepress1.md'},
-              { text:'jenkins 搭建流程',link:'/pages/notes/vuepress1.md'},
+              { text:'jenkins 搭建流程',link:'https://github.com/llongu/ci-jenkins-demo'},
             ]
           },
           {
@@ -52,6 +54,8 @@ module.exports = {
               { text: 'create-app-web', link: 'https://github.com/llongu/llongu.github.io' },
               { text: 'create-app-web-lib', link: 'https://github.com/llongu/llongu.github.io' },
               { text: 'domMove', link: 'https://github.com/llongu/llongu.github.io' },
+              { text: 'egg-serviec', link: 'https://github.com/llongu/llongu.github.io' },
+              { text: 'bugwatch', link: 'https://github.com/llongu/llongu.github.io' },
             ]
           },
           {
@@ -69,9 +73,9 @@ module.exports = {
           {
             text: '生活&工具',
             items: [
+              { text:'devsidecar 加速工具',link:'/pages/use/video.md'},
               { text: '产品经理', link: '/pages/pm/process.md' },
               { text: 'UI设计', link: '/pages/ui/color.md' },
-              { text:'devsidecar 加速工具',link:'/pages/use/video.md'},
               { text: '飞机场收集', link: '/pages/' },
               { text: '聚合类网站收集', link: '/pages/' },
               { text: '外包网站收集', link: '/pages/' },
@@ -84,7 +88,7 @@ module.exports = {
           },
           
         ],
-        sidebarDepth: 2,
+        sidebarDepth: 3,
         sidebar
     },
 }
