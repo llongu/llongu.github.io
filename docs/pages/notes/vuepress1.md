@@ -80,23 +80,23 @@ sidebar 作用：用于配置不同页面下展示不同的左侧导航栏
 
 **注意仓库名称 `name` 最好是自己用户名 `username`使用 `username.github.io` 就可访问，否则访问地址将会是 `https://username.github.io/name.github.io`**
 
-![新建仓库 name.github.io](./img/1.png)
+![新建仓库 name.github.io](./img/vuepress1.png)
 
  
 ### 2. 仓库配置 access token /  secrets
 
 - 进入个人设置 developer setting
 
-![新建仓库 name.github.io](./img/2.png)
+![新建仓库 name.github.io](./img/vuepress2.png)
 
 - 生成token 选择权限，复制token
 
-![新建仓库 name.github.io](./img/3.png)
+![新建仓库 name.github.io](./img/vuepress3.png)
 
-![新建仓库 name.github.io](./img/4.png)
+![新建仓库 name.github.io](./img/vuepress4.png)
 - name.github.io 仓库 setting 设置 ，添加secrets，输入secrets名称 粘贴 token
 
-![新建仓库 name.github.io](./img/5.png)
+![新建仓库 name.github.io](./img/vuepress5.png)
 
 ### 2. 创建自动化工作流，push 后自动部署
  
@@ -132,7 +132,7 @@ sidebar 作用：用于配置不同页面下展示不同的左侧导航栏
 
 ### 4. 仓库配置 GitHub Pages
 
-![新建仓库 name.github.io](./img/6.png)
+![新建仓库 name.github.io](./img/vuepress6.png)
 
 ### 5. 等待一下，刷新 name.github.io 即可访问
 

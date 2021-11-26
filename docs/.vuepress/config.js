@@ -9,12 +9,15 @@ module.exports = {
     plugins: [['vuepress-plugin-code-copy', true]],
     theme: 'yuu',
     themeConfig: {
+        yuu: {
+          defaultColorTheme: 'red',
+        },
         logo: 'logo.png',
         repo: 'https://github.com/llongu/llongu.github.io',
-        
+
         nav: [
           {
-            text: '前端',
+            text: '前端学习',
             items: [
               { text: '浏览器', link: '/pages/browser/httpCode' },
               { text: 'javascript', link: '/pages/javascript/this' },
@@ -28,7 +31,7 @@ module.exports = {
             ]
           },
           {
-            text: '前端功能解决方案',
+            text: '常用功能解决方案',
             items: [
               { text: '大文件上传', link: '/pages/use/uploadFile.md' },
               { text: '导入导出excel', link: '/pages/use/excel.md' },
@@ -43,19 +46,26 @@ module.exports = {
               { text:'前端开发所需的环境配置',link:'/pages/notes/vuepress1.md'},
               { text:'前端标准项目搭建配置流程' ,link:'/pages/notes/vuepress1.md'},
               { text:'使用nvm 管理node版本' ,link:'/pages/notes/vuepress1.md'},
-              { text:'本地搭建npm 环境' ,link:'/pages/notes/vuepress1.md'},
+              { text:'verdaccio 搭建npm 环境' ,link:'/pages/notes/verdaccio.md'},
               { text:'vuepress1.x 博客搭建流程',link:'/pages/notes/vuepress1.md'},
+              { text:'github 自动同步 gitee',link:'/pages/notes/githubSyncGitee.md'},
               { text:'jenkins 搭建流程',link:'https://github.com/llongu/ci-jenkins-demo'},
             ]
           },
           {
-            text: 'npm包',
+            text: 'npm',
             items: [
-              { text: 'create-app-web', link: 'https://github.com/llongu/llongu.github.io' },
-              { text: 'create-app-web-lib', link: 'https://github.com/llongu/llongu.github.io' },
+              {text:'cli',items:[
+                { text: 'create-app-web', link: 'https://github.com/llongu/llongu.github.io' },
+                { text: 'create-app-web-lib', link: 'https://github.com/llongu/llongu.github.io' },
+              ]},
+             {text:'plugin',items:[
               { text: 'domMove', link: 'https://github.com/llongu/llongu.github.io' },
+             ]},
+             {text:'project',items:[
               { text: 'egg-serviec', link: 'https://github.com/llongu/llongu.github.io' },
               { text: 'bugwatch', link: 'https://github.com/llongu/llongu.github.io' },
+             ]}
             ]
           },
           {
@@ -73,7 +83,7 @@ module.exports = {
           {
             text: '生活&工具',
             items: [
-              { text:'devsidecar 加速工具',link:'/pages/use/video.md'},
+              { text:'dev-sidecar 加速工具',link:'https://github.com/docmirror/dev-sidecar'},
               { text: '产品经理', link: '/pages/pm/process.md' },
               { text: 'UI设计', link: '/pages/ui/color.md' },
               { text: '飞机场收集', link: '/pages/' },
