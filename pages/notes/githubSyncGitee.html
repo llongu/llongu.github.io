@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>通过 GitHub Actions 将 GitHub 仓库自动备份同步到 Gitee | 写字の地方</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="logo.png" with="0.1rem" search="true">
+    <meta name="description" content="notes">
+    
+    <link rel="preload" href="/assets/css/0.styles.3714c6e3.css" as="style"><link rel="preload" href="/assets/js/app.486fc749.js" as="script"><link rel="preload" href="/assets/js/2.6def8fa7.js" as="script"><link rel="preload" href="/assets/js/15.0b16588c.js" as="script"><link rel="prefetch" href="/assets/js/10.09c12761.js"><link rel="prefetch" href="/assets/js/11.210e8410.js"><link rel="prefetch" href="/assets/js/12.d90c873b.js"><link rel="prefetch" href="/assets/js/13.d43e8cb2.js"><link rel="prefetch" href="/assets/js/14.872b264a.js"><link rel="prefetch" href="/assets/js/16.1cfea993.js"><link rel="prefetch" href="/assets/js/17.9d08d93c.js"><link rel="prefetch" href="/assets/js/18.3e381b87.js"><link rel="prefetch" href="/assets/js/19.97af1bf7.js"><link rel="prefetch" href="/assets/js/20.c6c840b3.js"><link rel="prefetch" href="/assets/js/21.f09525ae.js"><link rel="prefetch" href="/assets/js/22.4cb82358.js"><link rel="prefetch" href="/assets/js/23.459d2fea.js"><link rel="prefetch" href="/assets/js/24.02ca1790.js"><link rel="prefetch" href="/assets/js/25.6f12fca3.js"><link rel="prefetch" href="/assets/js/26.1188fa61.js"><link rel="prefetch" href="/assets/js/27.08dad32c.js"><link rel="prefetch" href="/assets/js/28.93b90ca4.js"><link rel="prefetch" href="/assets/js/29.4b93adab.js"><link rel="prefetch" href="/assets/js/3.66863925.js"><link rel="prefetch" href="/assets/js/30.c2897721.js"><link rel="prefetch" href="/assets/js/31.b2659098.js"><link rel="prefetch" href="/assets/js/32.770ed3f8.js"><link rel="prefetch" href="/assets/js/33.1d53680b.js"><link rel="prefetch" href="/assets/js/34.b565c7bd.js"><link rel="prefetch" href="/assets/js/35.6f6d03d1.js"><link rel="prefetch" href="/assets/js/36.5f15f541.js"><link rel="prefetch" href="/assets/js/37.c148203a.js"><link rel="prefetch" href="/assets/js/38.b8c485d5.js"><link rel="prefetch" href="/assets/js/39.16da2f6f.js"><link rel="prefetch" href="/assets/js/4.e53d8446.js"><link rel="prefetch" href="/assets/js/40.d2d448fe.js"><link rel="prefetch" href="/assets/js/41.0f93445c.js"><link rel="prefetch" href="/assets/js/42.7e8c1e82.js"><link rel="prefetch" href="/assets/js/43.d71efdde.js"><link rel="prefetch" href="/assets/js/44.f00166e9.js"><link rel="prefetch" href="/assets/js/45.a3aba1c9.js"><link rel="prefetch" href="/assets/js/46.5a693316.js"><link rel="prefetch" href="/assets/js/47.43205c9a.js"><link rel="prefetch" href="/assets/js/48.ee725fe8.js"><link rel="prefetch" href="/assets/js/49.2874e93f.js"><link rel="prefetch" href="/assets/js/5.ebc28cb2.js"><link rel="prefetch" href="/assets/js/50.aab23524.js"><link rel="prefetch" href="/assets/js/51.0fc40771.js"><link rel="prefetch" href="/assets/js/52.6ea4ada9.js"><link rel="prefetch" href="/assets/js/53.8cdcfd94.js"><link rel="prefetch" href="/assets/js/54.2b59bdaf.js"><link rel="prefetch" href="/assets/js/55.57c9406a.js"><link rel="prefetch" href="/assets/js/56.7b6ab216.js"><link rel="prefetch" href="/assets/js/57.651201a5.js"><link rel="prefetch" href="/assets/js/58.7e6b1529.js"><link rel="prefetch" href="/assets/js/59.c5d95a0d.js"><link rel="prefetch" href="/assets/js/6.0efbc068.js"><link rel="prefetch" href="/assets/js/60.a63aef51.js"><link rel="prefetch" href="/assets/js/61.b2842c88.js"><link rel="prefetch" href="/assets/js/62.3ad9ea71.js"><link rel="prefetch" href="/assets/js/63.f2ad265f.js"><link rel="prefetch" href="/assets/js/64.655d2ebf.js"><link rel="prefetch" href="/assets/js/65.12898f65.js"><link rel="prefetch" href="/assets/js/66.7c140e2e.js"><link rel="prefetch" href="/assets/js/67.c7cddd2b.js"><link rel="prefetch" href="/assets/js/7.d956719a.js"><link rel="prefetch" href="/assets/js/8.fa5a479c.js"><link rel="prefetch" href="/assets/js/9.bc389f37.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3714c6e3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="logo.png" alt="写字の地方" class="logo"> <span class="site-name can-hide">写字の地方</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <ul class="color-theme-options"><li><a href="#" class="default-theme"></a></li> <li><a href="#" class="blue-theme"></a></li><li><a href="#" class="red-theme"></a></li><li><a href="#" class="purple-theme"></a></li></ul> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox"></div> <div class="ignore-themes-options toggle-option"><label for="ignore-themes-toggle">Ignore Other Themes?</label> <input id="ignore-themes-toggle" type="checkbox"></div> <!----></div></div></div> <!----> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/browser/httpCode.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/javascript/this.html" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/pages/function/begin.html" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Html&amp;Css/formattingContexts.html" class="nav-link">
+  Html&amp;Css
+</a></li><li class="dropdown-item"><!----> <a href="/pages/webpack/process.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/pages/test/home.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jquery/entry.html" class="nav-link">
+  jquery剖析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/coding/aop&amp;oop.html" class="nav-link">
+  编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/pages/leetcode&amp;books/home.html" class="nav-link">
+  leetcode&amp;books
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常用功能解决方案" class="dropdown-title"><span class="title">常用功能解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="常用功能解决方案" class="mobile-dropdown-title"><span class="title">常用功能解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/use/uploadFile.html" class="nav-link">
+  大文件上传
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/excel.html" class="nav-link">
+  导入导出excel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/uniapp.html" class="nav-link">
+  uni-app 常见问题
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/officeView.html" class="nav-link">
+  网页office预览方案
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/video.html" class="nav-link">
+  网页视频播放方案
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  前端开发所需的环境配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  前端标准项目搭建配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  使用nvm 管理node版本
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/verdaccio.html" class="nav-link">
+  verdaccio 搭建npm 环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  vuepress1.x 博客搭建流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/githubSyncGitee.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  github 自动同步 gitee
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/llongu/ci-jenkins-demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jenkins 搭建流程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="npm" class="dropdown-title"><span class="title">npm</span> <span class="arrow down"></span></button> <button type="button" aria-label="npm" class="mobile-dropdown-title"><span class="title">npm</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          cli
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web-lib
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          plugin
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  domMove
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          project
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  egg-serviec
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  bugwatch
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端&amp;服务端" class="dropdown-title"><span class="title">后端&amp;服务端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端&amp;服务端" class="mobile-dropdown-title"><span class="title">后端&amp;服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/nginx/des.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/pages/linux/order.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jenkins/" class="nav-link">
+  jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/pages/php/base.html" class="nav-link">
+  php
+</a></li><li class="dropdown-item"><!----> <a href="/pages/java/" class="nav-link">
+  java
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生活&amp;工具" class="dropdown-title"><span class="title">生活&amp;工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="生活&amp;工具" class="mobile-dropdown-title"><span class="title">生活&amp;工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/docmirror/dev-sidecar" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  dev-sidecar 加速工具
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/pages/pm/process.html" class="nav-link">
+  产品经理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/ui/color.html" class="nav-link">
+  UI设计
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  飞机场收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  聚合类网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  外包网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  浏览器插件聚合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  薅羊毛
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  互联网常见项目 erp crm 对应痛点
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路-炒股软件
+</a></li></ul></div></div> <a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/browser/httpCode.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/javascript/this.html" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/pages/function/begin.html" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Html&amp;Css/formattingContexts.html" class="nav-link">
+  Html&amp;Css
+</a></li><li class="dropdown-item"><!----> <a href="/pages/webpack/process.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/pages/test/home.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jquery/entry.html" class="nav-link">
+  jquery剖析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/coding/aop&amp;oop.html" class="nav-link">
+  编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/pages/leetcode&amp;books/home.html" class="nav-link">
+  leetcode&amp;books
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常用功能解决方案" class="dropdown-title"><span class="title">常用功能解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="常用功能解决方案" class="mobile-dropdown-title"><span class="title">常用功能解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/use/uploadFile.html" class="nav-link">
+  大文件上传
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/excel.html" class="nav-link">
+  导入导出excel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/uniapp.html" class="nav-link">
+  uni-app 常见问题
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/officeView.html" class="nav-link">
+  网页office预览方案
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/video.html" class="nav-link">
+  网页视频播放方案
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  前端开发所需的环境配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  前端标准项目搭建配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  使用nvm 管理node版本
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/verdaccio.html" class="nav-link">
+  verdaccio 搭建npm 环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  vuepress1.x 博客搭建流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/githubSyncGitee.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  github 自动同步 gitee
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/llongu/ci-jenkins-demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jenkins 搭建流程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="npm" class="dropdown-title"><span class="title">npm</span> <span class="arrow down"></span></button> <button type="button" aria-label="npm" class="mobile-dropdown-title"><span class="title">npm</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          cli
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web-lib
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          plugin
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  domMove
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          project
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  egg-serviec
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  bugwatch
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端&amp;服务端" class="dropdown-title"><span class="title">后端&amp;服务端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端&amp;服务端" class="mobile-dropdown-title"><span class="title">后端&amp;服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/nginx/des.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/pages/linux/order.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jenkins/" class="nav-link">
+  jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/pages/php/base.html" class="nav-link">
+  php
+</a></li><li class="dropdown-item"><!----> <a href="/pages/java/" class="nav-link">
+  java
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生活&amp;工具" class="dropdown-title"><span class="title">生活&amp;工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="生活&amp;工具" class="mobile-dropdown-title"><span class="title">生活&amp;工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/docmirror/dev-sidecar" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  dev-sidecar 加速工具
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/pages/pm/process.html" class="nav-link">
+  产品经理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/ui/color.html" class="nav-link">
+  UI设计
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  飞机场收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  聚合类网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  外包网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  浏览器插件聚合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  薅羊毛
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  互联网常见项目 erp crm 对应痛点
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路-炒股软件
+</a></li></ul></div></div> <a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/pages/notes/verdaccio.html" class="sidebar-link">verdaccio 搭建npm 环境</a></li><li><a href="/pages/notes/vuepress1.html" class="sidebar-link">vuepress1.x 博客搭建流程</a></li><li><a href="/pages/notes/githubSyncGitee.html" aria-current="page" class="active sidebar-link">github 自动同步 gitee</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/notes/githubSyncGitee.html#通过-github-actions-将-github-仓库自动备份同步到-gitee" class="sidebar-link">通过 GitHub Actions 将 GitHub 仓库自动备份同步到 Gitee</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/notes/githubSyncGitee.html#_1-gitee-配置ssh公钥" class="sidebar-link">1. gitee 配置ssh公钥</a></li><li class="sidebar-sub-header"><a href="/pages/notes/githubSyncGitee.html#_2-将ssh-私钥-配置-github-项目设置-secrets-命名-gitee-sync" class="sidebar-link">2. 将ssh 私钥 配置 github 项目设置  Secrets ，命名 GITEE_SYNC</a></li><li class="sidebar-sub-header"><a href="/pages/notes/githubSyncGitee.html#_3-github-项目配置-workflow" class="sidebar-link">3. github 项目配置 workflow</a></li><li class="sidebar-sub-header"><a href="/pages/notes/githubSyncGitee.html#_4-代码push-到github仓库-触发-action-gitee-会自动同步备份" class="sidebar-link">4. 代码push 到github仓库 触发 action , gitee 会自动同步备份</a></li></ul></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="通过-github-actions-将-github-仓库自动备份同步到-gitee"><a href="#通过-github-actions-将-github-仓库自动备份同步到-gitee" class="header-anchor">#</a> 通过 GitHub Actions 将 GitHub 仓库自动备份同步到 Gitee</h2> <h3 id="_1-gitee-配置ssh公钥"><a href="#_1-gitee-配置ssh公钥" class="header-anchor">#</a> 1. gitee 配置ssh公钥</h3> <p><img src="/assets/img/sync1.f026b964.png" alt=""></p> <h3 id="_2-将ssh-私钥-配置-github-项目设置-secrets-命名-gitee-sync"><a href="#_2-将ssh-私钥-配置-github-项目设置-secrets-命名-gitee-sync" class="header-anchor">#</a> 2. 将ssh 私钥 配置 github 项目设置  Secrets ，命名 GITEE_SYNC</h3> <p><img src="/assets/img/sync2.e10938e9.png" alt=""></p> <h3 id="_3-github-项目配置-workflow"><a href="#_3-github-项目配置-workflow" class="header-anchor">#</a> 3. github 项目配置 workflow</h3> <p>根目录创建 <code>.github/workflows/mirror.yml</code></p> <div class="language-yml extra-class"><pre class="language-yml"><code>
+<span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">'GitHub Actions Mirror'</span>
+
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>push<span class="token punctuation">,</span>pull_request<span class="token punctuation">]</span>
+
+  <span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">mirror_to_gitee</span><span class="token punctuation">:</span>
+      <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+      <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">'Checkout'</span>
+          <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v1
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">'Mirror to gitee'</span>
+          <span class="token key atrule">uses</span><span class="token punctuation">:</span> pixta<span class="token punctuation">-</span>dev/repository<span class="token punctuation">-</span>mirroring<span class="token punctuation">-</span>action@v1
+          <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">target_repo_url</span><span class="token punctuation">:</span>
+              git@gitee.com<span class="token punctuation">:</span>username/project<span class="token punctuation">-</span>name.git
+          <span class="token key atrule">ssh_private_key</span><span class="token punctuation">:</span>
+              $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.GITEE_SYNC <span class="token punctuation">}</span><span class="token punctuation">}</span>  
+
+</code></pre></div><h3 id="_4-代码push-到github仓库-触发-action-gitee-会自动同步备份"><a href="#_4-代码push-到github仓库-触发-action-gitee-会自动同步备份" class="header-anchor">#</a> 4. 代码push 到github仓库 触发 action , gitee 会自动同步备份</h3></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/notes/vuepress1.html" class="prev">
+        vuepress1.x 博客搭建流程
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.486fc749.js" defer></script><script src="/assets/js/2.6def8fa7.js" defer></script><script src="/assets/js/15.0b16588c.js" defer></script>
+  </body>
+</html>
