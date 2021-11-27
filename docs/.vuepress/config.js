@@ -45,7 +45,7 @@ module.exports = {
             items: [
               { text:'前端开发所需的环境配置',link:'/pages/notes/vuepress1.md'},
               { text:'前端标准项目搭建配置流程' ,link:'/pages/notes/vuepress1.md'},
-              { text:'使用nvm 管理node版本' ,link:'/pages/notes/vuepress1.md'},
+              { text:'使用nvm 管理node版本' ,link:'/pages/notes/nvm.md'},
               { text:'verdaccio 搭建npm 环境' ,link:'/pages/notes/verdaccio.md'},
               { text:'vuepress1.x 博客搭建流程',link:'/pages/notes/vuepress1.md'},
               { text:'github 自动同步 gitee',link:'/pages/notes/githubSyncGitee.md'},
