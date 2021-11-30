@@ -10,7 +10,7 @@ module.exports ={
             { title:'自执行函数表达式与函数声明的调用',path:'/pages/javascript/callFunction.md'},
             { title:'eavl，new Function,setTimeout',path:'/pages/javascript/eavl.md'},
             { title:'{} 花括号的二义性',path:'/pages/javascript/brackets.md'},
-            { title:'commonJS 规范',path:'/pages/javascript/commonJS.md'},
+            { title:'CommonJS,AMD,CMD,UMD,ES6',path:'/pages/javascript/commonJS.md'},
       ]
 }
   

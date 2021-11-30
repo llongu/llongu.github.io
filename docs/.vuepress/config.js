@@ -56,11 +56,11 @@ module.exports = {
             text: 'npm',
             items: [
               {text:'cli',items:[
-                { text: 'create-app-web', link: 'https://github.com/llongu/llongu.github.io' },
-                { text: 'create-app-web-lib', link: 'https://github.com/llongu/llongu.github.io' },
+                { text: 'create-app-web', link: 'https://www.npmjs.com/package/create-app-web' },
+                { text: 'create-app-web-lib', link: 'https://github.com/llongu/create-app-web-lib' },
               ]},
              {text:'plugin',items:[
-              { text: 'domMove', link: 'https://github.com/llongu/llongu.github.io' },
+              { text: 'floater-dom', link: 'https://www.npmjs.com/package/floater-dom' },
              ]},
              {text:'project',items:[
               { text: 'egg-serviec', link: 'https://github.com/llongu/llongu.github.io' },
@@ -83,7 +83,9 @@ module.exports = {
           {
             text: '生活&工具',
             items: [
-              { text:'dev-sidecar 加速工具',link:'https://github.com/docmirror/dev-sidecar'},
+              { text:'dev-sidecar 环境加速工具',link:'https://github.com/docmirror/dev-sidecar'},
+              { text:'snipaste 截图工具',link:'https://www.snipaste.com/'},
+           
               { text: '产品经理', link: '/pages/pm/process.md' },
               { text: 'UI设计', link: '/pages/ui/color.md' },
               { text: '飞机场收集', link: '/pages/' },
