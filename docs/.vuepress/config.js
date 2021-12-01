@@ -4,7 +4,9 @@ module.exports = {
     title: '写字の地方',
     description: 'notes',
     head:[
-      ['link',{rel:'icon','href':'logo.png',with:'0.1rem',search:true}]
+      ['link',{rel:'icon','href':'logo.png',with:'0.1rem',search:true}],
+      ['script',{src:'/js/jquery.min.js'}],
+      ['script',{src:'/js/main.js'}],
     ],
     plugins: [['vuepress-plugin-code-copy', true]],
     theme: 'yuu',
@@ -38,6 +40,7 @@ module.exports = {
               { text:'uni-app 常见问题',link:'/pages/use/uniapp.md'},
               { text:'网页office预览方案',link:'/pages/use/officeView.md'},
               { text:'网页视频播放方案',link:'/pages/use/video.md'},
+              { text:'后台管理系统权限管理',link:'/pages/use/adminAuth.md'},
             ]
           },
           {
@@ -100,7 +103,7 @@ module.exports = {
           },
           
         ],
-        sidebarDepth: 3,
+        sidebarDepth:4,
         sidebar
     },
 }

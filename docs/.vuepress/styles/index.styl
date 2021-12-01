@@ -118,3 +118,67 @@
     text-align:  center;
 }
 
+
+
+/*钢铁侠*/
+#IronM {
+  width: 50px;
+  height: 70px;
+  line-height: 30px;
+  text-align: center;
+  transition: transform linear 0.3s;
+  -webkit-transition: transform linear 0.3s;
+  position: absolute;
+  z-index: 1;
+  display: none;
+  img{
+       width: 100%;
+  height: 100%;
+  }
+
+  
+ 
+  #fire {
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 99%;
+    display: none;
+    animation: height 0.1s linear alternate infinite;
+    -webkit-animation: height 0.1s linear alternate infinite;
+  }
+  .fire {
+    width: 10px;
+    height: 100%;
+     position: absolute;
+ }
+
+    .fire_l {
+      left: 12px;
+    }
+
+    .fire_r {
+       right: 12px;
+    }
+
+    @keyframes height {
+        from {
+            height: 30px;
+        }
+        to {
+            height: 20px;
+    }
+    }
+
+    @-webkit-keyframes height {
+        from {
+            height: 30px;
+        }
+        to {
+            height: 20px;
+        }
+    }
+
+
+}
