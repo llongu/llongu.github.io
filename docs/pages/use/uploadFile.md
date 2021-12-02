@@ -495,25 +495,46 @@ chunks.forEach((chunk, index) => {
   ```              
 
 
-## 4. 第三方上传-又拍云上传实践 (js无sdk 手写)
+## 4. 第三方上传-又拍云上传实践 (无js sdk 手写)
 
   [文档](http://docs.upyun.com/api/rest_api/)
 
-- 开发前需要了解知识点： 
+- **开发前需要了解知识点**： 
 
    1. 浏览器有请求并发数限制，所以并发上传最好控制在6个请求左右
 
    2. 页面关闭，切换，窗口关闭，切换，根据业务需求是否要断开上传，暂停上传或销毁上传对象，是否需要后台上传，如果有后台上传考虑使用 `web worker`
 
-   3. 又拍云分片上传使用 put 上传并且返回信息在 response header里面
+   3. 又拍云分片上传使用 put 上传并且返回信息在 response header 里面
 
-- 又拍云准备：
+- **又拍云准备**：
 
-    1. 上传域名  智能选路（推荐） v0.api.upyun.com
+    1. 又拍云上传域名  智能选路（推荐） v0.api.upyun.com
 
-    密钥
+    2. 密钥 : 
 
-### 4.1 创建生成 又拍云密钥的类以及上传路径
+        - domain 域名
+        - bucketName 空间名称
+        - username 账号
+        - password 密码
+
+    3. filePath 上传路径 ：
+         
+        - 又拍云上传域名 + 上传空间 +  文件类型 + 上传日期 + 文件名称
+       
+    4. Signature  [签名生成](http://docs.upyun.com/api/authorization/) :
+
+        -  Signature =  Base64 ( HMAC-SHA1 ( md5 ( Password ) +  Method +  URI + Date ) )
+
+        - 使用base6 ，HMAC-SHA1 包裹加密，密码使用md5加密，method 为 put ,URL 为 filePath 上传路径，Date 为当前时间 GMT 格式
+
+        - 最后 请求头加上  `Authorization` : `UPYUN ${username}:${Signature}`
+
+### 4.1 创建 又拍云签名,以及上传路径信息
+
+
+
+
 
 ### 4.1 创建 原生 xhr 对象
 ### 4.1 创建 uploader 类

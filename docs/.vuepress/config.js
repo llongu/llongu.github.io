@@ -5,7 +5,6 @@ module.exports = {
     description: 'notes',
     head:[
       ['link',{rel:'icon','href':'logo.png',with:'0.1rem',search:true}],
-      ['script',{src:'/js/jquery.min.js'}],
       ['script',{src:'/js/main.js'}],
     ],
     plugins: [['vuepress-plugin-code-copy', true]],
@@ -46,8 +45,8 @@ module.exports = {
           {
             text: '笔记',
             items: [
-              { text:'前端开发所需的环境配置',link:'/pages/notes/vuepress1.md'},
-              { text:'前端标准项目搭建配置流程' ,link:'/pages/notes/vuepress1.md'},
+              { text:'前端开发电脑环境配置',link:'/pages/notes/vuepress1.md'},
+              { text:'前端项目搭建sop流程' ,link:'/pages/notes/vuepress1.md'},
               { text:'使用nvm 管理node版本' ,link:'/pages/notes/nvm.md'},
               { text:'verdaccio 搭建npm 环境' ,link:'/pages/notes/verdaccio.md'},
               { text:'vuepress1.x 博客搭建流程',link:'/pages/notes/vuepress1.md'},
@@ -68,6 +67,7 @@ module.exports = {
              {text:'project',items:[
               { text: 'egg-serviec', link: 'https://github.com/llongu/llongu.github.io' },
               { text: 'bugwatch', link: 'https://github.com/llongu/llongu.github.io' },
+              { text: 'H5game', link: '/pages/h5game.md'},
              ]}
             ]
           },

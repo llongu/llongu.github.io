@@ -8,11 +8,11 @@ actionLink: '/'
 
 <iframe id='jsFun' src='https://www.javascript.fun/'></iframe>
 <div id="IronM">
-			<img src="images/g.png" alt="" id="Iron_Man" />
-			<div id="fire">
-				<img src="images/fire.png" alt="" class="fire fire_l" />
-				<img src="images/fire.png" alt="" class="fire fire_r" />
-			</div>
+		<img src="images/g.png" alt="" id="Iron_Man" />
+		<div id="fire">
+			<img src="images/fire.png" alt="" class="fire fire_l" />
+			<img src="images/fire.png" alt="" class="fire fire_r" />
+		</div>
 </div>
 
 ![img](/study.jpg)
