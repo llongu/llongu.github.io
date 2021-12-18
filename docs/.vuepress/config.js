@@ -89,9 +89,10 @@ module.exports = {
               { text:'dev-sidecar 环境加速工具',link:'https://github.com/docmirror/dev-sidecar'},
               { text:'snipaste 截图工具',link:'https://www.snipaste.com/'},
            
+              { text: '科学上网', link: 'http://kingfast.info/index.php/index/register/?yqi=63283' },
+              
               { text: '产品经理', link: '/pages/pm/process.md' },
               { text: 'UI设计', link: '/pages/ui/color.md' },
-              { text: '飞机场收集', link: '/pages/' },
               { text: '聚合类网站收集', link: '/pages/' },
               { text: '外包网站收集', link: '/pages/' },
               { text: '浏览器插件聚合', link: '/pages/' },
