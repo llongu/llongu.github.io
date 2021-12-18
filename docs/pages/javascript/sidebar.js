@@ -11,6 +11,7 @@ module.exports ={
             { title:'eavl，new Function,setTimeout',path:'/pages/javascript/eavl.md'},
             { title:'{} 花括号的二义性',path:'/pages/javascript/brackets.md'},
             { title:'CommonJS,AMD,CMD,UMD,ES6',path:'/pages/javascript/commonJS.md'},
+            { text: 'js开发常用方法', path: '/pages/javascript/fn.md' },
       ]
 }
   

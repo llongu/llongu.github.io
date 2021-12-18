@@ -29,6 +29,7 @@ module.exports = {
               { text: 'jquery剖析', link: '/pages/jquery/entry' },
               { text: '编程思想', link: '/pages/coding/aop&oop' },
               { text: 'leetcode&books', link: '/pages/leetcode&books/home' },
+              { text: 'js开发常用方法', link: '/pages/javascript/fn' },
             ]
           },
           {
@@ -36,6 +37,7 @@ module.exports = {
             items: [
               { text: '大文件上传', link: '/pages/use/uploadFile.md' },
               { text: '导入导出excel', link: '/pages/use/excel.md' },
+              { text: '页面水印添加', link: '/pages/use/waterMark.md' },
               { text:'uni-app 常见问题',link:'/pages/use/uniapp.md'},
               { text:'网页office预览方案',link:'/pages/use/officeView.md'},
               { text:'网页视频播放方案',link:'/pages/use/video.md'},
