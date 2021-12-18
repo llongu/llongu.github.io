@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>日常开发中常用的一些功能函数 | 写字の地方</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="logo.png" with="0.1rem" search="true">
+    <script src="/js/main.js"></script>
+    <meta name="description" content="notes">
+    
+    <link rel="preload" href="/assets/css/0.styles.01960845.css" as="style"><link rel="preload" href="/assets/js/app.c52eb111.js" as="script"><link rel="preload" href="/assets/js/2.6def8fa7.js" as="script"><link rel="preload" href="/assets/js/44.4521588d.js" as="script"><link rel="prefetch" href="/assets/js/10.09c12761.js"><link rel="prefetch" href="/assets/js/11.210e8410.js"><link rel="prefetch" href="/assets/js/12.b12dc161.js"><link rel="prefetch" href="/assets/js/13.0f9437b6.js"><link rel="prefetch" href="/assets/js/14.34ff37ad.js"><link rel="prefetch" href="/assets/js/15.63a3fede.js"><link rel="prefetch" href="/assets/js/16.1cfea993.js"><link rel="prefetch" href="/assets/js/17.9d08d93c.js"><link rel="prefetch" href="/assets/js/18.3e381b87.js"><link rel="prefetch" href="/assets/js/19.2d2887f0.js"><link rel="prefetch" href="/assets/js/20.df3a94c0.js"><link rel="prefetch" href="/assets/js/21.9a9f8392.js"><link rel="prefetch" href="/assets/js/22.d9bd9b0d.js"><link rel="prefetch" href="/assets/js/23.b9db3d7d.js"><link rel="prefetch" href="/assets/js/24.147b9b63.js"><link rel="prefetch" href="/assets/js/25.89273763.js"><link rel="prefetch" href="/assets/js/26.1188fa61.js"><link rel="prefetch" href="/assets/js/27.08dad32c.js"><link rel="prefetch" href="/assets/js/28.93b90ca4.js"><link rel="prefetch" href="/assets/js/29.4b93adab.js"><link rel="prefetch" href="/assets/js/3.66863925.js"><link rel="prefetch" href="/assets/js/30.c2897721.js"><link rel="prefetch" href="/assets/js/31.b2659098.js"><link rel="prefetch" href="/assets/js/32.770ed3f8.js"><link rel="prefetch" href="/assets/js/33.1d53680b.js"><link rel="prefetch" href="/assets/js/34.b565c7bd.js"><link rel="prefetch" href="/assets/js/35.6f6d03d1.js"><link rel="prefetch" href="/assets/js/36.5f15f541.js"><link rel="prefetch" href="/assets/js/37.c148203a.js"><link rel="prefetch" href="/assets/js/38.b8c485d5.js"><link rel="prefetch" href="/assets/js/39.73e1a4c1.js"><link rel="prefetch" href="/assets/js/4.ea4490da.js"><link rel="prefetch" href="/assets/js/40.d2d448fe.js"><link rel="prefetch" href="/assets/js/41.0f93445c.js"><link rel="prefetch" href="/assets/js/42.7e8c1e82.js"><link rel="prefetch" href="/assets/js/43.d71efdde.js"><link rel="prefetch" href="/assets/js/45.0859339f.js"><link rel="prefetch" href="/assets/js/46.2def6331.js"><link rel="prefetch" href="/assets/js/47.17cd7a76.js"><link rel="prefetch" href="/assets/js/48.67ffe054.js"><link rel="prefetch" href="/assets/js/49.7fc79bf1.js"><link rel="prefetch" href="/assets/js/5.ebc28cb2.js"><link rel="prefetch" href="/assets/js/50.121c1502.js"><link rel="prefetch" href="/assets/js/51.d7ea9096.js"><link rel="prefetch" href="/assets/js/52.8fb31e0a.js"><link rel="prefetch" href="/assets/js/53.07e58869.js"><link rel="prefetch" href="/assets/js/54.d3d4643e.js"><link rel="prefetch" href="/assets/js/55.ec8498e0.js"><link rel="prefetch" href="/assets/js/56.59e22722.js"><link rel="prefetch" href="/assets/js/57.e13fce82.js"><link rel="prefetch" href="/assets/js/58.f0280d7f.js"><link rel="prefetch" href="/assets/js/59.33b5ff58.js"><link rel="prefetch" href="/assets/js/6.0efbc068.js"><link rel="prefetch" href="/assets/js/60.5a5aeea1.js"><link rel="prefetch" href="/assets/js/61.7c7f108e.js"><link rel="prefetch" href="/assets/js/62.f5a7c937.js"><link rel="prefetch" href="/assets/js/63.917962f7.js"><link rel="prefetch" href="/assets/js/64.5e71e9ca.js"><link rel="prefetch" href="/assets/js/65.052f1b32.js"><link rel="prefetch" href="/assets/js/66.fecb189d.js"><link rel="prefetch" href="/assets/js/67.37d007e1.js"><link rel="prefetch" href="/assets/js/68.7e19ebdc.js"><link rel="prefetch" href="/assets/js/69.115c403e.js"><link rel="prefetch" href="/assets/js/7.88d1811b.js"><link rel="prefetch" href="/assets/js/70.d50a4304.js"><link rel="prefetch" href="/assets/js/8.71b07b2e.js"><link rel="prefetch" href="/assets/js/9.bc389f37.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.01960845.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="logo.png" alt="写字の地方" class="logo"> <span class="site-name can-hide">写字の地方</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <ul class="color-theme-options"><li><a href="#" class="default-theme"></a></li> <li><a href="#" class="blue-theme"></a></li><li><a href="#" class="red-theme"></a></li><li><a href="#" class="purple-theme"></a></li></ul> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox"></div> <div class="ignore-themes-options toggle-option"><label for="ignore-themes-toggle">Ignore Other Themes?</label> <input id="ignore-themes-toggle" type="checkbox"></div> <!----></div></div></div> <!----> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/browser/httpCode.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/javascript/this.html" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/pages/function/begin.html" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Html&amp;Css/formattingContexts.html" class="nav-link">
+  Html&amp;Css
+</a></li><li class="dropdown-item"><!----> <a href="/pages/webpack/process.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/pages/test/home.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jquery/entry.html" class="nav-link">
+  jquery剖析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/coding/aop&amp;oop.html" class="nav-link">
+  编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/pages/leetcode&amp;books/home.html" class="nav-link">
+  leetcode&amp;books
+</a></li><li class="dropdown-item"><!----> <a href="/pages/javascript/fn.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  js开发常用方法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常用功能解决方案" class="dropdown-title"><span class="title">常用功能解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="常用功能解决方案" class="mobile-dropdown-title"><span class="title">常用功能解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/use/uploadFile.html" class="nav-link">
+  大文件上传
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/excel.html" class="nav-link">
+  导入导出excel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/waterMark.html" class="nav-link">
+  页面水印添加
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/uniapp.html" class="nav-link">
+  uni-app 常见问题
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/officeView.html" class="nav-link">
+  网页office预览方案
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/video.html" class="nav-link">
+  网页视频播放方案
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/adminAuth.html" class="nav-link">
+  后台管理系统权限管理
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  前端开发电脑环境配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  前端项目搭建sop流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/nvm.html" class="nav-link">
+  使用nvm 管理node版本
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/verdaccio.html" class="nav-link">
+  verdaccio 搭建npm 环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  vuepress1.x 博客搭建流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/githubSyncGitee.html" class="nav-link">
+  github 自动同步 gitee
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/llongu/ci-jenkins-demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jenkins 搭建流程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="npm" class="dropdown-title"><span class="title">npm</span> <span class="arrow down"></span></button> <button type="button" aria-label="npm" class="mobile-dropdown-title"><span class="title">npm</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          cli
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.npmjs.com/package/create-app-web" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/llongu/create-app-web-lib" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web-lib
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          plugin
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.npmjs.com/package/floater-dom" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  floater-dom
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          project
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  egg-serviec
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  bugwatch
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/pages/h5game.html" class="nav-link">
+  H5game
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端&amp;服务端" class="dropdown-title"><span class="title">后端&amp;服务端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端&amp;服务端" class="mobile-dropdown-title"><span class="title">后端&amp;服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/nginx/des.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/pages/linux/order.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jenkins/" class="nav-link">
+  jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/pages/php/base.html" class="nav-link">
+  php
+</a></li><li class="dropdown-item"><!----> <a href="/pages/java/" class="nav-link">
+  java
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生活&amp;工具" class="dropdown-title"><span class="title">生活&amp;工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="生活&amp;工具" class="mobile-dropdown-title"><span class="title">生活&amp;工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/docmirror/dev-sidecar" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  dev-sidecar 环境加速工具
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.snipaste.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  snipaste 截图工具
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://kingfast.info/index.php/index/register/?yqi=63283" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  科学上网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/pages/pm/process.html" class="nav-link">
+  产品经理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/ui/color.html" class="nav-link">
+  UI设计
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  聚合类网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  外包网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  浏览器插件聚合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  薅羊毛
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  互联网常见项目 erp crm 对应痛点
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路-炒股软件
+</a></li></ul></div></div> <a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/browser/httpCode.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/javascript/this.html" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/pages/function/begin.html" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Html&amp;Css/formattingContexts.html" class="nav-link">
+  Html&amp;Css
+</a></li><li class="dropdown-item"><!----> <a href="/pages/webpack/process.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/pages/test/home.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jquery/entry.html" class="nav-link">
+  jquery剖析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/coding/aop&amp;oop.html" class="nav-link">
+  编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/pages/leetcode&amp;books/home.html" class="nav-link">
+  leetcode&amp;books
+</a></li><li class="dropdown-item"><!----> <a href="/pages/javascript/fn.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  js开发常用方法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常用功能解决方案" class="dropdown-title"><span class="title">常用功能解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="常用功能解决方案" class="mobile-dropdown-title"><span class="title">常用功能解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/use/uploadFile.html" class="nav-link">
+  大文件上传
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/excel.html" class="nav-link">
+  导入导出excel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/waterMark.html" class="nav-link">
+  页面水印添加
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/uniapp.html" class="nav-link">
+  uni-app 常见问题
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/officeView.html" class="nav-link">
+  网页office预览方案
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/video.html" class="nav-link">
+  网页视频播放方案
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/adminAuth.html" class="nav-link">
+  后台管理系统权限管理
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  前端开发电脑环境配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  前端项目搭建sop流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/nvm.html" class="nav-link">
+  使用nvm 管理node版本
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/verdaccio.html" class="nav-link">
+  verdaccio 搭建npm 环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  vuepress1.x 博客搭建流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/githubSyncGitee.html" class="nav-link">
+  github 自动同步 gitee
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/llongu/ci-jenkins-demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jenkins 搭建流程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="npm" class="dropdown-title"><span class="title">npm</span> <span class="arrow down"></span></button> <button type="button" aria-label="npm" class="mobile-dropdown-title"><span class="title">npm</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          cli
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.npmjs.com/package/create-app-web" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/llongu/create-app-web-lib" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web-lib
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          plugin
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.npmjs.com/package/floater-dom" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  floater-dom
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          project
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  egg-serviec
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  bugwatch
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/pages/h5game.html" class="nav-link">
+  H5game
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端&amp;服务端" class="dropdown-title"><span class="title">后端&amp;服务端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端&amp;服务端" class="mobile-dropdown-title"><span class="title">后端&amp;服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/nginx/des.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/pages/linux/order.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jenkins/" class="nav-link">
+  jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/pages/php/base.html" class="nav-link">
+  php
+</a></li><li class="dropdown-item"><!----> <a href="/pages/java/" class="nav-link">
+  java
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生活&amp;工具" class="dropdown-title"><span class="title">生活&amp;工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="生活&amp;工具" class="mobile-dropdown-title"><span class="title">生活&amp;工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/docmirror/dev-sidecar" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  dev-sidecar 环境加速工具
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.snipaste.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  snipaste 截图工具
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://kingfast.info/index.php/index/register/?yqi=63283" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  科学上网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/pages/pm/process.html" class="nav-link">
+  产品经理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/ui/color.html" class="nav-link">
+  UI设计
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  聚合类网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  外包网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  浏览器插件聚合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  薅羊毛
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  互联网常见项目 erp crm 对应痛点
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路-炒股软件
+</a></li></ul></div></div> <a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/pages/javascript/tips.html" class="sidebar-link">小技巧</a></li><li><a href="/pages/javascript/executionContext.html" class="sidebar-link">执行上下文AO,VO,GO</a></li><li><a href="/pages/javascript/this.html" class="sidebar-link">this</a></li><li><a href="/pages/javascript/es5Object.html" class="sidebar-link">ES5 对象的扩展、密封、冻结</a></li><li><a href="/pages/javascript/deepClone.html" class="sidebar-link">值类型和引用类型及深浅拷贝</a></li><li><a href="/pages/javascript/stack.html" class="sidebar-link">栈和堆</a></li><li><a href="/pages/javascript/arguments.html" class="sidebar-link">函数，形参，实参的 length</a></li><li><a href="/pages/javascript/callFunction.html" class="sidebar-link">自执行函数表达式与函数声明的调用</a></li><li><a href="/pages/javascript/eavl.html" class="sidebar-link">eavl，new Function,setTimeout</a></li><li><a href="/pages/javascript/brackets.html" class="sidebar-link">{} 花括号的二义性</a></li><li><a href="/pages/javascript/commonJS.html" class="sidebar-link">CommonJS,AMD,CMD,UMD,ES6</a></li><li><a href="/pages/javascript/fn.html" aria-current="page" class="active sidebar-link">/pages/javascript/fn.html</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/javascript/fn.html#javascript" class="sidebar-link">javascript</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/javascript/fn.html#_1-深拷贝" class="sidebar-link">1. 深拷贝</a></li><li class="sidebar-sub-header"><a href="/pages/javascript/fn.html#_2-重命名数组对象里面的-key-value-不变-比如-select-后端返回的-option-并不是常规的-label-value-格式" class="sidebar-link">2. 重命名数组对象里面的 key ，value 不变 (比如 select 后端返回的 option 并不是常规的 label value 格式)</a></li><li class="sidebar-sub-header"><a href="/pages/javascript/fn.html#_3-扁平化数据" class="sidebar-link">3. 扁平化数据</a></li><li class="sidebar-sub-header"><a href="/pages/javascript/fn.html#_4-倒计时功能-moment" class="sidebar-link">4. 倒计时功能 moment</a></li><li class="sidebar-sub-header"><a href="/pages/javascript/fn.html#_5-下载文件-重命名" class="sidebar-link">5. 下载文件，重命名</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/javascript/fn.html#css" class="sidebar-link">css</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="日常开发中常用的一些功能函数"><a href="#日常开发中常用的一些功能函数" class="header-anchor">#</a> 日常开发中常用的一些功能函数</h1> <blockquote><p>比如深拷贝，不想去手写或引入 loadsh，又懒得百度，就来这儿 copy 吧</p></blockquote> <h2 id="javascript"><a href="#javascript" class="header-anchor">#</a> javascript</h2> <h3 id="_1-深拷贝"><a href="#_1-深拷贝" class="header-anchor">#</a> 1. 深拷贝</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">deepClone</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">isObject</span><span class="token punctuation">(</span><span class="token parameter">o</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> o <span class="token operator">===</span> <span class="token string">&quot;object&quot;</span> <span class="token operator">||</span> <span class="token keyword">typeof</span> o <span class="token operator">===</span> <span class="token string">&quot;function&quot;</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> o <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isObject</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;非对象&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">let</span> isArray <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> newObj <span class="token operator">=</span> isArray <span class="token operator">?</span> <span class="token punctuation">[</span><span class="token operator">...</span>obj<span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span>obj <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  Reflect<span class="token punctuation">.</span><span class="token function">ownKeys</span><span class="token punctuation">(</span>newObj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    newObj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">isObject</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token function">deepClone</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">:</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> newObj<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  a<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  b<span class="token operator">:</span> <span class="token punctuation">{</span>
+    c<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    d<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> newObj <span class="token operator">=</span> <span class="token function">deepClone</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+newObj<span class="token punctuation">.</span>b<span class="token punctuation">.</span>c <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>b<span class="token punctuation">.</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2</span>
+</code></pre></div><h3 id="_2-重命名数组对象里面的-key-value-不变-比如-select-后端返回的-option-并不是常规的-label-value-格式"><a href="#_2-重命名数组对象里面的-key-value-不变-比如-select-后端返回的-option-并不是常规的-label-value-格式" class="header-anchor">#</a> 2. 重命名数组对象里面的 key ，value 不变 (比如 select 后端返回的 option 并不是常规的 label value 格式)</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+     *
+     * @param  {object&lt;Array&gt;} data  要转换数组对象
+     * @param {object} opt key 重命名
+     * renameKey((data ) || [], {
+                    key: 'id', // 重命名属性 Key 为id
+                    value: 'id',// 重命名属性 value 为id
+                    title: 'name',// 重命名属性 value 为name
+                    children: '_child',// 设重命名属性 children 为_child
+        }),
+    */</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> renameKey <span class="token operator">=</span> <span class="token punctuation">(</span>data<span class="token operator">:</span> object<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> opt<span class="token operator">:</span> object<span class="token punctuation">)</span><span class="token operator">:</span> any<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> item<span class="token operator">:</span> object<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  data<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">list<span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> newData<span class="token operator">:</span> any <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> i <span class="token keyword">in</span> opt<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">===</span> <span class="token string">&quot;children&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        newData<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> list<span class="token punctuation">[</span>opt<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">?</span> <span class="token function">renameKey</span><span class="token punctuation">(</span>list<span class="token punctuation">[</span>opt<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> opt<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        newData<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> list<span class="token punctuation">[</span>opt<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    item<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>newData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> item<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_3-扁平化数据"><a href="#_3-扁平化数据" class="header-anchor">#</a> 3. 扁平化数据</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * 展开数组对象
+ *  arr:原数组
+ *  key ：递归名
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> flatObjArr <span class="token operator">=</span> <span class="token punctuation">(</span>arr<span class="token operator">:</span> any<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> key<span class="token operator">:</span> string<span class="token punctuation">)</span><span class="token operator">:</span> any<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> newArr<span class="token operator">:</span> any<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">flatObjArrLoop</span><span class="token punctuation">(</span><span class="token parameter">arr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    arr<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">i<span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      newArr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>i<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">flatObjArrLoop</span><span class="token punctuation">(</span>i<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">flatObjArrLoop</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> newArr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_4-倒计时功能-moment"><a href="#_4-倒计时功能-moment" class="header-anchor">#</a> 4. 倒计时功能 moment</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> tips <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> futureTime <span class="token operator">=</span> <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">6</span><span class="token operator">*</span><span class="token number">60</span><span class="token operator">*</span><span class="token number">1000</span><span class="token punctuation">;</span> <span class="token comment">//接口返回时间</span>
+<span class="token keyword">let</span> timeStamp <span class="token operator">=</span> <span class="token function">moment</span><span class="token punctuation">(</span>futureTime<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>timeStamp <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    timeStamp <span class="token operator">-=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> days <span class="token operator">=</span> <span class="token function">moment</span><span class="token punctuation">(</span>futureTime<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">diff</span><span class="token punctuation">(</span><span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;days&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> hours <span class="token operator">=</span> <span class="token function">moment</span><span class="token punctuation">(</span>futureTime<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">diff</span><span class="token punctuation">(</span><span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;hours&quot;</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">24</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> minutes <span class="token operator">=</span> <span class="token function">moment</span><span class="token punctuation">(</span>timeStamp<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">minutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> seconds <span class="token operator">=</span> <span class="token function">moment</span><span class="token punctuation">(</span>timeStamp<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">seconds</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    tips <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>days <span class="token operator">?</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>days <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">0</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>days<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">天</span><span class="token template-punctuation string">`</span></span> <span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>days<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">天</span><span class="token template-punctuation string">`</span></span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span> <span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>
+      hours <span class="token operator">?</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>hours <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">0</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>hours<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">小时</span><span class="token template-punctuation string">`</span></span> <span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>hours<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">小时</span><span class="token template-punctuation string">`</span></span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span> <span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+    <span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>minutes <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">0</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>minutes<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span> <span class="token operator">:</span> minutes<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">分</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>
+      seconds <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">0</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>seconds<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span> <span class="token operator">:</span> seconds
+    <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">秒后开始</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    tips <span class="token operator">=</span> <span class="token string">&quot;倒计时结束&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'%c 🥃 tips: '</span><span class="token punctuation">,</span> <span class="token string">'font-size:20px;background-color: #42b983;color:#fff;'</span><span class="token punctuation">,</span> tips<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_5-下载文件-重命名"><a href="#_5-下载文件-重命名" class="header-anchor">#</a> 5. 下载文件，重命名</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">getBlob</span><span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">&quot;GET&quot;</span><span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    xhr<span class="token punctuation">.</span>responseType <span class="token operator">=</span> <span class="token string">&quot;blob&quot;</span><span class="token punctuation">;</span>
+    xhr<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">saveAs</span><span class="token punctuation">(</span><span class="token parameter">blob<span class="token punctuation">,</span> filename</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>msSaveOrOpenBlob<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    navigator<span class="token punctuation">.</span><span class="token function">msSaveBlob</span><span class="token punctuation">(</span>blob<span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> link <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> body <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;body&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    link<span class="token punctuation">.</span>href <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>blob<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    link<span class="token punctuation">.</span>download <span class="token operator">=</span> filename<span class="token punctuation">;</span>
+
+    <span class="token comment">// fix Firefox</span>
+    link<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">&quot;none&quot;</span><span class="token punctuation">;</span>
+    body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>link<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    link<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    body<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>link<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    window<span class="token punctuation">.</span><span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">revokeObjectURL</span><span class="token punctuation">(</span>link<span class="token punctuation">.</span>href<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">DownloadFile</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> filename</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">getBlob</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">blob</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">saveAs</span><span class="token punctuation">(</span>blob<span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      window<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="css"><a href="#css" class="header-anchor">#</a> css</h2></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/javascript/commonJS.html" class="prev">
+        CommonJS,AMD,CMD,UMD,ES6
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.c52eb111.js" defer></script><script src="/assets/js/2.6def8fa7.js" defer></script><script src="/assets/js/44.4521588d.js" defer></script>
+  </body>
+</html>
