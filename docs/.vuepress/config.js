@@ -49,11 +49,13 @@ module.exports = {
             items: [
               { text:'前端开发电脑环境配置',link:'/pages/notes/vuepress1.md'},
               { text:'前端项目搭建sop流程' ,link:'/pages/notes/vuepress1.md'},
+
               { text:'使用nvm 管理node版本' ,link:'/pages/notes/nvm.md'},
               { text:'verdaccio 搭建npm 环境' ,link:'/pages/notes/verdaccio.md'},
               { text:'vuepress1.x 博客搭建流程',link:'/pages/notes/vuepress1.md'},
               { text:'github 自动同步 gitee',link:'/pages/notes/githubSyncGitee.md'},
               { text:'jenkins 搭建流程',link:'https://github.com/llongu/ci-jenkins-demo'},
+              { text:'使用node下载git项目到本地',link:'/pages/notes/gitDown.md'},
             ]
           },
           {
