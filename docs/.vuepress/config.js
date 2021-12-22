@@ -26,10 +26,11 @@ module.exports = {
               { text: 'Html&Css', link: '/pages/Html&Css/formattingContexts' },
               { text: 'webpack', link: '/pages/webpack/process' },
               { text: '单元测试', link: '/pages/test/home' },
+              { text: '项目mock', link: 'https://docs.qq.com/doc/DVUFwbFhXdWhmb1dv' },
               { text: 'jquery剖析', link: '/pages/jquery/entry' },
               { text: '编程思想', link: '/pages/coding/aop&oop' },
               { text: 'leetcode&books', link: '/pages/leetcode&books/home' },
-              { text: 'js开发常用方法', link: '/pages/javascript/fn' },
+              { text: 'js开发常用方法复制', link: '/pages/javascript/fn' },
             ]
           },
           {
@@ -38,7 +39,7 @@ module.exports = {
               { text: '大文件上传', link: '/pages/use/uploadFile.md' },
               { text: '导入导出excel', link: '/pages/use/excel.md' },
               { text: '页面水印添加', link: '/pages/use/waterMark.md' },
-              { text:'uni-app 常见问题',link:'/pages/use/uniapp.md'},
+              { text:'uni-app 常见问题',link:'https://docs.qq.com/doc/DVU1TWU1UYXdpWnln'},
               { text:'网页office预览方案',link:'/pages/use/officeView.md'},
               { text:'网页视频播放方案',link:'/pages/use/video.md'},
               { text:'后台管理系统权限管理',link:'/pages/use/adminAuth.md'},
@@ -47,8 +48,8 @@ module.exports = {
           {
             text: '笔记',
             items: [
-              { text:'前端开发电脑环境配置',link:'/pages/notes/vuepress1.md'},
-              { text:'前端项目搭建sop流程' ,link:'/pages/notes/vuepress1.md'},
+              { text:'前端开发电脑环境配置',link:'/pages/notes/developConfig.md'},
+              { text:'前端项目搭建sop流程' ,link:'/pages/notes/projectSop.md'},
 
               { text:'使用nvm 管理node版本' ,link:'/pages/notes/nvm.md'},
               { text:'verdaccio 搭建npm 环境' ,link:'/pages/notes/verdaccio.md'},
@@ -92,11 +93,10 @@ module.exports = {
             items: [
               { text:'dev-sidecar 环境加速工具',link:'https://github.com/docmirror/dev-sidecar'},
               { text:'snipaste 截图工具',link:'https://www.snipaste.com/'},
-           
               { text: '科学上网', link: 'http://kingfast.info/index.php/index/register/?yqi=63283' },
-              
               { text: '产品经理', link: '/pages/pm/process.md' },
               { text: 'UI设计', link: '/pages/ui/color.md' },
+
               { text: '聚合类网站收集', link: '/pages/' },
               { text: '外包网站收集', link: '/pages/' },
               { text: '浏览器插件聚合', link: '/pages/' },
