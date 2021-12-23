@@ -72,7 +72,7 @@ module.exports = {
              {text:'project',items:[
               { text: 'egg-serviec', link: 'https://github.com/llongu/llongu.github.io' },
               { text: 'bugwatch', link: 'https://github.com/llongu/llongu.github.io' },
-              { text: 'H5game', link: '/pages/h5game.md'},
+              { text: 'H5game', link: '/pages/H5Game/index.md'},
              ]}
             ]
           },
