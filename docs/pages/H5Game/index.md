@@ -1,6 +1,9 @@
 ## 写过的一些H5小游戏
 
-## 1. [答题游戏](/pages/H5Game/answers/index.html)
-## 1. [Flappy Bird ](/pages/H5Game/bird/index.html)
+## 1. [答题游戏](/H5Game/answers)
+
+## 1. [Flappy Bird](/H5Game/bird)
+## 1. [踩白块](/H5Game/whiteblock)
+
 
 
