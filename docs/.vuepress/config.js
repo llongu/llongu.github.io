@@ -20,17 +20,16 @@ module.exports = {
           {
             text: '前端学习',
             items: [
+              { text: 'javaScript', link: '/pages/javascript/this' },
               { text: '浏览器', link: '/pages/browser/httpCode' },
-              { text: 'javascript', link: '/pages/javascript/this' },
-              { text: '函数式编程', link: '/pages/function/begin' },
               { text: 'Html&Css', link: '/pages/Html&Css/formattingContexts' },
+              { text: '函数式编程', link: '/pages/function/begin' },
               { text: 'webpack', link: '/pages/webpack/process' },
-              { text: '单元测试', link: '/pages/test/home' },
+              { text: '单元测试', link: '/pages/unit/home' },
               { text: '项目mock', link: 'https://docs.qq.com/doc/DVUFwbFhXdWhmb1dv' },
               { text: 'jquery剖析', link: '/pages/jquery/entry' },
               { text: '编程思想', link: '/pages/coding/aop&oop' },
               { text: 'leetcode&books', link: '/pages/leetcode&books/home' },
-              { text: 'js开发常用方法复制', link: '/pages/javascript/fn' },
             ]
           },
           {
@@ -42,7 +41,8 @@ module.exports = {
               { text:'uni-app 常见问题',link:'https://docs.qq.com/doc/DVU1TWU1UYXdpWnln'},
               { text:'网页office预览方案',link:'/pages/use/officeView.md'},
               { text:'网页视频播放方案',link:'/pages/use/video.md'},
-              { text:'后台管理系统权限管理',link:'/pages/use/adminAuth.md'},
+              { text:'后台管理系统权限设计',link:'/pages/use/adminAuth.md'},
+              { text: '前端开发常用方法复制', link: '/pages/use/fn' },
             ]
           },
           {
@@ -71,13 +71,13 @@ module.exports = {
              ]},
              {text:'project',items:[
               { text: 'egg-serviec', link: 'https://github.com/llongu/llongu.github.io' },
-              { text: 'bugwatch', link: 'https://github.com/llongu/llongu.github.io' },
-              { text: 'H5game', link: '/pages/H5Game/index.md'},
+              { text: 'bugWatch', link: 'https://github.com/llongu/llongu.github.io' },
+              { text: 'H5Game', link: '/pages/H5Game/index.md'},
              ]}
             ]
           },
           {
-            text: '后端&服务端',
+            text: '服务端',
             items: [
               { text: 'nginx', link: '/pages/nginx/des.md' },
               { text: 'linux', link: '/pages/linux/order.md' },
@@ -89,26 +89,30 @@ module.exports = {
             ]
           },
           {
-            text: '生活&工具',
+            text: '工具&软件',
             items: [
               { text:'dev-sidecar 环境加速工具',link:'https://github.com/docmirror/dev-sidecar'},
               { text:'snipaste 截图工具',link:'https://www.snipaste.com/'},
               { text: '科学上网', link: 'http://kingfast.info/index.php/index/register/?yqi=63283' },
+            ]
+          },
+          {
+            text: '工作之外',
+            items: [
               { text: '产品经理', link: '/pages/pm/process.md' },
               { text: 'UI设计', link: '/pages/ui/color.md' },
-
               { text: '聚合类网站收集', link: '/pages/' },
               { text: '外包网站收集', link: '/pages/' },
               { text: '浏览器插件聚合', link: '/pages/' },
               { text: '薅羊毛', link: '/pages/' },
-              { text: '互联网常见项目 erp crm 对应痛点', link: '/pages/' },
+              { text: '互联网常见项目 erp crm ', link: '/pages/' },
               { text: '致富道路', link: '/pages/' },
               { text: '致富道路-炒股软件', link: '/pages/' },
             ]
           },
           
         ],
-        sidebarDepth:4,
+        sidebarDepth:2,
         sidebar
     },
 }

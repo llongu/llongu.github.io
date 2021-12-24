@@ -6,6 +6,8 @@ module.exports ={
             { title:'网页office预览方案',path:'/pages/use/officeView.md'},
             { title:'网页视频播放方案',path:'/pages/use/video.md'},
             { title:'后台管理系统权限管理',path:'/pages/use/adminAuth.md'},
+            { title: '前端开发常用方法复制', path: '/pages/use/fn.md' },
+
       ]
 }
   
