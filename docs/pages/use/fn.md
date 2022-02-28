@@ -91,7 +91,37 @@ export const flatObjArr = (arr: any[], key: string): any[] => {
 };
 ```
 
-### 4. 倒计时功能 moment
+### 4. 查找Tree结构目标节点 （以及父级）并返回
+
+```js
+/**
+ * tragetId : 1
+ * treeData :[{ value : 2,children:[{value:1,name:'child'}]}]
+ */
+ function findTreeNodeParent (tragetId, treeData)  {
+    let traget = {};
+    let parent = false;
+    const findLoop = (data, parentData) => {
+      for (let i = 0; i < data.length; i++) {
+        if (tragetId === data[i].value) {
+          // 获取父级元素
+          if (parentData) {
+            parent = parentData;
+          }
+          return { traget: data[i] };
+        }
+        if (Array.isArray(data[i].children)) {
+          const { traget: tragets } = findLoop(data[i].children, data[i]);
+          traget = tragets;
+        }
+      }
+      return { traget, parent };
+    };
+    return findLoop(treeData);
+  };
+```
+
+### 5. 倒计时功能 moment
 
 ```js
 let tips = "";
@@ -118,7 +148,7 @@ timer = setInterval(() => {
 }, 1000);
 ```
 
-### 5. 下载文件，重命名
+### 6. 下载文件，重命名
 
 ```js
 function getBlob(url) {

@@ -7,8 +7,7 @@ module.exports ={
             { title:'使用node 下载git项目',path:'/pages/notes/gitDown.md'},
             { title:'前端开发电脑环境配置' ,path:'/pages/notes/developConfig.md'},
             { title:'前端项目搭建sop流程' ,path:'/pages/notes/projectSop.md'},
-
-
+            { title:'Hash/对称与非对称算法' ,path:'/pages/notes/hash.md'},
       ]
 }
   

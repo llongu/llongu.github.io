@@ -57,6 +57,8 @@ module.exports = {
               { text:'github 自动同步 gitee',link:'/pages/notes/githubSyncGitee.md'},
               { text:'jenkins 搭建流程',link:'https://github.com/llongu/ci-jenkins-demo'},
               { text:'使用node下载git项目到本地',link:'/pages/notes/gitDown.md'},
+              { text:'Hash/对称与非对称算法',link:'/pages/notes/hash.md'},
+
             ]
           },
           {
@@ -94,6 +96,7 @@ module.exports = {
               { text:'dev-sidecar 环境加速工具',link:'https://github.com/docmirror/dev-sidecar'},
               { text:'snipaste 截图工具',link:'https://www.snipaste.com/'},
               { text: '科学上网', link: 'http://kingfast.info/index.php/index/register/?yqi=63283' },
+              { text: '网页占位图', link: 'https://fakeimg.pl/' },
             ]
           },
           {
