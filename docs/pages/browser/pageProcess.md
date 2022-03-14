@@ -65,18 +65,29 @@
 
 如果以上都没有，就会阻塞住渲染流程直到 JS 执行完毕。遇到文件下载的会去下载文件，这里如果使用 HTTP/2 协议的话会极大的提高多图的下载效率。
 
-##### 2. 生成 Render 树
+##### 2. 生成 Render 树 
+
 
 CSSOM 树和 DOM 树构建完成后会开始生成 Render 树，这一步就是确定页面元素的布局、样式等等诸多方面的东西
 
 ##### 3. 调用 GPU 绘制，合成图层，将内容显示在屏幕上了
 
+
 在生成 Render 树的过程中，浏览器就开始调用 GPU 绘制，合成图层，将内容显示在屏幕上了。
 
 #### **过程**
 
-    获取资源后  => 解析HTML与CSS   => 生成 DOM Tree与 Style Rules => 合并生成 Render Tree => CPU重排（layout）=> GPU重绘（paint）=> 显示（display）
+    通过请求response 获取资源后  => 解析HTML与CSS(解析器)   => 生成 DOM Tree与 Style Rules => 合并生成 Render Tree => CPU重排（layout）=> GPU重绘（paint）=> 显示（display）
+
 
 ![](./img/render1.jpg)
 
 ![](./img/render2.jpg)
+
+#### **render Tree** 
+    
+   1. render Tree  也叫 layout Tree,生成之后由C++ skia 引擎对页面一点点绘制的（类似Canvas绘制，而canvas是基于skia之上封装开放给浏览器的api）
+
+   2. 为什么需要dom Tree 和 css Tree  合并成 render Tree : 因为合并后才知道 css Tree  对  dom Tree 哪些节点进行渲染和隐藏，得出最后需要的节点render Tree,才进行渲染
+
+

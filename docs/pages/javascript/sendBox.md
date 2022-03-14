@@ -15,7 +15,7 @@
 <script>
     /**
      *  沙箱环境 （就是用一个新空对象做傀儡，不管做什么操作都是操作这个傀儡，傀儡再记录操作改变window 的值（其实本质使用的window的值），在销毁后把记录好的新增值值删除和和修改前的还原即可）
-     *  代理对象 window ，使用api es6 Proxy
+     *  代理对象 window ，使用api es6 Proxy实现  (使用iframe 实现 参考：https://blog.csdn.net/alitech2017/article/details/106213288)
      *  代理window创造沙箱环境，不可污染 window环境变量，
      *  1. 对于新增的代理值，做记录， 销毁代理模式后，需要删除代理值，以及 window 值
      *  2. 对于window 已存在的值，做修改记录，销毁代理模式后，需要还原 window的值

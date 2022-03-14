@@ -72,7 +72,6 @@ module.exports = {
               { text: 'floater-dom', link: 'https://www.npmjs.com/package/floater-dom' },
              ]},
              {text:'project',items:[
-              { text: 'egg-serviec', link: 'https://github.com/llongu/llongu.github.io' },
               { text: 'bugWatch', link: 'https://github.com/llongu/llongu.github.io' },
               { text: 'H5Game', link: '/pages/H5Game/index.md'},
              ]}
