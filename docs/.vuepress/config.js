@@ -25,6 +25,7 @@ module.exports = {
               { text: 'Html&Css', link: '/pages/Html&Css/formattingContexts' },
               { text: '函数式编程', link: '/pages/function/begin' },
               { text: 'webpack', link: '/pages/webpack/process' },
+              { text: 'vite', link: '/pages/viet/home' },
               { text: '单元测试', link: '/pages/unit/home' },
               { text: '项目mock', link: 'https://docs.qq.com/doc/DVUFwbFhXdWhmb1dv' },
               { text: 'jquery剖析', link: '/pages/jquery/entry' },
@@ -58,6 +59,7 @@ module.exports = {
               { text:'jenkins 搭建流程',link:'https://github.com/llongu/ci-jenkins-demo'},
               { text:'使用node下载git项目到本地',link:'/pages/notes/gitDown.md'},
               { text:'Hash/对称与非对称算法',link:'/pages/notes/hash.md'},
+              { text:'手写一个eslint',link:'/pages/notes/eslint.md'},
 
             ]
           },
