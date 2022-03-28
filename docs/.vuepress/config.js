@@ -25,12 +25,13 @@ module.exports = {
               { text: 'Html&Css', link: '/pages/Html&Css/formattingContexts' },
               { text: '函数式编程', link: '/pages/function/begin' },
               { text: 'webpack', link: '/pages/webpack/process' },
-              { text: 'vite', link: '/pages/viet/home' },
-              { text: '单元测试', link: '/pages/unit/home' },
-              { text: '项目mock', link: 'https://docs.qq.com/doc/DVUFwbFhXdWhmb1dv' },
+              { text: 'vite', link: '/pages/vite/home' },
+              { text: '微信小程序', link: '/pages/wxMini/core' },
               { text: 'jquery剖析', link: '/pages/jquery/entry' },
               { text: '编程思想', link: '/pages/coding/aop&oop' },
               { text: 'leetcode&books', link: '/pages/leetcode&books/home' },
+              { text: '单元测试', link: '/pages/unit/home' },
+              { text: '常见算法', link: '/pages/agorithms/tire' },
             ]
           },
           {
@@ -43,6 +44,7 @@ module.exports = {
               { text:'网页office预览方案',link:'/pages/use/officeView.md'},
               { text:'网页视频播放方案',link:'/pages/use/video.md'},
               { text:'后台管理系统权限设计',link:'/pages/use/adminAuth.md'},
+              { text: '项目mock', link: 'https://docs.qq.com/doc/DVUFwbFhXdWhmb1dv' },
               { text: '前端开发常用方法复制', link: '/pages/use/fn' },
             ]
           },
@@ -64,7 +66,7 @@ module.exports = {
             ]
           },
           {
-            text: 'npm',
+            text: 'npm&github',
             items: [
               {text:'cli',items:[
                 { text: 'create-app-web', link: 'https://www.npmjs.com/package/create-app-web' },
@@ -72,9 +74,9 @@ module.exports = {
               ]},
              {text:'plugin',items:[
               { text: 'floater-dom', link: 'https://www.npmjs.com/package/floater-dom' },
+              { text: 'drag-text-mergeBg', link: 'https://github.com/llongu/drag-text-mergeBg' },
              ]},
              {text:'project',items:[
-              { text: 'bugWatch', link: 'https://github.com/llongu/llongu.github.io' },
               { text: 'H5Game', link: '/pages/H5Game/index.md'},
              ]}
             ]
