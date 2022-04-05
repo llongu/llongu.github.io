@@ -12,6 +12,7 @@ module.exports ={
             { title:'{} 花括号的二义性',path:'/pages/javascript/brackets.md'},
             { title:'CommonJS,AMD,CMD,UMD,ES6',path:'/pages/javascript/commonJS.md'},
             { title: 'js沙箱环境', path: '/pages/javascript/sendBox.md' },
+            { title: 'eventLoop', path: '/pages/javascript/eventLoop.md' },
       ]
 }
   
