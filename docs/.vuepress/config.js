@@ -21,6 +21,7 @@ module.exports = {
             text: '前端学习',
             items: [
               { text: 'javaScript', link: '/pages/javascript/this' },
+              { text: 'typeScript', link: '/pages/typescript/basic' },
               { text: '浏览器', link: '/pages/browser/httpCode' },
               { text: 'Html&Css', link: '/pages/Html&Css/formattingContexts' },
               { text: '函数式编程', link: '/pages/function/begin' },
