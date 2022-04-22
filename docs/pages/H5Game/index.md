@@ -12,6 +12,10 @@
 ## 6. [踩梯子](/H5Game/ladder)
 ## 7. [太空人](/H5Game/starry)
 
+## 7. [拼图](/H5Game/pciture)
+## 7. [接水果](/H5Game/fruit)
+
+
 
 
 
