@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/flexible_css.debug.js"></script>
+		<script type="text/javascript" src="js/flexible.debug.js"></script>
+	</head>
+	<body>
+		<div class="warp">
+			<!--钱币-->
+			<img class="money" src="img/fruit1.png" alt="">
+
+			<!--人物-->
+			<div class="boy"></div>
+			
+			<!--点击开始-->
+			<button type="button" class="begin" style="width: 100px;height: 50px;font-size: 20px;">点击开始</button>
+			
+			<!--分数-->
+			<div class="socre" style="letter-spacing: 4px;font-size: 20px;margin-left: 10px;">0分</div>
+			
+		
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hammer.min.js" ></script>
+	<script type="text/javascript" src="js/index.js"></script>
+
+	<script type="text/javascript">
+		
+		    window.requestAnimFrame = (function(){
+      return  window.requestAnimationFrame       || 
+              window.webkitRequestAnimationFrame || 
+              window.mozRequestAnimationFrame    || 
+              window.oRequestAnimationFrame      || 
+              window.msRequestAnimationFrame     || 
+              function(/* function */ callback, /* DOMElement */ element){
+                window.setTimeout(callback, 1000 / 60);
+              };
+    })();
+		
+		
+		var obj = document.getElementsByClassName('boy').item(0);
+		var l;
+		var touch1;
+		var touch;
+		
+		$("body .begin").click(function(){
+			var gamer=setInterval(games,800);
+			//clearInterval(gamer);		
+			getsocre();
+			
+			$("body").on("touchstart",function(){
+				event.preventDefault(); // 阻止浏览器默认事件，重要 
+			})
+			
+			//	$("body").off("touchstart");
+			
+		})
+
+        
+		obj.addEventListener("touchstart", function() {
+			// 如果这个元素的位置内只有一个手指的话
+			if(event.targetTouches.length == 1) {　　　　
+				event.preventDefault(); // 阻止浏览器默认事件，重要 
+				 touch1 = event.targetTouches[0];
+			}
+		
+			 l = touch1.pageX - obj.offsetLeft; //鼠标在当前元素内部左边的距离
+		})
+		
+		
+			obj.addEventListener('touchmove', function(event) {
+				// 如果这个元素的位置内只有一个手指的话
+				if(event.targetTouches.length == 1) {　　　　
+					event.preventDefault(); // 阻止浏览器默认事件，重要 
+					touch = event.targetTouches[0];
+				}
+                
+                requestAnimFrame(dothing);
+                
+			}, false);
+			
+		    function dothing(){
+		        // 把元素放在手指所在的位置
+				var lefts = touch.pageX - l; //鼠标距离 减掉 物体距文档左边的距离 
+				
+				if(lefts < 0) {
+					lefts = 0;
+				}
+				 
+				if(lefts > $("body").width() - $(".boy").width()) {
+					lefts = $("body").width() - $(".boy").width();
+				}
+				//console.log(lefts)
+				obj.style.left = lefts + 'px';
+			
+		    }
+	
+	//分数
+	var socres=0;
+	
+	//游戏开始
+		function getsocre() {
+			
+			var boywidth = $(".boy").width();
+			var boyheight = $(".boy").height();
+			var warpheight = $(".warp").height();
+
+			var timer = setInterval(function() {
+
+				for(a = 0; a < $(".money").length; a++) {
+					var moneywidth = $(".money").eq(a).width();
+					var moneyheight = $(".money").eq(a).height();
+
+					var boyleft = parseInt($(".boy").position().left),
+						boytop = parseInt($(".boy").position().top),
+						moneyleft = parseInt($(".money").eq(a).position().left),
+						moneytop = parseInt($(".money").eq(a).position().top);
+					//	console.log("人物左边距离"+boyleft+"人物上边距离"+boytop)
+					//	console.log("钱币左边距离"+moneyleft+"钱币上边距离"+moneytop)
+
+					//  当钱币左边的距离 加上自身的宽度是否大于或等于 人物左边的距离 并且 距离左边的距离不能超出人物距离左边的距离加上人物的宽度
+
+					//  当钱币上边的距离 加上自身的宽度是否大于或等于 人物上边的距离 
+					if(moneyleft + moneywidth - 10 >= boyleft && moneyleft <= boyleft + boywidth - 25 && moneytop + moneyheight >= boytop) {
+
+						if(moneytop + moneyheight - boytop > 15 && moneytop - boytop < 20) { //判断未接到 金币是否走过了
+							//console.log("yes")
+							//判断分数
+							var src=$(".money").eq(a).attr('src');
+							var splits=src.split(".");
+							var num1=splits[splits.length-2].substr(-1);
+							var num2=splits[splits.length-2].substr(-2);
+							if(!isNaN(num2)){
+								var arrs=num2;
+							}else{
+								var arrs=num1;
+							}
+//							console.log(num1)
+//							console.log(num2)
+//							console.log(arrs)
+							if(arrs>30){
+								socres--;
+								console.log
+								if(socres<=0){socres=0;}
+								$(".socre").html(socres+"分");
+							}else{
+								socres++;
+								$(".socre").html(socres+"分");
+							}
+							
+							$(".money").eq(a).css({ "transition": "opacity .2s linear", "opacity": "0" });
+							$(".money").eq(a).remove();
+						
+							
+			
+						} else if(moneytop + moneyheight > warpheight + 20) {
+							//console.log("已经走过了");
+							$(".money").eq(a).remove();
+						}
+
+					} else {
+						//console.log("no")
+						if(moneytop + moneyheight > warpheight + 20) {
+							$(".money").eq(a).remove();
+						}
+					}
+				}
+
+			}, 150)
+
+		}
+	
+
+	//创建图片
+		function games(){
+			
+			var srcs = Math.ceil(Math.random() * 40); //随机图片
+			var positions = Math.ceil(Math.random() * 90); //随机left值
+	
+			var newimg = document.createElement("img"); //创建img
+	
+			newimg.className = "money"; //设置属性
+			newimg.style.left = positions + "%";
+			newimg.src = "img/fruit" + srcs + ".png";
+	
+			$(".warp").prepend(newimg);
+			//	console.log($(".money").length)
+	
+			$(".money").css({ "-webkit-animationName": "moves", "animationName": "moves" });
+		}
+		
+		
+	</script>
+
+</html>

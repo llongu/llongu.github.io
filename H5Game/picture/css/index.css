@@ -1,0 +1,41 @@
+﻿body,html{
+	background: #f6f6f6;
+	font-family: "微软雅黑";
+}
+body img{
+	width: 100%;
+	height: 100%;
+}
+
+.wrap,.index_wrap,#mycanvas,.form_wrap{
+	width:10rem;
+	height:100%;
+	margin:  0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.wrap{
+	background: url(../img/index_bg.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+
+.index_wrap,#mycanvas,.form_wrap,.pop{
+	display: none;
+}
+
+#loadingText{
+	text-align: center;
+	font-size: .45rem;
+	color: #000;
+	letter-spacing: 0.04rem;
+	font-family: "黑体";
+	margin-top: 100%;
+}
+
+#begin,#gift{
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 80%;
+	color: red;
+}
