@@ -25,6 +25,9 @@ module.exports = {
               { text: '浏览器', link: '/pages/browser/httpCode' },
               { text: 'Html&Css', link: '/pages/Html&Css/formattingContexts' },
               { text: 'webpack', link: '/pages/webpack/process' },
+
+              
+              { text: 'vue', link: '/pages/vue/vue2' },
               { text: 'vite', link: '/pages/vite/home' },
               { text: '微信小程序', link: '/pages/wxMini/core' },
               { text: 'jquery剖析', link: '/pages/jquery/entry' },
