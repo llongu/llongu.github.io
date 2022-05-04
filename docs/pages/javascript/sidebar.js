@@ -6,10 +6,12 @@ module.exports ={
             { title:'closure 闭包',path:'/pages/javascript/closure.md'},
             { title:'call apply',path:'/pages/javascript/callApply.md'},
             { title:'prototype 原型 继承',path:'/pages/javascript/prototype.md'},
+            { title:'instanceOf',path:'/pages/javascript/instanceOf.md'},
             { title:'new',path:'/pages/javascript/new.md'},
             
             { title:'执行上下文AO,VO,GO',path:'/pages/javascript/executionContext.md'},
             { title: 'eventLoop', path: '/pages/javascript/eventLoop.md' },
+            { title:'eventBus',path:'/pages/javascript/eventBus.md'},
 
             { title:'栈和堆',path:'/pages/javascript/stack.md'},
             { title:'栈和队列',path:'/pages/javascript/queque.md'},
