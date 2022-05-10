@@ -1,13 +1,4 @@
 window.onload = function () {
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?9fe3e108f82a020dfa7c0120f577c7db";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-  })();
-
-
   window.requestAnimFrame = (function () {
     return (
       window.requestAnimationFrame ||
@@ -155,6 +146,11 @@ window.onload = function () {
     var IronM = document.getElementById("IronM"),
       fire = document.getElementById("fire"),
       body = document.getElementsByTagName("body")[0];
+
+      IronM.addEventListener('click',()=>{
+        console.log(window._hmt)
+        window._hmt.push(['_trackEvent', '点击', '钢铁侠', '已点击', new Date()]) 
+      })
 
     IronM.style.opacity = 1;
 

@@ -5,6 +5,7 @@ module.exports = {
     description: 'notes',
     head:[
       ['link',{rel:'icon','href':'logo.png',with:'0.1rem',search:true}],
+      ['script',{src:'https://hm.baidu.com/hm.js?9fe3e108f82a020dfa7c0120f577c7db'}],
       ['script',{src:'/js/main.js'}],
     ],
     plugins: [['vuepress-plugin-code-copy', true]],
