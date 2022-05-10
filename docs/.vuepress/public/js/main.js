@@ -147,11 +147,6 @@ window.onload = function () {
       fire = document.getElementById("fire"),
       body = document.getElementsByTagName("body")[0];
 
-      IronM.addEventListener('click',()=>{
-        console.log(window._hmt)
-        window._hmt.push(['_trackEvent', '点击', '钢铁侠', '已点击', new Date()]) 
-      })
-
     IronM.style.opacity = 1;
 
     var move = new Move({
