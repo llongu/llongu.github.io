@@ -1,4 +1,13 @@
 window.onload = function () {
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?9fe3e108f82a020dfa7c0120f577c7db";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+
+
   window.requestAnimFrame = (function () {
     return (
       window.requestAnimationFrame ||
