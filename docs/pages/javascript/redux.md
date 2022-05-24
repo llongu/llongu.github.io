@@ -1,5 +1,53 @@
 # redux
 
+## 大致流程
+
+创建 state 和 reducer,传入 createStore 合并 reducer 和 state，添加订阅函数 ，状态获取， dispatch 函数 ，创建 action 封装 dispatch，触发 action,传入事件类型， reducer 处理后返回新的 state，调用订阅函数
+
+```JS
+state={
+  name:123
+}
+
+reducer(state,type){
+    switch(type){
+        case 'demo'
+        return {
+            name:'demo',
+            ...state
+        }
+    }
+}
+createStore(state,reducer){
+
+    listen=[]
+
+    getstate()=>state
+
+    sub(fn){
+        listen.push(fn)
+    }
+    dispatch(state,type){
+        state=reducer(state,type)
+        listen.foreach(e=>e())
+    }
+    return{
+        getstate,
+        sub,
+        dispatch
+    }
+}
+
+store= createStore(state,reducer)
+store.sub(()={xxx})
+store.dispatch({
+    type:'demo'
+})
+
+```
+
+## 结合使用
+
 ```html
 <!DOCTYPE html>
 <html>

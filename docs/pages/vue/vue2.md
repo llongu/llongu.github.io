@@ -1,5 +1,23 @@
 # vue2
 
+## Vue 的双向数据绑定的原理
+
+先初始化 data，双向数据绑定。然后模板解析，拿到 key，生成一个 watcher（watcher 负责值的获取 get 和更新 update），watcher 首次自动触发 get 取值，这时候会触发双向绑定 get,get 拿到当前 watche 添加到订阅函数 dep listener(dep 负责 push 到 listener，notify 负责 listener.foreach => watcher.update)。 最后通过双向数据绑定 set 触发通知， vdom 比较后更新 dom，
+## Proxy ⽐ defineproperty 优劣 对⽐
+
+porxy 可以检测到引用对象的数据变化并返回新对象，而 defineproperty 不可以，缺点是 proxy 会劫持整个对象，而 defineproperty 不会
+
+## Vue 对 Dom diff 的优化⽅案是什么？
+
+
+Vue 对 Dom diff 的优化：对 oldDom 和 newDom 进行遍历匹配，处理过的 dom 做上标记，使用 oldstart/oldend，newstart/newend 指针排序。 1.头部或尾部相同，跳过，对应指针移动。 2.首尾判断相同 oldStart 向前移动，newEnd 向后移动，尾首判断相同，oldEnd 向后移动，newStart 向前移动。
+3.oldDOM 找不到新增节点，则新增，插入到 oldStart 指针前位置，newStart 往后移动。
+4.oldDom 能找到节点，但不在该指针位置，则移动，插入到 oldStart 指针前位置，并做上特殊标记
+如果 newDom 遍历标记完毕，而 oldDom 还有没标记的 Dom，则删除。
+
+[深入Vue2 Diff算法](https://blog.csdn.net/Sideremens/article/details/97629849)
+
+
 ## vue 双向绑定原理实现
 
 ```html
