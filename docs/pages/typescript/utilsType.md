@@ -19,11 +19,31 @@ interface PageInfo {
 
 type Page = "home" | "about" | "contact";
 
-const nav: Record<Page, PageInfo> = {
+const nav: Record<Page, PageInfo> = {//key 为Page,value 为 pageinfo 对象，对象key为title，value类型为string
   about: { title: "about" },
   contact: { title: "contact" },
   home: { title: "home" },
 };
+console.log(nav)
+
+//record 与 key in 
+type firstkey = "a" | "b" | "c" 
+type secondkey = "contact" | "home" | "about" 
+type secondvalue = "home" | "about" | "contact"
+const nav2: Record<firstkey, { [key in secondkey]?: secondvalue }> = {
+  a: { contact: "about" },
+  b: { home: "contact" },
+  c: { about: "home" }
+}
+
+const nav3: { [key in firstkey]: { [key in secondkey]?: secondvalue } } = {
+  a: { contact: "about" },
+  b: { home: "contact" },
+  c: { about: "home" }
+}
+
+console.log(nav2.a.contact)
+console.log(nav3.a.contact)
 
 ```
 ## Partial
