@@ -95,7 +95,7 @@ module.exports = {
               { text: 'jenkins', link: '/pages/jenkins/' },
           
               { text: 'php', link: '/pages/php/base.md' },
-              { text: 'java', link: '/pages/java/' }
+              { text: 'java', link: '/pages/java/base.md' }
             ]
           },
           {
