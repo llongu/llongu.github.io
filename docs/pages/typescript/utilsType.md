@@ -184,3 +184,20 @@ type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => i
 type t = ReturnType<(name: string) => string | number>
 // type t = string | number
 ```
+
+## is
+```ts
+// 判断参数是否为string类型, 返回布尔值
+function isString(s:unknown):s is string{
+  return typeof s === 'string'
+}
+
+// 判断参数是否为字符串,是在调用转大写方法
+function ifUpperCase(str:unknown){
+
+  if(isString(str)){
+    str.toUpperCase()
+    // (parameter) str: string
+  }
+}
+```

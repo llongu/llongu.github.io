@@ -2,6 +2,7 @@
 
 - `FC(function component)` 带 `children` `vfc` `不带children`,`fc` 不推荐，多余
 - `{}` 是万能类型 但与 `object` 相等,小写`object`只表示类型
+- `xxx!  useRef(HTMLElement)(null!)` 可用于骗ts,不用去层层判断非null 
 - `Function` 不要做类型使用
 - `interface` 在不知道数据是什么类型，如对接接口，写 sdk 时使用。在自己声明对象是不需要用，ts 会自动类型推断
   ```ts
@@ -80,3 +81,5 @@
   ![](./img/p1.png)
   
   ![](./img/p2.png)
+
+- lib.es5.d.ts 官方源码文件

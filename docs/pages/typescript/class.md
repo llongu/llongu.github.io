@@ -100,3 +100,19 @@ console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 
 
 ```
+## class new 实现
+
+```ts
+class Water {
+  drink() {
+    console.log(123)
+  }
+}
+// { new (): T } === new ()=> T
+function Car<T>(Water: { new (): T }): T {
+  return new Water()
+}
+
+Car(Water).drink()
+
+```

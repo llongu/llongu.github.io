@@ -21,17 +21,17 @@ module.exports = {
           {
             text: '前端学习',
             items: [
-              { text: 'javaScript', link: '/pages/javascript/this' },
-              { text: 'typeScript', link: '/pages/typescript/basic' },
+              { text: 'JavaScript', link: '/pages/javascript/this' },
+              { text: 'TypeScript', link: '/pages/typescript/basic' },
               { text: '浏览器', link: '/pages/browser/httpCode' },
               { text: 'Html&Css', link: '/pages/Html&Css/formattingContexts' },
-              { text: 'webpack', link: '/pages/webpack/process' },
+              { text: 'Webpack', link: '/pages/webpack/process' },
 
               
-              { text: 'vue', link: '/pages/vue/vue2' },
-              { text: 'vite', link: '/pages/vite/home' },
+              { text: 'Vue', link: '/pages/vue/vue2' },
+              { text: 'Vite', link: '/pages/vite/home' },
               { text: '微信小程序', link: '/pages/wxMini/core' },
-              { text: 'jquery剖析', link: '/pages/jquery/entry' },
+              { text: 'Jquery剖析', link: '/pages/jquery/entry' },
               { text: '函数式编程', link: '/pages/function/begin' },
               { text: '编程思想', link: '/pages/coding/aop&oop' },
               { text: 'leetcode&books', link: '/pages/leetcode&books/home' },

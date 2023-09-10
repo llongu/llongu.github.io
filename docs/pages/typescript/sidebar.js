@@ -6,8 +6,8 @@ module.exports ={
             { title:'接口',path:'/pages/typescript/interface.md'},
             { title:'泛型',path:'/pages/typescript/t.md'},
             { title:'依赖注入',path:'/pages/typescript/inject.md'},
-            { title:'笔记',path:'/pages/typescript/main.md'},
-
+            { title:'笔记',path:'/pages/typescript/note.md'},
+            { title:'tsconfig.json',path:'/pages/typescript/config.md'},
       ]
 }
   
