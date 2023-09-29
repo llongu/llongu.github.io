@@ -8,7 +8,9 @@ module.exports = {
       ['script',{src:'https://hm.baidu.com/hm.js?9fe3e108f82a020dfa7c0120f577c7db'}],
       ['script',{src:'/js/main.js'}],
     ],
-    plugins: [['vuepress-plugin-code-copy', true]],
+    plugins: [
+      ['vuepress-plugin-code-copy', true],
+    ],
     theme: 'yuu',
     themeConfig: {
         yuu: {
@@ -92,10 +94,10 @@ module.exports = {
               { text: 'nginx', link: '/pages/nginx/des.md' },
               { text: 'linux', link: '/pages/linux/order.md' },
               { text: 'docker', link: '/pages/docker/' },
-              { text: 'jenkins', link: '/pages/jenkins/' },
-          
               { text: 'php', link: '/pages/php/base.md' },
-              { text: 'java', link: '/pages/java/base.md' }
+              { text: 'Java', link: '/pages/Java/Base/base.md' },
+              { text: 'ObjectC', link: '/pages/ObjectC/base.md' },
+              { text: 'MySQL', link: '/pages/mysql/base.md' },
             ]
           },
           {
