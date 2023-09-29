@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JDBC | 写字の地方</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="logo.png" with="0.1rem" search="true">
+    <script src="https://hm.baidu.com/hm.js?9fe3e108f82a020dfa7c0120f577c7db"></script>
+    <script src="/js/main.js"></script>
+    <meta name="description" content="notes">
+    
+    <link rel="preload" href="/assets/css/0.styles.a9b84738.css" as="style"><link rel="preload" href="/assets/js/app.088f0338.js" as="script"><link rel="preload" href="/assets/js/2.d5008571.js" as="script"><link rel="preload" href="/assets/js/1.c015acb9.js" as="script"><link rel="preload" href="/assets/js/125.a59feeaa.js" as="script"><link rel="prefetch" href="/assets/js/10.e354690c.js"><link rel="prefetch" href="/assets/js/100.f4d02960.js"><link rel="prefetch" href="/assets/js/101.480c9893.js"><link rel="prefetch" href="/assets/js/102.12d6f7d0.js"><link rel="prefetch" href="/assets/js/103.a83a6ffc.js"><link rel="prefetch" href="/assets/js/104.6713ed39.js"><link rel="prefetch" href="/assets/js/105.6d5d7749.js"><link rel="prefetch" href="/assets/js/106.25280b62.js"><link rel="prefetch" href="/assets/js/107.687c1440.js"><link rel="prefetch" href="/assets/js/108.4aecf8e7.js"><link rel="prefetch" href="/assets/js/109.5cad7e81.js"><link rel="prefetch" href="/assets/js/11.20a24e8a.js"><link rel="prefetch" href="/assets/js/110.deea5657.js"><link rel="prefetch" href="/assets/js/111.529b1fe3.js"><link rel="prefetch" href="/assets/js/112.50f36256.js"><link rel="prefetch" href="/assets/js/113.256c80a7.js"><link rel="prefetch" href="/assets/js/114.b02e1b97.js"><link rel="prefetch" href="/assets/js/115.cc511a1c.js"><link rel="prefetch" href="/assets/js/116.5ed0c127.js"><link rel="prefetch" href="/assets/js/117.e1b59d6f.js"><link rel="prefetch" href="/assets/js/118.6b9f6132.js"><link rel="prefetch" href="/assets/js/119.e9dff462.js"><link rel="prefetch" href="/assets/js/12.f771e045.js"><link rel="prefetch" href="/assets/js/120.5f72a317.js"><link rel="prefetch" href="/assets/js/121.7f58c621.js"><link rel="prefetch" href="/assets/js/122.e48c4420.js"><link rel="prefetch" href="/assets/js/123.1553e6b2.js"><link rel="prefetch" href="/assets/js/124.4f9d1d8c.js"><link rel="prefetch" href="/assets/js/126.9f199b2f.js"><link rel="prefetch" href="/assets/js/127.7a3d5036.js"><link rel="prefetch" href="/assets/js/128.2da5534c.js"><link rel="prefetch" href="/assets/js/129.30b2dd78.js"><link rel="prefetch" href="/assets/js/13.5626aa1d.js"><link rel="prefetch" href="/assets/js/130.5bacfac0.js"><link rel="prefetch" href="/assets/js/131.d36cc906.js"><link rel="prefetch" href="/assets/js/132.51cf1f5d.js"><link rel="prefetch" href="/assets/js/133.4a08f3c5.js"><link rel="prefetch" href="/assets/js/134.c29fd853.js"><link rel="prefetch" href="/assets/js/135.a7ba4a94.js"><link rel="prefetch" href="/assets/js/136.07c4e31e.js"><link rel="prefetch" href="/assets/js/137.05d90495.js"><link rel="prefetch" href="/assets/js/138.31f00b3d.js"><link rel="prefetch" href="/assets/js/139.c3bf4a5c.js"><link rel="prefetch" href="/assets/js/14.5bc8f1d8.js"><link rel="prefetch" href="/assets/js/140.6788ac79.js"><link rel="prefetch" href="/assets/js/141.a311bad7.js"><link rel="prefetch" href="/assets/js/142.4fd2aa14.js"><link rel="prefetch" href="/assets/js/143.4ebfc4f7.js"><link rel="prefetch" href="/assets/js/144.4fc0b0f3.js"><link rel="prefetch" href="/assets/js/145.a95244d7.js"><link rel="prefetch" href="/assets/js/146.9848ff47.js"><link rel="prefetch" href="/assets/js/147.9ad64413.js"><link rel="prefetch" href="/assets/js/148.44e3c7d0.js"><link rel="prefetch" href="/assets/js/149.b4dae1ae.js"><link rel="prefetch" href="/assets/js/15.6b80f641.js"><link rel="prefetch" href="/assets/js/150.57828660.js"><link rel="prefetch" href="/assets/js/151.cb038dfe.js"><link rel="prefetch" href="/assets/js/152.5864cabb.js"><link rel="prefetch" href="/assets/js/153.de906b03.js"><link rel="prefetch" href="/assets/js/154.bdef37a9.js"><link rel="prefetch" href="/assets/js/155.9e1f93ea.js"><link rel="prefetch" href="/assets/js/156.71801bba.js"><link rel="prefetch" href="/assets/js/157.0764e6fb.js"><link rel="prefetch" href="/assets/js/16.8262fa1c.js"><link rel="prefetch" href="/assets/js/17.d8de09cb.js"><link rel="prefetch" href="/assets/js/18.0bd186fd.js"><link rel="prefetch" href="/assets/js/19.38590f39.js"><link rel="prefetch" href="/assets/js/20.8a5dc81a.js"><link rel="prefetch" href="/assets/js/21.538c0ea5.js"><link rel="prefetch" href="/assets/js/22.c20126ec.js"><link rel="prefetch" href="/assets/js/23.e30abd6a.js"><link rel="prefetch" href="/assets/js/24.74d09b1c.js"><link rel="prefetch" href="/assets/js/25.66efbef8.js"><link rel="prefetch" href="/assets/js/26.670ef733.js"><link rel="prefetch" href="/assets/js/27.35ea84f7.js"><link rel="prefetch" href="/assets/js/28.d0788d71.js"><link rel="prefetch" href="/assets/js/29.3d14e331.js"><link rel="prefetch" href="/assets/js/3.940b5dc2.js"><link rel="prefetch" href="/assets/js/30.f55ab162.js"><link rel="prefetch" href="/assets/js/31.9dab242c.js"><link rel="prefetch" href="/assets/js/32.85445d7d.js"><link rel="prefetch" href="/assets/js/33.e65b7cb9.js"><link rel="prefetch" href="/assets/js/34.1f6f9822.js"><link rel="prefetch" href="/assets/js/35.dbe10e85.js"><link rel="prefetch" href="/assets/js/36.fa414e61.js"><link rel="prefetch" href="/assets/js/37.69101733.js"><link rel="prefetch" href="/assets/js/38.372d7f20.js"><link rel="prefetch" href="/assets/js/39.a7b9d0fc.js"><link rel="prefetch" href="/assets/js/4.c41abce1.js"><link rel="prefetch" href="/assets/js/40.0a358b2b.js"><link rel="prefetch" href="/assets/js/41.f3da738e.js"><link rel="prefetch" href="/assets/js/42.028ef5ee.js"><link rel="prefetch" href="/assets/js/43.bca6f72a.js"><link rel="prefetch" href="/assets/js/44.0200fa91.js"><link rel="prefetch" href="/assets/js/45.ed6e5375.js"><link rel="prefetch" href="/assets/js/46.b53158ab.js"><link rel="prefetch" href="/assets/js/47.ac996754.js"><link rel="prefetch" href="/assets/js/48.fd4c76a8.js"><link rel="prefetch" href="/assets/js/49.a80e6803.js"><link rel="prefetch" href="/assets/js/5.d6192c08.js"><link rel="prefetch" href="/assets/js/50.c883db67.js"><link rel="prefetch" href="/assets/js/51.ee7b2e16.js"><link rel="prefetch" href="/assets/js/52.97205cfe.js"><link rel="prefetch" href="/assets/js/53.bc3381a0.js"><link rel="prefetch" href="/assets/js/54.2d512af6.js"><link rel="prefetch" href="/assets/js/55.75d34dbe.js"><link rel="prefetch" href="/assets/js/56.a350af0f.js"><link rel="prefetch" href="/assets/js/57.bcd0f452.js"><link rel="prefetch" href="/assets/js/58.0a949106.js"><link rel="prefetch" href="/assets/js/59.24c7ffc2.js"><link rel="prefetch" href="/assets/js/6.f54ed98f.js"><link rel="prefetch" href="/assets/js/60.55e7f49f.js"><link rel="prefetch" href="/assets/js/61.8e5aad9b.js"><link rel="prefetch" href="/assets/js/62.402e8ff9.js"><link rel="prefetch" href="/assets/js/63.13b39e64.js"><link rel="prefetch" href="/assets/js/64.b1bd88da.js"><link rel="prefetch" href="/assets/js/65.c7f48433.js"><link rel="prefetch" href="/assets/js/66.a4ac804e.js"><link rel="prefetch" href="/assets/js/67.496a3bae.js"><link rel="prefetch" href="/assets/js/68.30440c9d.js"><link rel="prefetch" href="/assets/js/69.c6913315.js"><link rel="prefetch" href="/assets/js/7.37cafaa9.js"><link rel="prefetch" href="/assets/js/70.0a0b5041.js"><link rel="prefetch" href="/assets/js/71.213e1a76.js"><link rel="prefetch" href="/assets/js/72.a39ec421.js"><link rel="prefetch" href="/assets/js/73.3c498d47.js"><link rel="prefetch" href="/assets/js/74.e562b8ec.js"><link rel="prefetch" href="/assets/js/75.aa05f46e.js"><link rel="prefetch" href="/assets/js/76.541e0a05.js"><link rel="prefetch" href="/assets/js/77.f067ff49.js"><link rel="prefetch" href="/assets/js/78.9a380f87.js"><link rel="prefetch" href="/assets/js/79.78719afa.js"><link rel="prefetch" href="/assets/js/80.355e5477.js"><link rel="prefetch" href="/assets/js/81.c3bff458.js"><link rel="prefetch" href="/assets/js/82.9b4ff6b4.js"><link rel="prefetch" href="/assets/js/83.15bc6a56.js"><link rel="prefetch" href="/assets/js/84.5d2edcbe.js"><link rel="prefetch" href="/assets/js/85.a3814915.js"><link rel="prefetch" href="/assets/js/86.a4d816ec.js"><link rel="prefetch" href="/assets/js/87.8e66d57a.js"><link rel="prefetch" href="/assets/js/88.4104a71c.js"><link rel="prefetch" href="/assets/js/89.1626b28f.js"><link rel="prefetch" href="/assets/js/90.bd49971f.js"><link rel="prefetch" href="/assets/js/91.a2f1378f.js"><link rel="prefetch" href="/assets/js/92.a427d85c.js"><link rel="prefetch" href="/assets/js/93.4ff17fee.js"><link rel="prefetch" href="/assets/js/94.1fb87e11.js"><link rel="prefetch" href="/assets/js/95.960ca181.js"><link rel="prefetch" href="/assets/js/96.dd2cbf93.js"><link rel="prefetch" href="/assets/js/97.ff8cee02.js"><link rel="prefetch" href="/assets/js/98.bf52235d.js"><link rel="prefetch" href="/assets/js/99.2426fbf8.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.dd07a4b7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a9b84738.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="logo.png" alt="写字の地方" class="logo"> <span class="site-name can-hide">写字の地方</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <ul class="color-theme-options"><li><a href="#" class="default-theme"></a></li> <li><a href="#" class="blue-theme"></a></li><li><a href="#" class="red-theme"></a></li><li><a href="#" class="purple-theme"></a></li></ul> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox"></div> <div class="ignore-themes-options toggle-option"><label for="ignore-themes-toggle">Ignore Other Themes?</label> <input id="ignore-themes-toggle" type="checkbox"></div> <!----></div></div></div> <!----> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/javascript/this.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/pages/typescript/basic.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/pages/browser/httpCode.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Html&amp;Css/formattingContexts.html" class="nav-link">
+  Html&amp;Css
+</a></li><li class="dropdown-item"><!----> <a href="/pages/webpack/process.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/pages/vue/vue2.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/vite/home.html" class="nav-link">
+  Vite
+</a></li><li class="dropdown-item"><!----> <a href="/pages/wxMini/core.html" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jquery/entry.html" class="nav-link">
+  Jquery剖析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/function/begin.html" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/coding/aop&amp;oop.html" class="nav-link">
+  编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/pages/leetcode&amp;books/home.html" class="nav-link">
+  leetcode&amp;books
+</a></li><li class="dropdown-item"><!----> <a href="/pages/unit/home.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/agorithms/tire.html" class="nav-link">
+  常见算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常用功能解决方案" class="dropdown-title"><span class="title">常用功能解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="常用功能解决方案" class="mobile-dropdown-title"><span class="title">常用功能解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/use/uploadFile.html" class="nav-link">
+  大文件上传
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/excel.html" class="nav-link">
+  导入导出excel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/waterMark.html" class="nav-link">
+  页面水印添加
+</a></li><li class="dropdown-item"><!----> <a href="https://docs.qq.com/doc/DVU1TWU1UYXdpWnln" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  uni-app 常见问题
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/pages/use/officeView.html" class="nav-link">
+  网页office预览方案
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/video.html" class="nav-link">
+  网页视频播放方案
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/adminAuth.html" class="nav-link">
+  后台管理系统权限设计
+</a></li><li class="dropdown-item"><!----> <a href="https://docs.qq.com/doc/DVUFwbFhXdWhmb1dv" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  项目mock
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/pages/use/fn.html" class="nav-link">
+  前端开发常用方法复制
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/notes/developConfig.html" class="nav-link">
+  前端开发电脑环境配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/projectSop.html" class="nav-link">
+  前端项目搭建sop流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/nvm.html" class="nav-link">
+  使用nvm 管理node版本
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/verdaccio.html" class="nav-link">
+  verdaccio 搭建npm 环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  vuepress1.x 博客搭建流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/githubSyncGitee.html" class="nav-link">
+  github 自动同步 gitee
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/llongu/ci-jenkins-demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jenkins 搭建流程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/pages/notes/gitDown.html" class="nav-link">
+  使用node下载git项目到本地
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/hash.html" class="nav-link">
+  Hash/对称与非对称算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/eslint.html" class="nav-link">
+  手写一个eslint
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="npm&amp;github" class="dropdown-title"><span class="title">npm&amp;github</span> <span class="arrow down"></span></button> <button type="button" aria-label="npm&amp;github" class="mobile-dropdown-title"><span class="title">npm&amp;github</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          cli
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.npmjs.com/package/create-app-web" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/llongu/create-app-web-lib" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web-lib
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          plugin
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.npmjs.com/package/floater-dom" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  floater-dom
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/llongu/drag-text-mergeBg" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  drag-text-mergeBg
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          project
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/H5Game/index.html" class="nav-link">
+  H5Game
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="服务端" class="dropdown-title"><span class="title">服务端</span> <span class="arrow down"></span></button> <button type="button" aria-label="服务端" class="mobile-dropdown-title"><span class="title">服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/nginx/des.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/pages/linux/order.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/pages/php/base.html" class="nav-link">
+  php
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Java/Base/base.html" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/pages/ObjectC/base.html" class="nav-link">
+  ObjectC
+</a></li><li class="dropdown-item"><!----> <a href="/pages/mysql/base.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具&amp;软件" class="dropdown-title"><span class="title">工具&amp;软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具&amp;软件" class="mobile-dropdown-title"><span class="title">工具&amp;软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/docmirror/dev-sidecar" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  dev-sidecar 环境加速工具
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.snipaste.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  snipaste 截图工具
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://kingfast.info/index.php/index/register/?yqi=63283" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  科学上网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://fakeimg.pl/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  网页占位图
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工作之外" class="dropdown-title"><span class="title">工作之外</span> <span class="arrow down"></span></button> <button type="button" aria-label="工作之外" class="mobile-dropdown-title"><span class="title">工作之外</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/pm/process.html" class="nav-link">
+  产品经理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/ui/color.html" class="nav-link">
+  UI设计
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  聚合类网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  外包网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  浏览器插件聚合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  薅羊毛
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  互联网常见项目 erp crm 
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路-炒股软件
+</a></li></ul></div></div> <a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/javascript/this.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/pages/typescript/basic.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/pages/browser/httpCode.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Html&amp;Css/formattingContexts.html" class="nav-link">
+  Html&amp;Css
+</a></li><li class="dropdown-item"><!----> <a href="/pages/webpack/process.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/pages/vue/vue2.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/vite/home.html" class="nav-link">
+  Vite
+</a></li><li class="dropdown-item"><!----> <a href="/pages/wxMini/core.html" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/jquery/entry.html" class="nav-link">
+  Jquery剖析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/function/begin.html" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/coding/aop&amp;oop.html" class="nav-link">
+  编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/pages/leetcode&amp;books/home.html" class="nav-link">
+  leetcode&amp;books
+</a></li><li class="dropdown-item"><!----> <a href="/pages/unit/home.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/agorithms/tire.html" class="nav-link">
+  常见算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常用功能解决方案" class="dropdown-title"><span class="title">常用功能解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="常用功能解决方案" class="mobile-dropdown-title"><span class="title">常用功能解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/use/uploadFile.html" class="nav-link">
+  大文件上传
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/excel.html" class="nav-link">
+  导入导出excel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/waterMark.html" class="nav-link">
+  页面水印添加
+</a></li><li class="dropdown-item"><!----> <a href="https://docs.qq.com/doc/DVU1TWU1UYXdpWnln" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  uni-app 常见问题
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/pages/use/officeView.html" class="nav-link">
+  网页office预览方案
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/video.html" class="nav-link">
+  网页视频播放方案
+</a></li><li class="dropdown-item"><!----> <a href="/pages/use/adminAuth.html" class="nav-link">
+  后台管理系统权限设计
+</a></li><li class="dropdown-item"><!----> <a href="https://docs.qq.com/doc/DVUFwbFhXdWhmb1dv" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  项目mock
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/pages/use/fn.html" class="nav-link">
+  前端开发常用方法复制
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/notes/developConfig.html" class="nav-link">
+  前端开发电脑环境配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/projectSop.html" class="nav-link">
+  前端项目搭建sop流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/nvm.html" class="nav-link">
+  使用nvm 管理node版本
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/verdaccio.html" class="nav-link">
+  verdaccio 搭建npm 环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/vuepress1.html" class="nav-link">
+  vuepress1.x 博客搭建流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/githubSyncGitee.html" class="nav-link">
+  github 自动同步 gitee
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/llongu/ci-jenkins-demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jenkins 搭建流程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/pages/notes/gitDown.html" class="nav-link">
+  使用node下载git项目到本地
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/hash.html" class="nav-link">
+  Hash/对称与非对称算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/notes/eslint.html" class="nav-link">
+  手写一个eslint
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="npm&amp;github" class="dropdown-title"><span class="title">npm&amp;github</span> <span class="arrow down"></span></button> <button type="button" aria-label="npm&amp;github" class="mobile-dropdown-title"><span class="title">npm&amp;github</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          cli
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.npmjs.com/package/create-app-web" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/llongu/create-app-web-lib" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  create-app-web-lib
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          plugin
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.npmjs.com/package/floater-dom" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  floater-dom
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/llongu/drag-text-mergeBg" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  drag-text-mergeBg
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          project
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/H5Game/index.html" class="nav-link">
+  H5Game
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="服务端" class="dropdown-title"><span class="title">服务端</span> <span class="arrow down"></span></button> <button type="button" aria-label="服务端" class="mobile-dropdown-title"><span class="title">服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/nginx/des.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/pages/linux/order.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/pages/php/base.html" class="nav-link">
+  php
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Java/Base/base.html" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/pages/ObjectC/base.html" class="nav-link">
+  ObjectC
+</a></li><li class="dropdown-item"><!----> <a href="/pages/mysql/base.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具&amp;软件" class="dropdown-title"><span class="title">工具&amp;软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具&amp;软件" class="mobile-dropdown-title"><span class="title">工具&amp;软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/docmirror/dev-sidecar" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  dev-sidecar 环境加速工具
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.snipaste.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  snipaste 截图工具
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://kingfast.info/index.php/index/register/?yqi=63283" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  科学上网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://fakeimg.pl/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  网页占位图
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工作之外" class="dropdown-title"><span class="title">工作之外</span> <span class="arrow down"></span></button> <button type="button" aria-label="工作之外" class="mobile-dropdown-title"><span class="title">工作之外</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/pm/process.html" class="nav-link">
+  产品经理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/ui/color.html" class="nav-link">
+  UI设计
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  聚合类网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  外包网站收集
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  浏览器插件聚合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  薅羊毛
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  互联网常见项目 erp crm 
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路
+</a></li><li class="dropdown-item"><!----> <a href="/pages/" class="nav-link router-link-active">
+  致富道路-炒股软件
+</a></li></ul></div></div> <a href="https://github.com/llongu/llongu.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/pages/mysql/base.html" class="sidebar-link">基础</a></li><li><a href="/pages/mysql/jdbc.html" aria-current="page" class="active sidebar-link">JDBC</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/mysql/jdbc.html#drivermanager" class="sidebar-link">DriverManager</a></li><li class="sidebar-sub-header"><a href="/pages/mysql/jdbc.html#connection" class="sidebar-link">Connection</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/mysql/jdbc.html#事务操作" class="sidebar-link">事务操作</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/mysql/jdbc.html#statement" class="sidebar-link">Statement</a></li><li class="sidebar-sub-header"><a href="/pages/mysql/jdbc.html#preparedstatement" class="sidebar-link">PreparedStatement</a></li><li class="sidebar-sub-header"><a href="/pages/mysql/jdbc.html#resultset" class="sidebar-link">ResultSet</a></li><li class="sidebar-sub-header"><a href="/pages/mysql/jdbc.html#druid-介绍和使用" class="sidebar-link">Druid 介绍和使用</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="jdbc"><a href="#jdbc" class="header-anchor">#</a> JDBC</h1> <div class="language- extra-class"><pre><code>JDBC（Java Database Connectivity，Java数据库连接）是一个Java语言中用来规范客户端程序如何访问数据库的应用程序接口（API）。
+
+通过使用JDBC，Java开发者可以将他们的应用程序与任何支持JDBC的数据库进行连接。JDBC API包括一系列的Java方法，这些方法用于创建，查询，更新，删除数据库中的数据。
+
+JDBC驱动是用于连接到特定类型数据库的程序。许多数据库管理系统（如Oracle，MySQL，PostgreSQL等）都有对应的JDBC驱动程序。
+
+JDBC的基本步骤通常包括以下：
+
+加载JDBC驱动
+创建数据库连接
+创建一个或多个SQL语句
+通过数据库执行这些语句
+获取并处理结果（如果有的话）
+关闭连接和语句对象
+
+例如，以下是一段简单的Java代码，使用JDBC连接到MySQL数据库并执行一个查询：
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Connection</span> conn <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token class-name">Statement</span> stmt <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token class-name">ResultSet</span> rs <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 1. 加载驱动</span>
+      <span class="token class-name">Class</span><span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">&quot;com.mysql.cj.jdbc.Driver&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      
+      <span class="token comment">// 2. 创建连接</span>
+      conn <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token string">&quot;jdbc:mysql://localhost:3306/mydatabase&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;username&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;password&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      
+      <span class="token comment">// 3. 创建语句</span>
+      stmt <span class="token operator">=</span> conn<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token class-name">String</span> sql<span class="token punctuation">;</span>
+      sql <span class="token operator">=</span> <span class="token string">&quot;SELECT id, name FROM MyTable&quot;</span><span class="token punctuation">;</span>
+      rs <span class="token operator">=</span> stmt<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">//防止SQl 注入</span>
+    <span class="token comment">// sql = &quot;SELECT id, name FROM MyTable WHERE id = ?&quot;;</span>
+    <span class="token comment">// PreparedStatement pstmt = conn.prepareStatement(sql);</span>
+    <span class="token comment">// pstmt.setInt(1, 1001);</span>
+    <span class="token comment">// rs = pstmt.executeQuery();</span>
+      
+      <span class="token comment">// 4. 处理结果集</span>
+      <span class="token keyword">while</span><span class="token punctuation">(</span>rs<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;ID: &quot;</span> <span class="token operator">+</span> rs<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot;, Name: &quot;</span> <span class="token operator">+</span> rs<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">SQLException</span> se<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      se<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 处理 JDBC 错误</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 处理 Class.forName 错误</span>
+    <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 5. 关闭所有资源</span>
+      <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>stmt<span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span> stmt<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">SQLException</span> se2<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span> <span class="token comment">// 什么也不做</span>
+      <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>conn<span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span> conn<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">SQLException</span> se<span class="token punctuation">)</span> <span class="token punctuation">{</span> se<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="drivermanager"><a href="#drivermanager" class="header-anchor">#</a> DriverManager</h2> <div class="language- extra-class"><pre><code>DriverManager是JDBC的基础类，用于管理一系列JDBC驱动程序。它负责：
+
+1. 注册驱动程序
+2. 提供数据库连接
+3. 跟踪可用的驱动程序
+
+以下是DriverManager的常用方法：
+</code></pre></div><table><thead><tr><th>方法</th> <th>描述</th></tr></thead> <tbody><tr><td>static void registerDriver(Driver driver)</td> <td>注册驱动程序</td></tr> <tr><td>static Connection getConnection(String url)</td> <td>通过给定的URL连接到数据库</td></tr> <tr><td>static Connection getConnection(String url, String user, String password)</td> <td>通过给定的URL连接到数据库，使用给定的用户名和密码</td></tr> <tr><td>static Connection getConnection(String url, Properties info)</td> <td>通过给定的URL连接到数据库，使用给定的属性</td></tr> <tr><td>static Connection getConnection(String url, String user, String password, Properties info)</td> <td>通过给定的URL连接到数据库，使用给定的用户名和密码，使用给定的属性</td></tr> <tr><td>static Driver getDriver(String url)</td> <td>获取给定URL的驱动程序</td></tr> <tr><td>static Driver[] getDrivers()</td> <td>获取已注册的驱动程序</td></tr> <tr><td>static void setLoginTimeout(int seconds)</td> <td>设置登录超时时间</td></tr> <tr><td>static int getLoginTimeout()</td> <td>获取登录超时时间</td></tr> <tr><td>static PrintWriter getLogWriter()</td> <td>获取日志输出流</td></tr> <tr><td>static void setLogWriter(PrintWriter out)</td> <td>设置日志输出流</td></tr></tbody></table> <h2 id="connection"><a href="#connection" class="header-anchor">#</a> Connection</h2> <div class="language- extra-class"><pre><code>Connection接口表示与特定数据库的连接。它负责：
+
+1. 创建语句
+2. 提供数据库元数据信息
+3. 控制事务
+4. 关闭连接
+</code></pre></div><h3 id="事务操作"><a href="#事务操作" class="header-anchor">#</a> 事务操作</h3> <div class="language- extra-class"><pre><code>事务是一组SQL语句，它们作为一个单元执行。如果事务中的所有语句都成功执行，则提交事务。如果任何语句失败，则回滚事务。
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">try</span> <span class="token punctuation">{</span>
+  conn<span class="token punctuation">.</span><span class="token function">setAutoCommit</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  stmt <span class="token operator">=</span> conn<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  stmt<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span><span class="token string">&quot;INSERT INTO MyTable(id, name) VALUES(1001, 'name1')&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  stmt<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span><span class="token string">&quot;INSERT INTO MyTable(id, name) VALUES(1002, 'name2')&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  conn<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">SQLException</span> se<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  conn<span class="token punctuation">.</span><span class="token function">rollback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+  conn<span class="token punctuation">.</span><span class="token function">setAutoCommit</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><div class="language- extra-class"><pre><code>以下是Connection的常用方法：
+</code></pre></div><table><thead><tr><th>方法</th> <th>描述</th></tr></thead> <tbody><tr><td>Statement createStatement()</td> <td>创建一个Statement对象，用于执行静态SQL语句</td></tr> <tr><td>PreparedStatement prepareStatement(String sql)</td> <td>创建一个PreparedStatement对象，用于执行动态SQL语句</td></tr> <tr><td>CallableStatement prepareCall(String sql)</td> <td>创建一个CallableStatement对象，用于执行存储过程</td></tr> <tr><td>String nativeSQL(String sql)</td> <td>将SQL语句转换为本地SQL语句</td></tr> <tr><td>void setAutoCommit(boolean autoCommit)</td> <td>设置自动提交模式</td></tr> <tr><td>boolean getAutoCommit()</td> <td>获取自动提交模式</td></tr> <tr><td>void commit()</td> <td>提交当前事务</td></tr> <tr><td>void rollback()</td> <td>回滚当前事务</td></tr> <tr><td>void close()</td> <td>关闭连接</td></tr> <tr><td>boolean isClosed()</td> <td>检查连接是否已关闭</td></tr> <tr><td>DatabaseMetaData getMetaData()</td> <td>获取数据库元数据信息</td></tr> <tr><td>void setReadOnly(boolean readOnly)</td> <td>设置只读模式</td></tr> <tr><td>boolean isReadOnly()</td> <td>检查是否为只读模式</td></tr> <tr><td>void setCatalog(String catalog)</td> <td>设置当前目录</td></tr> <tr><td>String getCatalog()</td> <td>获取当前目录</td></tr> <tr><td>void setTransactionIsolation(int level)</td> <td>设置事务隔离级别</td></tr> <tr><td>int getTransactionIsolation()</td> <td>获取事务隔离级别</td></tr> <tr><td>SQLWarning getWarnings()</td> <td>获取连接的警告信息</td></tr> <tr><td>void clearWarnings()</td> <td>清除连接的警告信息</td></tr> <tr><td>Statement createStatement(int resultSetType, int resultSetConcurrency)</td> <td>创建一个Statement对象，用于执行静态SQL语句，指定结果集类型和并发模式</td></tr> <tr><td>PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency)</td> <td>创建一个PreparedStatement对象，用于执行动态SQL语句，指定结果集类型和并发模式</td></tr> <tr><td>CallableStatement prepareCall(String sql, int resultSetType, int resultSetConcurrency)</td> <td>创建一个CallableStatement对象，用于执行存储过程，指定结果集类型和并发模式</td></tr> <tr><td>Map getTypeMap()</td> <td>获取自定义类型映射</td></tr> <tr><td>void setTypeMap(Map map)</td> <td>设置自定义类型映射</td></tr></tbody></table> <h2 id="statement"><a href="#statement" class="header-anchor">#</a> Statement</h2> <div class="language- extra-class"><pre><code>Statement接口用于执行静态SQL语句并返回它所生成结果的对象。它负责：
+
+1. 执行SQL语句
+2. 获取结果集
+3. 获取生成的键
+
+以下是Statement的常用方法：
+</code></pre></div><table><thead><tr><th>方法</th> <th>描述</th></tr></thead> <tbody><tr><td>ResultSet executeQuery(String sql)</td> <td>执行给定的SQL语句，返回一个ResultSet对象</td></tr> <tr><td>int executeUpdate(String sql)</td> <td>执行给定的SQL语句，返回受影响的行数</td></tr> <tr><td>boolean execute(String sql)</td> <td>执行给定的SQL语句，返回一个boolean值，表示是否有结果集</td></tr> <tr><td>void addBatch(String sql)</td> <td>将给定的SQL语句添加到批处理中</td></tr> <tr><td>void clearBatch()</td> <td>清除批处理中的所有语句</td></tr> <tr><td>int[] executeBatch()</td> <td>执行批处理中的所有语句，返回一个int数组，表示每个语句受影响的行数</td></tr> <tr><td>ResultSet getResultSet()</td> <td>获取当前结果集</td></tr> <tr><td>int getUpdateCount()</td> <td>获取当前受影响的行数</td></tr> <tr><td>boolean getMoreResults()</td> <td>检查是否有更多的结果集</td></tr> <tr><td>void close()</td> <td>关闭语句</td></tr> <tr><td>int getMaxFieldSize()</td> <td>获取最大字段大小</td></tr> <tr><td>void setMaxFieldSize(int max)</td> <td>设置最大字段大小</td></tr> <tr><td>int getMaxRows()</td> <td>获取最大行数</td></tr> <tr><td>void setMaxRows(int max)</td> <td>设置最大行数</td></tr> <tr><td>void setEscapeProcessing(boolean enable)</td> <td>启用或禁用转义处理</td></tr> <tr><td>int getQueryTimeout()</td> <td>获取查询超时时间</td></tr> <tr><td>void setQueryTimeout(int seconds)</td> <td>设置查询超时时间</td></tr> <tr><td>void cancel()</td> <td>取消当前语句的执行</td></tr> <tr><td>SQLWarning getWarnings()</td> <td>获取当前语句的警告信息</td></tr> <tr><td>void clearWarnings()</td> <td>清除当前语句的警告信息</td></tr> <tr><td>void setCursorName(String name)</td> <td>设置游标名称</td></tr> <tr><td>boolean execute(String sql, int autoGeneratedKeys)</td> <td>执行给定的SQL语句，返回一个boolean值，表示是否有结果集，指定是否返回自动生成的键</td></tr> <tr><td>boolean execute(String sql, int[] columnIndexes)</td> <td>执行给定的SQL语句，返回一个boolean值，表示是否有结果集，指定是否返回自动生成的键</td></tr> <tr><td>boolean execute(String sql, String[] columnNames)</td> <td>执行给定的SQL语句，返回一个boolean值，表示是否有结果集，指定是否返回自动生成的键</td></tr> <tr><td>int getResultSetType()</td> <td>获取结果集类型</td></tr> <tr><td>int getResultSetConcurrency()</td> <td>获取结果集并发模式</td></tr> <tr><td>int getResultSetHoldability()</td> <td>获取结果集可保持性</td></tr> <tr><td>boolean isClosed()</td> <td>检查语句是否已关闭</td></tr> <tr><td>void setPoolable(boolean poolable)</td> <td>设置是否可池化</td></tr> <tr><td>boolean isPoolable()</td> <td>检查是否可池化</td></tr> <tr><td>void closeOnCompletion()</td> <td>设置在当前语句完成时关闭</td></tr> <tr><td>boolean isCloseOnCompletion()</td> <td>检查是否在当前语句完成时关闭</td></tr></tbody></table> <p>...</p> <h2 id="preparedstatement"><a href="#preparedstatement" class="header-anchor">#</a> PreparedStatement</h2> <div class="language- extra-class"><pre><code>PreparedStatement 是Statement的子类，用于执行参数化动态SQL语句并返回它所生成结果的对象。它负责：
+
+1. 执行SQL语句
+2. 获取结果集
+3. 获取生成的键
+
+以下是PreparedStatement的常用方法：
+</code></pre></div><table><thead><tr><th>方法</th> <th>描述</th></tr></thead> <tbody><tr><td>ResultSet executeQuery()</td> <td>执行当前SQL语句，返回一个ResultSet对象</td></tr> <tr><td>int executeUpdate()</td> <td>执行当前SQL语句，返回受影响的行数</td></tr> <tr><td>boolean execute()</td> <td>执行当前SQL语句，返回一个boolean值，表示是否有结果集</td></tr> <tr><td>---</td> <td>---</td></tr> <tr><td>void setNull(int parameterIndex, int sqlType)</td> <td>设置给定参数的值为NULL</td></tr> <tr><td>void setBoolean(int parameterIndex, boolean x)</td> <td>设置给定参数的值为boolean值</td></tr> <tr><td>void setByte(int parameterIndex, byte x)</td> <td>设置给定参数的值为byte值</td></tr> <tr><td>void setShort(int parameterIndex, short x)</td> <td>设置给定参数的值为short值</td></tr> <tr><td>void setInt(int parameterIndex, int x)</td> <td>设置给定参数的值为int值</td></tr> <tr><td>void setLong(int parameterIndex, long x)</td> <td>设置给定参数的值为long值</td></tr> <tr><td>void setFloat(int parameterIndex, float x)</td> <td>设置给定参数的值为float值</td></tr> <tr><td>void setDouble(int parameterIndex, double x)</td> <td>设置给定参数的值为double值</td></tr> <tr><td>void setBigDecimal(int parameterIndex, BigDecimal x)</td> <td>设置给定参数的值为BigDecimal值</td></tr> <tr><td>void setString(int parameterIndex, String x)</td> <td>设置给定参数的值为String值</td></tr> <tr><td>void setBytes(int parameterIndex, byte[] x)</td> <td>设置给定参数的值为byte数组</td></tr> <tr><td>void setDate(int parameterIndex, Date x)</td> <td>设置给定参数的值为Date值</td></tr> <tr><td>void setTime(int parameterIndex, Time x)</td> <td>设置给定参数的值为Time值</td></tr> <tr><td>void setTimestamp(int parameterIndex, Timestamp x)</td> <td>设置给定参数的值为Timestamp值</td></tr> <tr><td>void setAsciiStream(int parameterIndex, InputStream x, int length)</td> <td>设置给定参数的值为AsciiStream值</td></tr> <tr><td>void setUnicodeStream(int parameterIndex, InputStream x, int length)</td> <td>设置给定参数的值为UnicodeStream值</td></tr> <tr><td>void setBinaryStream(int parameterIndex, InputStream x, int length)</td> <td>设置给定参数的值为BinaryStream值</td></tr> <tr><td>void clearParameters()</td> <td>清除所有参数的值</td></tr> <tr><td>void setObject(int parameterIndex, Object x, int targetSqlType)</td> <td>设置给定参数的值为Object值</td></tr> <tr><td>void setObject(int parameterIndex, Object x)</td> <td>设置给定参数的值为Object值</td></tr> <tr><td>boolean execute()</td> <td>执行当前SQL语句，返回一个boolean值，表示是否有结果集</td></tr> <tr><td>void addBatch()</td> <td>将当前SQL语句添加到批处理中</td></tr></tbody></table> <p>...</p> <h2 id="resultset"><a href="#resultset" class="header-anchor">#</a> ResultSet</h2> <div class="language- extra-class"><pre><code>ResultSet接口用于表示SQL查询的结果集。它负责：
+
+1. 遍历结果集
+2. 获取结果集的元数据信息
+
+以下是ResultSet的常用方法：
+</code></pre></div><table><thead><tr><th>方法</th> <th>描述</th></tr></thead> <tbody><tr><td>boolean next()</td> <td>移动到下一行</td></tr> <tr><td>boolean previous()</td> <td>移动到上一行</td></tr> <tr><td>boolean first()</td> <td>移动到第一行</td></tr> <tr><td>boolean last()</td> <td>移动到最后一行</td></tr> <tr><td>boolean absolute(int row)</td> <td>移动到指定行</td></tr> <tr><td>boolean relative(int rows)</td> <td>移动指定行数</td></tr> <tr><td>void close()</td> <td>关闭结果集</td></tr> <tr><td>boolean isClosed()</td> <td>检查结果集是否已关闭</td></tr> <tr><td>void setFetchDirection(int direction)</td> <td>设置获取方向</td></tr> <tr><td>int getFetchDirection()</td> <td>获取获取方向</td></tr> <tr><td>void setFetchSize(int rows)</td> <td>设置获取大小</td></tr> <tr><td>int getFetchSize()</td> <td>获取获取大小</td></tr> <tr><td>int getType()</td> <td>获取结果集类型</td></tr> <tr><td>int getConcurrency()</td> <td>获取结果集并发模式</td></tr> <tr><td>int getHoldability()</td> <td>获取结果集可保持性</td></tr> <tr><td>boolean isBeforeFirst()</td> <td>检查是否在第一行之前</td></tr> <tr><td>boolean isAfterLast()</td> <td>检查是否在最后一行之后</td></tr> <tr><td>boolean isFirst()</td> <td>检查是否在第一行</td></tr> <tr><td>boolean isLast()</td> <td>检查是否在最后一行</td></tr> <tr><td>void beforeFirst()</td> <td>移动到第一行之前</td></tr> <tr><td>void afterLast()</td> <td>移动到最后一行之后</td></tr> <tr><td>boolean first()</td> <td>移动到第一行</td></tr> <tr><td>boolean last()</td> <td>移动到最后一行</td></tr> <tr><td>int getRow()</td> <td>获取当前行号</td></tr> <tr><td>boolean absolute(int row)</td> <td>移动到指定行</td></tr> <tr><td>boolean relative(int rows)</td> <td>移动指定行数</td></tr> <tr><td>ResultSetMetaData getMetaData()</td> <td>获取结果集元数据信息</td></tr> <tr><td>void setMetaData(ResultSetMetaData meta)</td> <td>设置结果集元数据信息</td></tr> <tr><td>Statement getStatement()</td> <td>获取创建结果集的语句</td></tr> <tr><td>Blob getBlob(int columnIndex)</td> <td>获取指定列的Blob对象</td></tr> <tr><td>Blob getBlob(String columnLabel)</td> <td>获取指定列的Blob对象</td></tr> <tr><td>Clob getClob(int columnIndex)</td> <td>获取指定列的Clob对象</td></tr> <tr><td>Clob getClob(String columnLabel)</td> <td>获取指定列的Clob对象</td></tr> <tr><td>boolean getBoolean(int columnIndex)</td> <td>获取指定列的</td></tr> <tr><td>boolean值</td> <td></td></tr> <tr><td>boolean getBoolean(String columnLabel)</td> <td>获取指定列的</td></tr> <tr><td>boolean值</td> <td></td></tr> <tr><td>byte getByte(int columnIndex)</td> <td>获取指定列的byte值</td></tr></tbody></table> <p>...</p> <h1 id="数据库连接池"><a href="#数据库连接池" class="header-anchor">#</a> 数据库连接池</h1> <div class="language- extra-class"><pre><code>数据库连接池是一种创建和管理数据库连接的技术。它负责：
+
+资源重用：由于数据库连接得以重用，避免了频繁创建、释放连接引起的大量性能开销，在减少系统消耗的基础上，也增加了系统运行环境的平稳性
+提高系统响应速度：数据库连接池在初始化过程中，往往已经创建了若干数据库连接置于池中备用，此时连接的初始化工作均已完成。对于业务请求处理而言，直接利用现有可用连接，避免了数据库连接初始化和释放过程的时间开销，从而缩减了系统整体响应时间
+新的资源分配手段：对于多应用共享同一数据库的系统而言，可在应用层通过数据库连接的配置，使用数据库连接池技术，设置某一应用最大可用数据库连接数，避免某一应用独占所有数据库资源
+统一的连接管理：在较为完善的数据库连接池实现中，可根据预先设定的连接占用超时时间，强制收回被超时占用的连接，从而避免了常规数据库连接操作中可能出现的资源泄漏
+</code></pre></div><h2 id="druid-介绍和使用"><a href="#druid-介绍和使用" class="header-anchor">#</a> Druid 介绍和使用</h2> <div class="language- extra-class"><pre><code>下载Jar包,导入模块
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code> <span class="token keyword">import</span> <span class="token import"><span class="token namespace">com<span class="token punctuation">.</span>alibaba<span class="token punctuation">.</span>druid<span class="token punctuation">.</span>pool<span class="token punctuation">.</span></span><span class="token class-name">DruidDataSource</span></span><span class="token punctuation">;</span>
+
+ <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DruidDemo</span> <span class="token punctuation">{</span>
+   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token class-name">DruidDataSource</span> dataSource <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DruidDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       dataSource<span class="token punctuation">.</span><span class="token function">setUrl</span><span class="token punctuation">(</span><span class="token string">&quot;jdbc:mysql://localhost:3306/test&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       dataSource<span class="token punctuation">.</span><span class="token function">setUsername</span><span class="token punctuation">(</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       dataSource<span class="token punctuation">.</span><span class="token function">setPassword</span><span class="token punctuation">(</span><span class="token string">&quot;123456&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       dataSource<span class="token punctuation">.</span><span class="token function">setInitialSize</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       dataSource<span class="token punctuation">.</span><span class="token function">setMaxActive</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token comment">// more properties ...</span>
+   <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/mysql/base.html" class="prev">
+        基础
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.088f0338.js" defer></script><script src="/assets/js/2.d5008571.js" defer></script><script src="/assets/js/1.c015acb9.js" defer></script><script src="/assets/js/125.a59feeaa.js" defer></script>
+  </body>
+</html>
