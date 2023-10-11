@@ -287,7 +287,9 @@ boolean值 |
 
 
 
-# 数据库连接池
+
+
+## 数据库连接池
 
     数据库连接池是一种创建和管理数据库连接的技术。它负责：
 
@@ -318,9 +320,233 @@ boolean值 |
   ```
 
 
+## demo
+
+```java
+package main;
+
+
+import com.alibaba.druid.pool.DruidDataSourceFactory;
+
+import javax.sql.DataSource;
+import java.io.FileInputStream;
+import java.sql.*;
+import java.util.Properties;
+
+public class DruidDataBase {
+    public static DataSource dataSource;
+    static {
+        System.out.println("DruidDataBase 开始执行连接");
+        try {
+            //加载配置文件
+            Properties prop = new Properties();
+            FileInputStream fis = new FileInputStream("F:/java/salaryManage/salary/src/druid.properties");
+            prop.load(fis);
+            fis.close();
+
+            //获取连接池对象
+            dataSource= DruidDataSourceFactory.createDataSource(prop);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+
+    }
+
+    //获取Connection
+    public static Connection getConnection(){
+                 Connection conn=null;
+                 try {
+                         conn=dataSource.getConnection();
+
+                 } catch (SQLException e) {
+                         e.printStackTrace();
+                   }
+                 return conn;
+     }
+
+   public static void close(Connection conn){
+        try {
+            if(conn!=null)
+                conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+     }
+    public static void close(Statement stm){
+             try {
+                   if(stm!=null)
+                             stm.close();
+                   } catch (SQLException e) {
+                       e.printStackTrace();
+                    }
+            }
+     public static void close(ResultSet rs){
+              try {
+                       if(rs!=null)
+                              rs.close();
+                    } catch (SQLException e) {
+                       e.printStackTrace();
+                    }
+     }
+
+     public static void allClose(Connection conn,Statement stm){
+         try {
+             conn.close();
+             stm.close();
+         } catch (SQLException e) {
+             e.printStackTrace();
+         }
+     }
+
+    public static void allClose(Connection conn,Statement stm,ResultSet rs){
+        try {
+            conn.close();
+            stm.close();
+            rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+```
 
 
 
 
 
 
+## use demo
+
+```java
+package main;
+
+import com.alibaba.fastjson.JSONObject;
+
+import java.sql.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Job {
+    public static JSONObject query(){
+        try {
+            Connection  conn=DruidDataBase.getConnection();
+            String sql = "SELECT * FROM job";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            ResultSet resultSet = pstmt.executeQuery();
+            ResultSetMetaData metaData = resultSet.getMetaData();
+            int columnCount = metaData.getColumnCount();
+            List<Map<String, Object>> resultList = new ArrayList<>();
+
+            while (resultSet.next()) {
+                HashMap<String, Object> columnMap = new HashMap<>();
+                for (int i = 1; i <= columnCount; i++) {
+                    String key = metaData.getColumnName(i);
+                    Object value = resultSet.getObject(key);
+                    columnMap.put(key, value);
+                }
+                resultList.add(columnMap);
+            }
+
+            JSONObject jsonData=new JSONObject();
+            jsonData.put("success",true);
+            jsonData.put("list",resultList);
+            //关闭连接
+            DruidDataBase.allClose(conn,pstmt,resultSet);
+            return jsonData;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public static JSONObject add(Map<String, String> params){
+        try {
+            Connection  conn=DruidDataBase.getConnection();
+            String sql = "INSERT INTO job (name,remark,update_date,create_date) VALUES (?,?,?,?)";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1,params.get("name"));
+            pstmt.setString(2,params.get("remark"));
+            String timeStr1=LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+
+            pstmt.setString(3,timeStr1);
+            pstmt.setString(4,timeStr1);
+
+
+            int resultSet = pstmt.executeUpdate();
+            JSONObject jsonData=new JSONObject();
+            if(resultSet==1){
+                jsonData.put("success",true);
+            }else{
+                jsonData.put("success",false);
+            }
+            //关闭连接
+            DruidDataBase.allClose(conn,pstmt);
+            return jsonData;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static JSONObject update(Map<String, String> params){
+        try {
+            Connection  conn=DruidDataBase.getConnection();
+
+            String sql = "UPDATE job SET name = ?, remark = ?, update_date = ?, create_date = ? WHERE id = ?";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1,params.get("name"));
+            pstmt.setString(2,params.get("remark"));
+            String timeStr1=LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+
+            pstmt.setString(3,timeStr1);
+            pstmt.setString(4,params.get("create_date"));
+            pstmt.setString(5,params.get("id"));
+
+            int resultSet = pstmt.executeUpdate();
+            JSONObject jsonData=new JSONObject();
+            if(resultSet==1){
+                jsonData.put("success",true);
+            }else{
+                jsonData.put("success",false);
+            }
+            //关闭连接
+            DruidDataBase.allClose(conn,pstmt);
+            return jsonData;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    public static JSONObject delete(String id){
+        try {
+            Connection  conn=DruidDataBase.getConnection();
+            String sql = "DELETE FROM job where (id) = (?)";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1,id);
+            int resultSet = pstmt.executeUpdate();
+            JSONObject jsonData=new JSONObject();
+            if(resultSet==1){
+                jsonData.put("success",true);
+            }else{
+                jsonData.put("success",false);
+            }
+            //关闭连接
+            DruidDataBase.allClose(conn,pstmt);
+            return jsonData;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+}
+
+```
