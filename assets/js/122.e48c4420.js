@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[122],{778:function(t,n,s){"use strict";s.r(n);var e=s(10),r=Object(e.a)({},(function(){var t=this._self._c;return t("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[t("p",[this._v("ssh-keygen -t rsa -C 'name' -f 'name' _rsa\n.pub 为公钥反之私钥，私钥配置权限 600")])])}),[],!1,null,null,null);n.default=r.exports}}]);
