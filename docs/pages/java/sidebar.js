@@ -16,6 +16,13 @@ module.exports ={
             { title:'异常',path:'/pages/Java/catch/catch.md'},
             { title:'collection 集合',path:'/pages/Java/collection/collection.md'},
             { title:'map 集合',path:'/pages/Java/map/map.md'},
+            { title:'字符集',path:'/pages/Java/character/character.md'},
+            { title:'IO流',path:'/pages/Java/io/io.md'},
+            { title:'Stream流,File类',path:'/pages/Java/stream/stream.md'},
+            { title:'网络编程',path:'/pages/Java/internet/internet.md'},
+            { title:'日志',path:'/pages/Java/log/log.md'},
+            { title:'多线程',path:'/pages/Java/thread/thread.md'},
+            { title:'单元测试、反射、注解、代理',path:'/pages/Java/reflect/reflect.md'},
       ]
 }
   

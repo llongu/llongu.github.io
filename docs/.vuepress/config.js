@@ -98,6 +98,7 @@ module.exports = {
               { text: 'Java', link: '/pages/Java/Base/base.md' },
               { text: 'ObjectC', link: '/pages/ObjectC/base.md' },
               { text: 'MySQL', link: '/pages/mysql/base.md' },
+              { text: 'Python', link: '/pages/Python/Base/base.md' },
             ]
           },
           {
